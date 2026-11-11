@@ -1,0 +1,29 @@
+{
+  "id": "ensley-spelling-l6", "profile": "ensley", "subject": "Spelling", "title": "Lesson 6 Words", "icon": "✏️", "color": "#ff5fa8",
+  "due": "2026-11-13", "test": "Spelling Quiz · Fri 11/13",
+  "source": "Lesson 6 Spelling Analysis packet + vocabulary table (scans) and the Ensley's Spelling Quest app",
+  "notes": ["The worksheet's 'Find the Correct Spelling' answer choices are used as the wrong-spelling options, so practice matches the quiz style.", "Dependent can be an adjective or a noun (as printed on the vocabulary table). No word has a past tense."],
+  "units": [
+    { "id": "u1", "title": "Words 1–5", "icon": "🌱", "items": ["smooth", "seashell", "quarter", "fearless", "sandwich"] },
+    { "id": "u2", "title": "Words 6–10", "icon": "🌷", "items": ["afternoon", "igloo", "apartment", "spectator", "sheriff"] },
+    { "id": "u3", "title": "Words 11–15", "icon": "🌻", "items": ["partner", "compartment", "garden", "dependent", "pendant"], "story": "silly" }
+  ],
+  "items": [
+    { "t": "word", "id": "smooth", "w": "smooth", "meaning": "Having an even surface; not rough.", "sentence": "The smooth rock skipped across the water.", "pos": "Adjective", "syl": "Smooth", "plural": "N/A", "miss": ["Smewth", "Smoth", "Smoothe"] },
+    { "t": "word", "id": "seashell", "w": "seashell", "emoji": "🐚", "meaning": "The hard outer covering of a sea animal.", "sentence": "I found a seashell on the beach.", "pos": "Noun", "syl": "Sea-shell", "plural": "seashells", "miss": ["seeshell", "seachell", "seashel"] },
+    { "t": "word", "id": "quarter", "w": "quarter", "meaning": "One of four equal parts.", "sentence": "She ate a quarter of the sandwich.", "pos": "Noun", "syl": "Quar-ter", "plural": "quarters", "miss": ["Quaerter", "Quartir", "Qouarter"] },
+    { "t": "word", "id": "fearless", "w": "fearless", "meaning": "Showing no fear; brave.", "sentence": "The fearless firefighter helped everyone.", "pos": "Adjective", "syl": "Fear-less", "plural": "N/A", "miss": ["Fearles", "Fearliss", "Fearlesse"] },
+    { "t": "word", "id": "sandwich", "w": "sandwich", "emoji": "🥪", "meaning": "Food between slices of bread.", "sentence": "I ate a sandwich for lunch.", "pos": "Noun", "syl": "Sand-wich", "plural": "sandwiches", "miss": ["Sandwish", "Saendwich", "Sandwech"] },
+    { "t": "word", "id": "afternoon", "w": "afternoon", "meaning": "The time between noon and evening.", "sentence": "We will meet this afternoon.", "pos": "Noun", "syl": "Af-ter-noon", "plural": "afternoons", "miss": ["Afternon", "Afternoone", "Aftirnoon"] },
+    { "t": "word", "id": "igloo", "w": "igloo", "emoji": "🛖", "meaning": "A house built from blocks of snow.", "sentence": "The children built an igloo.", "pos": "Noun", "syl": "Ig-loo", "plural": "igloos", "miss": ["Iglew", "Iglo", "Iglue"] },
+    { "t": "word", "id": "apartment", "w": "apartment", "emoji": "🏢", "meaning": "A set of rooms for living.", "sentence": "My aunt lives in an apartment.", "pos": "Noun", "syl": "A-part-ment", "plural": "apartments", "miss": ["Apartmint", "Apartmente", "Apaertment"] },
+    { "t": "word", "id": "spectator", "w": "spectator", "meaning": "A person who watches an event.", "sentence": "Every spectator cheered loudly.", "pos": "Noun", "syl": "Spec-ta-tor", "plural": "spectators", "miss": ["Spictator", "Spectaetor", "Spectatore"] },
+    { "t": "word", "id": "sheriff", "w": "sheriff", "emoji": "🤠", "meaning": "A law enforcement officer.", "sentence": "The sheriff kept the town safe.", "pos": "Noun", "syl": "Sher-iff", "plural": "sheriffs", "miss": ["Shereff", "Shiriff", "Sherif"] },
+    { "t": "word", "id": "partner", "w": "partner", "emoji": "🤝", "meaning": "A person who works with another.", "sentence": "Choose a partner for the activity.", "pos": "Noun", "syl": "Part-ner", "plural": "partners", "miss": ["Pertner", "Partnir", "Partnre"] },
+    { "t": "word", "id": "compartment", "w": "compartment", "meaning": "A separate section or space.", "sentence": "Put the pencil in the compartment.", "pos": "Noun", "syl": "Com-part-ment", "plural": "compartments", "miss": ["Compartmente", "Compaertment", "Compertment"] },
+    { "t": "word", "id": "garden", "w": "garden", "emoji": "🌻", "meaning": "An area where plants are grown.", "sentence": "The flowers bloom in the garden.", "pos": "Noun", "syl": "Gar-den", "plural": "gardens", "miss": ["Gardene", "Gaerden", "Gerden"] },
+    { "t": "word", "id": "dependent", "w": "dependent", "meaning": "Relying on someone else for support.", "sentence": "A young child is dependent on adults.", "pos": "Adjective / Noun", "syl": "De-pend-ent", "plural": "dependents", "miss": ["Dependente", "Dipendent", "Dependant"] },
+    { "t": "word", "id": "pendant", "w": "pendant", "emoji": "📿", "meaning": "A piece of jewelry that hangs.", "sentence": "She wore a heart-shaped pendant.", "pos": "Noun", "syl": "Pen-dant", "plural": "pendants", "miss": ["Pindant", "Pendent", "Pendaent"] },
+    { "t": "story", "id": "silly", "title": "Sir Gerald's Super Sandwich Adventure", "text": "One [[afternoon]], a very [[fearless]] [[sandwich]] named Sir Gerald hopped out of his [[apartment]] to visit his best [[partner]], a grumpy pirate pig. On the way, he hopped through a [[garden]] where a [[sheriff]] of bees was buzzing a [[smooth]] tune. Sir Gerald tripped over a giant [[seashell]] and landed in a [[compartment]] of a shopping cart. A [[spectator]] in a top hat clapped and shouted, “Encore!” The pig was so happy that he gave Sir Gerald a [[pendant]] and built him a tiny [[igloo]] out of pudding. Sir Gerald was not [[dependent]] on anyone, but he did need one [[quarter]] of a hug to feel better!" }
+  ]
+}

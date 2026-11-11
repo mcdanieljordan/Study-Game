@@ -1,0 +1,309 @@
+{
+ "id": "sida-eus2",
+ "profile": "sida",
+ "subject": "Math",
+ "title": "EUS 2 · Rational Numbers",
+ "icon": "➗",
+ "color": "#38d6ff",
+ "due": null,
+ "test": "Fractions, decimals, percents",
+ "source": "C.A. Lyttle 2023 EUS study guide (merged_document.pdf / EUS7 Financial Literacy Highlights.pdf) — EUS 2 pp.11–14",
+ "units": [
+  {
+   "id": "u1",
+   "title": "Rational vocabulary",
+   "icon": "📘",
+   "items": [
+    "r-terms",
+    "r-qa"
+   ],
+   "lesson": [
+    {
+     "title": "What's a rational number?",
+     "html": "Any number you can write as A/B where A and B are integers and B ≠ 0. The value of a rational number is the quotient of its little division problem."
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Convert & benchmark",
+   "icon": "🔄",
+   "items": [
+    "g-conv",
+    "r-qa2"
+   ],
+   "lesson": [
+    {
+     "title": "Benchmark table",
+     "html": "1/10 = 0.1 = 10% · 1/8 = 0.125 = 12.5% · 1/5 = 0.2 = 20% · 1/4 = 0.25 = 25% · 3/8 = 0.375 = 37.5% · 2/5 = 0.4 = 40% · 1/2 = 0.5 = 50% · 3/5 = 0.6 = 60% · 3/4 = 0.75 = 75%"
+    },
+    {
+     "title": "Conversions",
+     "html": "Decimal → percent: ×100. Percent → decimal: ÷100. Fraction → decimal: divide top by bottom."
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Operations",
+   "icon": "🧮",
+   "items": [
+    "g-addf",
+    "g-mulf",
+    "g-divf",
+    "g-recip",
+    "g-mixed",
+    "g-dec",
+    "r-qa3"
+   ],
+   "lesson": [
+    {
+     "title": "Fraction operations",
+     "html": "<b>Add/subtract:</b> find a common denominator.<br><b>Multiply:</b> straight across.<br><b>Divide:</b> Keep, Change, Flip."
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "t": "terms",
+   "id": "r-terms",
+   "skill": "Rational vocabulary",
+   "pairs": [
+    [
+     "Rational Number",
+     "Any number that can be written as A/B where A and B are integers and B is not 0"
+    ],
+    [
+     "Numerator",
+     "The number above the fraction bar; the dividend"
+    ],
+    [
+     "Denominator",
+     "The number below the fraction bar; the divisor"
+    ],
+    [
+     "Proper Fraction",
+     "A fraction where the numerator is less than the denominator"
+    ],
+    [
+     "Improper Fraction",
+     "A fraction where the numerator is greater than the denominator"
+    ],
+    [
+     "Mixed Number",
+     "A whole number plus a proper fraction"
+    ],
+    [
+     "Reciprocal",
+     "A flipped fraction (the multiplicative inverse)"
+    ],
+    [
+     "Decimal",
+     "A form of a fraction where the denominator has been replaced by place value in multiples of 10"
+    ],
+    [
+     "Terminating Decimal",
+     "A decimal which ends; a fraction whose quotient has no remainder"
+    ],
+    [
+     "Repeating Decimal",
+     "A decimal which goes on forever; a fraction whose quotient always has a remainder"
+    ],
+    [
+     "Divisor",
+     "The number doing the dividing"
+    ],
+    [
+     "Dividend",
+     "The number being divided"
+    ],
+    [
+     "Quotient",
+     "The answer to a division problem"
+    ],
+    [
+     "Product",
+     "The answer to a multiplication problem"
+    ]
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "r-qa",
+   "skill": "Rational ideas",
+   "list": [
+    {
+     "q": "What is the value of a rational number?",
+     "a": "The quotient of its little division problem",
+     "w": [
+      "Its numerator",
+      "Its denominator",
+      "The product of top and bottom"
+     ],
+     "why": "A fraction IS a division problem: numerator ÷ denominator."
+    },
+    {
+     "q": "How do you turn a whole number into a fraction?",
+     "a": "Put it over 1",
+     "w": [
+      "Put it under 1",
+      "Double it",
+      "Add a decimal point"
+     ],
+     "why": "5 = 5/1."
+    },
+    {
+     "q": "To expand or simplify a fraction you multiply or divide by…",
+     "a": "A form of one (like 2/2)",
+     "w": [
+      "Zero",
+      "The denominator",
+      "The reciprocal"
+     ],
+     "why": "Multiplying by A/A changes how it looks, not its value."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "r-qa2",
+   "skill": "Converting",
+   "list": [
+    {
+     "q": "Decimal to percent:",
+     "a": "Multiply by 100",
+     "w": [
+      "Divide by 100",
+      "Add 100",
+      "Divide by 10"
+     ],
+     "why": "0.25 × 100 = 25%."
+    },
+    {
+     "q": "Percent to decimal:",
+     "a": "Divide by 100",
+     "w": [
+      "Multiply by 100",
+      "Subtract 100",
+      "Multiply by 10"
+     ],
+     "why": "40% ÷ 100 = 0.4."
+    },
+    {
+     "q": "Percent to fraction:",
+     "a": "Put the percent over 100 and simplify",
+     "w": [
+      "Put 100 over the percent",
+      "Divide by 10",
+      "Multiply by 100"
+     ],
+     "why": "25% = 25/100 = 1/4."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "r-qa3",
+   "skill": "Operation rules",
+   "list": [
+    {
+     "q": "Dividing fractions: “Keep, Change, Flip” means…",
+     "a": "Keep the first, change ÷ to ×, flip the second",
+     "w": [
+      "Keep both, change + to −, flip the answer",
+      "Flip the first, keep the second, change × to ÷",
+      "Change both denominators"
+     ],
+     "why": "Then multiply straight across."
+    },
+    {
+     "q": "To add or subtract fractions you first need…",
+     "a": "A common denominator",
+     "w": [
+      "A common numerator",
+      "To flip one fraction",
+      "To multiply across"
+     ],
+     "why": "Then add or subtract the numerators and keep the denominator."
+    },
+    {
+     "q": "Multiplying decimals: where does the decimal go?",
+     "a": "As many places in from the right as there were place holders in the original numbers",
+     "w": [
+      "Straight down",
+      "Straight up into the quotient",
+      "Lined up under the others"
+     ],
+     "why": "Multiply as if there are no decimals, then count the place holders."
+    },
+    {
+     "q": "Dividing decimals: “move BOTH decimals” means…",
+     "a": "Make the divisor a whole number and move the dividend's decimal the same number of places",
+     "w": [
+      "Move only the dividend's decimal left",
+      "Line up the decimals",
+      "Count the place holders"
+     ],
+     "why": "Then divide as usual and bring the decimal straight up."
+    }
+   ]
+  },
+  {
+   "t": "gen",
+   "id": "g-conv",
+   "gen": "rat-conv",
+   "n": 5,
+   "skill": "Fraction · decimal · percent",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-addf",
+   "gen": "rat-addfrac",
+   "n": 4,
+   "skill": "Add/subtract fractions",
+   "level": 2
+  },
+  {
+   "t": "gen",
+   "id": "g-mulf",
+   "gen": "rat-mulfrac",
+   "n": 3,
+   "skill": "Multiply fractions",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-divf",
+   "gen": "rat-divfrac",
+   "n": 3,
+   "skill": "Divide fractions",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-recip",
+   "gen": "rat-recip",
+   "n": 2,
+   "skill": "Reciprocals",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-mixed",
+   "gen": "rat-mixed",
+   "n": 2,
+   "skill": "Mixed numbers",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-dec",
+   "gen": "rat-dec",
+   "n": 3,
+   "skill": "Decimal operations",
+   "level": 1
+  }
+ ]
+}

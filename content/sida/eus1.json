@@ -1,0 +1,274 @@
+{
+ "id": "sida-eus1",
+ "profile": "sida",
+ "subject": "Math",
+ "title": "EUS 1 · Integers",
+ "icon": "➕",
+ "color": "#5dff7a",
+ "due": null,
+ "test": "Integers",
+ "source": "C.A. Lyttle 2023 EUS study guide (merged_document.pdf / EUS7 Financial Literacy Highlights.pdf) — EUS 1 pp.15–16",
+ "units": [
+  {
+   "id": "u1",
+   "title": "Meet the integers",
+   "icon": "🧭",
+   "items": [
+    "i-terms",
+    "i-qa",
+    "g-abs",
+    "g-opp"
+   ],
+   "lesson": [
+    {
+     "title": "Counting → Whole → Integers",
+     "html": "Counting numbers: 1, 2, 3… Whole numbers add zero. <b>Integers</b> add the opposites: …−3, −2, −1, 0, 1, 2, 3…"
+    },
+    {
+     "title": "Absolute value",
+     "html": "The distance from zero on a number line. Distance is never negative: |−7| = 7."
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Add & subtract",
+   "icon": "⚖️",
+   "items": [
+    "g-add",
+    "g-sub",
+    "i-qa2"
+   ],
+   "lesson": [
+    {
+     "title": "Adding & subtracting",
+     "html": "<b>Add a negative</b> = combining with an absence.<br><b>Subtract a negative</b> = taking away an absence (it's the same as adding the opposite)."
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Multiply & divide",
+   "icon": "✖️",
+   "items": [
+    "g-mul",
+    "g-div",
+    "i-qa3"
+   ],
+   "lesson": [
+    {
+     "title": "Signs in multiplying & dividing",
+     "html": "Same signs → positive.<br>Different signs → negative.<br>Multiplying negatives = combining the opposite of a number of equal groups."
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "t": "terms",
+   "id": "i-terms",
+   "skill": "Integer vocabulary",
+   "pairs": [
+    [
+     "Counting Number",
+     "Numbers used for counting: 1, 2, 3…"
+    ],
+    [
+     "Whole Number",
+     "All of the counting numbers and zero"
+    ],
+    [
+     "Integer",
+     "All of the whole numbers and their opposites"
+    ],
+    [
+     "Venn Diagram",
+     "A graph using shapes to compare and contrast groups, sets or categories"
+    ],
+    [
+     "Absolute Value",
+     "The distance from zero on a number line; distance is always positive"
+    ],
+    [
+     "Zero Pair",
+     "The value of zero formed when two opposites combine and cancel each other out"
+    ],
+    [
+     "Addition",
+     "The combination of like terms; continued counting"
+    ],
+    [
+     "Subtraction",
+     "The separation of like terms; continued counting backward"
+    ],
+    [
+     "Multiplication",
+     "The combination of a number of groups of identical value"
+    ],
+    [
+     "Division",
+     "The separation of a group into a number of sets of identical value"
+    ]
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "i-qa",
+   "skill": "Integer ideas",
+   "list": [
+    {
+     "q": "Why can positive and negative numbers be “equal opposites”?",
+     "a": "They have the same absolute value but sit on opposite sides of zero",
+     "w": [
+      "They both have the same sign",
+      "They are both greater than zero",
+      "They add up to 1"
+     ],
+     "why": "Equal distance from zero, opposite directions."
+    },
+    {
+     "q": "Zero is…",
+     "a": "Neither positive nor negative",
+     "w": [
+      "Positive",
+      "Negative",
+      "Both positive and negative"
+     ],
+     "why": "Positive numbers are the ones that are not negative and negative numbers are the ones that are not positive — zero is its own number: neither."
+    },
+    {
+     "q": "Which set contains −3?",
+     "a": "Integers",
+     "w": [
+      "Counting numbers",
+      "Whole numbers",
+      "Both counting and whole numbers"
+     ],
+     "why": "Integers are the only set that includes negatives."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "i-qa2",
+   "skill": "Adding & subtracting",
+   "list": [
+    {
+     "q": "Adding a negative number means…",
+     "a": "Combining with an absence",
+     "w": [
+      "Taking away an absence",
+      "Multiplying groups",
+      "Making zero"
+     ],
+     "why": "Add a negative: combining with an absence."
+    },
+    {
+     "q": "Subtracting a negative number means…",
+     "a": "Taking away an absence",
+     "w": [
+      "Combining with an absence",
+      "Doubling the number",
+      "Making it zero"
+     ],
+     "why": "Subtract a negative: taking away an absence — which makes the value go UP."
+    },
+    {
+     "q": "7 − (−3) is the same as…",
+     "a": "7 + 3",
+     "w": [
+      "7 − 3",
+      "−7 + 3",
+      "−7 − 3"
+     ],
+     "why": "Subtracting a negative = adding its opposite."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "i-qa3",
+   "skill": "Multiplying & dividing",
+   "list": [
+    {
+     "q": "A negative × a negative is…",
+     "a": "Positive",
+     "w": [
+      "Negative",
+      "Zero",
+      "It depends on the size"
+     ],
+     "why": "Same signs → positive."
+    },
+    {
+     "q": "A positive × a negative is…",
+     "a": "Negative",
+     "w": [
+      "Positive",
+      "Zero",
+      "It depends on the size"
+     ],
+     "why": "Different signs → negative."
+    },
+    {
+     "q": "(−12) ÷ 4 is…",
+     "a": "−3",
+     "w": [
+      "3",
+      "−8",
+      "8"
+     ],
+     "why": "Different signs → negative: 12 ÷ 4 = 3, so −3."
+    }
+   ]
+  },
+  {
+   "t": "gen",
+   "id": "g-abs",
+   "gen": "int-abs",
+   "n": 3,
+   "skill": "Absolute value",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-opp",
+   "gen": "int-opp",
+   "n": 2,
+   "skill": "Opposites",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-add",
+   "gen": "int-add",
+   "n": 5,
+   "skill": "Adding integers",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-sub",
+   "gen": "int-sub",
+   "n": 5,
+   "skill": "Subtracting integers",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-mul",
+   "gen": "int-mul",
+   "n": 4,
+   "skill": "Multiplying integers",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-div",
+   "gen": "int-div",
+   "n": 4,
+   "skill": "Dividing integers",
+   "level": 1
+  }
+ ]
+}

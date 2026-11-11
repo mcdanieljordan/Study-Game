@@ -1,0 +1,322 @@
+{
+ "id": "sida-eus6",
+ "profile": "sida",
+ "subject": "Math",
+ "title": "EUS 6 · Geometry",
+ "icon": "📐",
+ "color": "#38d6ff",
+ "due": null,
+ "test": "Geometry",
+ "source": "C.A. Lyttle 2023 EUS study guide (merged_document.pdf / EUS7 Financial Literacy Highlights.pdf) — EUS 6 pp.1–2",
+ "units": [
+  {
+   "id": "u1",
+   "title": "Geometry words",
+   "icon": "📘",
+   "items": [
+    "ge-terms1",
+    "ge-qa1"
+   ],
+   "lesson": [
+    {
+     "title": "Perimeter vs area",
+     "html": "<b>Perimeter</b> = distance around. <b>Area</b> = space inside, measured in square units (units²)."
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Area & perimeter",
+   "icon": "🧱",
+   "items": [
+    "g-area",
+    "g-perim",
+    "g-comp",
+    "ge-qa2"
+   ],
+   "lesson": [
+    {
+     "title": "Area formulas",
+     "html": "Parallelogram A = b·h · Triangle A = ½·b·h · Trapezoid A = ½(b₁ + b₂)·h · Circle A = πr²"
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Circles & triangles",
+   "icon": "⭕",
+   "items": [
+    "g-circ",
+    "g-tri",
+    "g-tineq",
+    "ge-qa3"
+   ],
+   "lesson": [
+    {
+     "title": "Circles",
+     "html": "π = circumference ÷ diameter ≈ 3.14. Diameter = 2 × radius. C = πd."
+    },
+    {
+     "title": "Triangles",
+     "html": "Angles add to 180°. The two smaller sides must add to MORE than the largest side."
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "t": "terms",
+   "id": "ge-terms1",
+   "skill": "Geometry vocabulary",
+   "pairs": [
+    [
+     "Point",
+     "A location in space"
+    ],
+    [
+     "Line",
+     "An extension that passes through two points; the shortest distance between two points"
+    ],
+    [
+     "Line Segment",
+     "A line which ends at two specific points"
+    ],
+    [
+     "Parallel Lines",
+     "Two lines with a constant distance between them that never intersect"
+    ],
+    [
+     "Angle",
+     "The shape formed by the intersection of two lines"
+    ],
+    [
+     "Perpendicular Lines",
+     "Lines which intersect at a right angle (90°)"
+    ],
+    [
+     "Polygon",
+     "Any shape that fully encloses an area with straight lines"
+    ],
+    [
+     "Regular Polygon",
+     "A polygon made up of equal line segments"
+    ],
+    [
+     "Perimeter",
+     "The distance around a polygon"
+    ],
+    [
+     "Area",
+     "The space within a polygon; measured in units²"
+    ],
+    [
+     "Formula",
+     "A special equation that shows the relationship between the characteristics of a shape"
+    ],
+    [
+     "Height",
+     "The vertical distance from the top to the bottom of a shape; measured perpendicular to a base"
+    ],
+    [
+     "Quadrilateral",
+     "Any four-sided polygon"
+    ],
+    [
+     "Diameter",
+     "The distance across a circle through its center"
+    ],
+    [
+     "Radius",
+     "The distance from the center of a circle to its edge; half of the diameter"
+    ],
+    [
+     "Circumference",
+     "The distance around a circle"
+    ],
+    [
+     "Pi",
+     "The ratio of a circle's circumference to its diameter (π ≈ 3.14 or 22/7)"
+    ]
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "ge-qa1",
+   "skill": "Geometry ideas",
+   "list": [
+    {
+     "q": "What is area measured in?",
+     "a": "Square units (units²)",
+     "w": [
+      "Units",
+      "Cubic units",
+      "Degrees"
+     ],
+     "why": "Area counts how many unit squares fit inside."
+    },
+    {
+     "q": "The interior angles of any triangle add up to…",
+     "a": "180°",
+     "w": [
+      "90°",
+      "360°",
+      "100°"
+     ],
+     "why": "Always 180°."
+    },
+    {
+     "q": "Which quadrilaterals exist?",
+     "a": "Squares, rhombuses, rectangles, parallelograms, kites",
+     "w": [
+      "Only squares",
+      "Only rectangles",
+      "Triangles and circles"
+     ],
+     "why": "Any four-sided polygon is a quadrilateral."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "ge-qa2",
+   "skill": "Formulas",
+   "list": [
+    {
+     "q": "Area of a parallelogram:",
+     "a": "A = b · h",
+     "w": [
+      "A = ½ b · h",
+      "A = π r²",
+      "A = 2(b + h)"
+     ],
+     "why": "Use the perpendicular height."
+    },
+    {
+     "q": "Area of a triangle:",
+     "a": "A = ½ · b · h",
+     "w": [
+      "A = b · h",
+      "A = b + h",
+      "A = π r²"
+     ],
+     "why": "Half of the matching parallelogram."
+    },
+    {
+     "q": "Area of a trapezoid:",
+     "a": "A = ½ (b₁ + b₂) · h",
+     "w": [
+      "A = b · h",
+      "A = ½ b · h",
+      "A = b₁ · b₂"
+     ],
+     "why": "Average the two bases, times the height."
+    },
+    {
+     "q": "Area of a circle:",
+     "a": "A = π r²",
+     "w": [
+      "A = 2π r",
+      "A = π d",
+      "A = π r"
+     ],
+     "why": "Square the RADIUS."
+    },
+    {
+     "q": "How do you find the area of a composite shape?",
+     "a": "Split it into standard shapes, find each area, and add",
+     "w": [
+      "Multiply all the sides",
+      "Find the perimeter",
+      "Use only one formula"
+     ],
+     "why": "Or subtract a missing piece."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "ge-qa3",
+   "skill": "Circles & triangles",
+   "list": [
+    {
+     "q": "π equals…",
+     "a": "Circumference ÷ diameter",
+     "w": [
+      "Radius ÷ diameter",
+      "Area ÷ radius",
+      "Diameter × 2"
+     ],
+     "why": "About 3.14."
+    },
+    {
+     "q": "Which can be the three sides of a triangle?",
+     "a": "5, 6, 9",
+     "w": [
+      "2, 3, 9",
+      "1, 2, 5",
+      "3, 3, 7"
+     ],
+     "why": "5 + 6 = 11 > 9 ✓. The two smaller sides must be bigger than the biggest."
+    },
+    {
+     "q": "A triangle's perimeter is…",
+     "a": "The sum of all three sides",
+     "w": [
+      "Half the base times the height",
+      "Base plus height",
+      "The largest side"
+     ],
+     "why": "Add the lengths of all three sides."
+    }
+   ]
+  },
+  {
+   "t": "gen",
+   "id": "g-area",
+   "gen": "ge-area",
+   "n": 5,
+   "skill": "Area",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-perim",
+   "gen": "ge-perim",
+   "n": 3,
+   "skill": "Perimeter",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-comp",
+   "gen": "ge-comp",
+   "n": 3,
+   "skill": "Composite shapes",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-circ",
+   "gen": "ge-circ",
+   "n": 4,
+   "skill": "Circles",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-tri",
+   "gen": "ge-tri",
+   "n": 3,
+   "skill": "Triangle angles",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-tineq",
+   "gen": "ge-tri-ineq",
+   "n": 3,
+   "skill": "Triangle inequality",
+   "level": 1
+  }
+ ]
+}

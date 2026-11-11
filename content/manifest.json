@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "note": "Add a pack: drop its JSON next to the others and add one line here. See docs/ADDING_CONTENT.md",
+  "packs": [
+    { "profile": "ensley", "file": "ensley/spelling-l6.json" },
+    { "profile": "ensley", "file": "ensley/math-frequency-tables.json" },
+    { "profile": "ensley", "file": "ensley/science-water-cycle.json" },
+    { "profile": "sida", "file": "sida/eus1.json" },
+    { "profile": "sida", "file": "sida/eus2.json" },
+    { "profile": "sida", "file": "sida/eus3.json" },
+    { "profile": "sida", "file": "sida/eus4.json" },
+    { "profile": "sida", "file": "sida/eus5.json" },
+    { "profile": "sida", "file": "sida/eus6.json" },
+    { "profile": "sida", "file": "sida/eus7.json" }
+  ]
+}

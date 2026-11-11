@@ -1,0 +1,61 @@
+{
+  "id": "ensley-sci-water", "profile": "ensley", "subject": "Science", "title": "The Water Cycle", "icon": "💧", "color": "#2fc99e",
+  "due": null, "test": "Water Cycle · Lessons 1–2",
+  "source": "Water Cycle Structured Notes/Study Guide (Crown Jewels 4 Learning) + Science Doodle Notes #24",
+  "notes": ["The study guide says 70% of Earth's surface is water; the doodle notes page says 75%. The app uses the study guide's 70% — please check with her teacher which number the test uses."],
+  "units": [
+    { "id": "u1", "title": "Earth's water", "icon": "🌍", "lesson": [
+      { "title": "A water planet", "html": "About <b>70%</b> of Earth's surface is covered by water.<br>Water is stored in oceans, rivers, streams, lakes, ponds and glaciers." },
+      { "title": "Two kinds of water", "html": "🌊 <b>Salt water</b> ≈ 97% of Earth's water — oceans and some rivers.<br>🚰 <b>Fresh water</b> ≈ 3% — for drinking — air, soil, rivers, streams, lakes, glaciers.<br>Most fresh water is <b>frozen in glaciers</b> (big sheets of ice), so we can't use it." } ],
+      "items": ["w-earth"] },
+    { "id": "u2", "title": "Water cycle words", "icon": "☁️", "lesson": [
+      { "title": "The water cycle", "html": "The <b>water cycle</b> is the process by which water moves through the Earth and atmosphere. It is happening <b>constantly</b>, and the <b>sun</b> fuels it." },
+      { "title": "Four big steps", "html": "☀️ <b>Evaporation</b> – liquid → gas (heat).<br>☁️ <b>Condensation</b> – gas → liquid droplets (cooling).<br>🌧️ <b>Precipitation</b> – rain, snow, sleet, hail.<br>🏞️ <b>Runoff</b> – water flows back to the ocean.<br>🌱 <b>Transpiration</b> – plants release water vapor (“plant sweat”)." } ],
+      "items": ["w-terms", "w-diagram"] },
+    { "id": "u3", "title": "Put it in order", "icon": "🔁", "lesson": [
+      { "title": "Around and around", "html": "Water changes state and then back again — a cycle never stops. Sun heats the ocean → evaporation → condensation → precipitation → runoff → back to the ocean." } ],
+      "items": ["w-seq1", "w-seq2", "w-cycle"] }
+  ],
+  "items": [
+    { "t": "qas", "id": "w-earth", "skill": "Earth's water", "list": [
+      { "q": "How much of Earth's surface is covered by water?", "a": "About 70%", "w": ["About 30%", "About 50%", "About 97%"], "why": "About 70% of Earth's surface is covered by water.", "hint": "It's most of the planet — more than half!" },
+      { "q": "Which is a place where Earth's water is stored?", "a": "Glaciers", "w": ["Deserts", "The Moon", "Sand dunes"], "why": "Water is stored in oceans, rivers, streams, lakes, ponds and glaciers." },
+      { "q": "How many types of water are found on Earth?", "a": "2", "w": ["1", "3", "4"], "why": "Two types: salt water and fresh water." },
+      { "q": "What are the 2 types of water on Earth?", "a": "Salt water and fresh water", "w": ["Hot water and cold water", "Rain water and sea water only", "Clean water and dirty water"], "why": "Salt water and fresh water." },
+      { "q": "Which type of water makes up about 97% of Earth's water?", "a": "Salt water", "w": ["Fresh water", "Rain water", "Ice water"], "why": "Salt water is about 97%. Fresh water is only about 3%." },
+      { "q": "Fresh water makes up about ___ of Earth's water.", "a": "3%", "w": ["30%", "97%", "70%"], "why": "Fresh water is only about 3% — that's why it's precious." },
+      { "q": "Where is salt water found?", "a": "In oceans and some rivers", "w": ["In glaciers only", "In the air and soil", "Only in lakes"], "why": "Salt water is found in oceans and some rivers." },
+      { "q": "Where is fresh water found?", "a": "In the air, soil, rivers, streams, lakes and glaciers", "w": ["Only in the ocean", "Only in glaciers", "Only underground"], "why": "Fresh water is in the air, soil, rivers, streams, lakes and glaciers." },
+      { "q": "Why is most of Earth's fresh water unusable?", "a": "It is frozen in glaciers", "w": ["It is too salty", "It is too hot", "It is hidden under the ocean"], "why": "Most fresh water is frozen in large sheets of ice called glaciers.", "hint": "Think about where fresh water is stored as ice." },
+      { "q": "What are glaciers?", "a": "Large sheets of ice", "w": ["Big salty lakes", "Clouds of water vapor", "Rivers of rain"], "why": "Glaciers are large sheets of ice." }
+    ] },
+    { "t": "terms", "id": "w-terms", "skill": "Water cycle vocabulary", "pairs": [
+      ["Evaporation", "Water changes from liquid to a gas, caused by heat"],
+      ["Condensation", "The cooling of water in the atmosphere; gas changing to liquid droplets"],
+      ["Precipitation", "Water droplets that fall from the atmosphere as rain, snow, sleet or hail"],
+      ["Transpiration", "The passage of water vapor from a plant to the atmosphere (plant sweat)"],
+      ["Runoff", "Rainfall that is not absorbed by the soil and travels to the ocean"],
+      ["Ocean", "The largest body of water on Earth"],
+      ["Water cycle", "The process by which water moves through the Earth and atmosphere"]
+    ] },
+    { "t": "qas", "id": "w-cycle", "skill": "The water cycle", "list": [
+      { "q": "The water cycle is happening…", "a": "Constantly, all the time", "w": ["Only in summer", "Only when it rains", "Once a year"], "why": "The water cycle is a process that is happening constantly." },
+      { "q": "What happens during the water cycle?", "a": "Water changes from one state to another and back again", "w": ["Water disappears forever", "Water only falls as rain", "Water only moves in rivers"], "why": "It causes water to change from one state to another and then back again!" },
+      { "q": "What energy source fuels the water cycle?", "a": "The sun", "w": ["The wind", "The moon", "The ocean"], "why": "The sun's heat powers the water cycle.", "hint": "It shines on the ocean and warms it." },
+      { "q": "Which is NOT a kind of precipitation?", "a": "Evaporation", "w": ["Rain", "Snow", "Hail"], "why": "Precipitation is rain, snow, sleet or hail. Evaporation is liquid turning into gas." },
+      { "q": "Evaporation changes water from…", "a": "A liquid to a gas", "w": ["A gas to a liquid", "A liquid to a solid", "A solid to a gas"], "why": "Heat makes liquid water change to a gas (water vapor)." },
+      { "q": "Condensation changes water from…", "a": "A gas to a liquid", "w": ["A liquid to a gas", "A liquid to ice", "A solid to a gas"], "why": "Cool air turns water vapor into liquid droplets — clouds!" },
+      { "q": "Name the 4 kinds of precipitation.", "a": "Rain, snow, sleet and hail", "w": ["Rain, fog, dew and frost", "Rain, steam, mist and cloud", "Snow, ice, wind and rain"], "why": "Rain, snow, sleet and hail." }
+    ] },
+    { "t": "diagram", "id": "w-diagram", "skill": "Water cycle diagram", "list": [
+      { "focus": "evaporation", "a": "Evaporation", "why": "Heat from the sun makes ocean water rise as water vapor." },
+      { "focus": "condensation", "a": "Condensation", "why": "Cool air turns the vapor into tiny droplets that make a cloud." },
+      { "focus": "precipitation", "a": "Precipitation", "why": "Water droplets fall from the cloud as rain, snow, sleet or hail." },
+      { "focus": "runoff", "a": "Runoff", "why": "Rain that isn't absorbed by the soil flows back to the ocean." },
+      { "focus": "transpiration", "a": "Transpiration", "why": "Plants release water vapor — “plant sweat”." },
+      { "focus": "sun", "a": "The sun (energy source)", "why": "The sun's heat fuels the whole water cycle." }
+    ], "choices": ["Evaporation", "Condensation", "Precipitation", "Runoff", "Transpiration", "The sun (energy source)"] },
+    { "t": "seq", "id": "w-seq1", "skill": "Water cycle order", "title": "Put the water cycle in order", "steps": ["Evaporation", "Condensation", "Precipitation", "Runoff"], "why": "Evaporation → Condensation → Precipitation → Runoff, then it starts all over again." },
+    { "t": "seq", "id": "w-seq2", "skill": "Water cycle order", "title": "Tell the story of one water drop", "steps": ["The sun heats the ocean", "Water rises as vapor", "Vapor cools into cloud droplets", "Rain or snow falls", "Water flows back to the ocean"], "why": "The sun heats the ocean, vapor rises, it cools into clouds, falls as precipitation, and runs back to the ocean." }
+  ]
+}

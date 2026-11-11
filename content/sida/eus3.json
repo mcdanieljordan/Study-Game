@@ -1,0 +1,396 @@
+{
+ "id": "sida-eus3",
+ "profile": "sida",
+ "subject": "Math",
+ "title": "EUS 3 · Expressions, Equations & Inequalities",
+ "icon": "🧪",
+ "color": "#ffb84a",
+ "due": null,
+ "test": "Algebra",
+ "source": "C.A. Lyttle 2023 EUS study guide (merged_document.pdf / EUS7 Financial Literacy Highlights.pdf) — EUS 3 pp.7–10",
+ "units": [
+  {
+   "id": "u1",
+   "title": "Expressions",
+   "icon": "🔤",
+   "items": [
+    "a-terms1",
+    "a-qa1",
+    "g-ev",
+    "g-like",
+    "g-gem1",
+    "g-gem2"
+   ],
+   "lesson": [
+    {
+     "title": "GEMDAS",
+     "html": "<b>G</b>rouping symbols → <b>E</b>xponents → <b>M</b>ultiply/<b>D</b>ivide (left to right) → <b>A</b>dd/<b>S</b>ubtract (left to right). It's a convention — you just memorize it."
+    },
+    {
+     "title": "Only like terms combine",
+     "html": "2x + 5x = 7x, but 2 + 5x can't combine. A variable by itself has a coefficient of 1."
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Equations",
+   "icon": "⚖️",
+   "items": [
+    "a-terms2",
+    "a-qa2",
+    "g-e1",
+    "g-e2",
+    "g-e3"
+   ],
+   "lesson": [
+    {
+     "title": "4 steps for a one-step equation",
+     "html": "1) Name the operation happening to the variable. 2) Name its inverse. 3) Apply the inverse to BOTH sides. 4) Check by plugging the answer back in."
+    },
+    {
+     "title": "Why it works",
+     "html": "Identity property: do the SAME thing to both sides and nothing changes. Inverse property: opposites cancel."
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Inequalities",
+   "icon": "📈",
+   "items": [
+    "a-terms3",
+    "a-qa3",
+    "g-is",
+    "g-ig",
+    "g-iy"
+   ],
+   "lesson": [
+    {
+     "title": "Flip the sign!",
+     "html": "When you multiply or divide both sides by a NEGATIVE number, flip the inequality symbol."
+    },
+    {
+     "title": "Graphing",
+     "html": "Closed circle for ≥ or ≤ (included). Open circle for > or < (not included). A solid arrow shows all the solutions."
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "t": "terms",
+   "id": "a-terms1",
+   "skill": "Expression vocabulary",
+   "pairs": [
+    [
+     "Expression",
+     "A mathematical statement of terms and operations with no solution"
+    ],
+    [
+     "Like Terms",
+     "Terms that have something in common and can be combined, like 2x and 5x"
+    ],
+    [
+     "Unlike Terms",
+     "Terms that cannot be combined, like 2 and 5x"
+    ],
+    [
+     "Variable",
+     "A mystery number or a number that changes, represented by a letter or symbol"
+    ],
+    [
+     "Coefficient",
+     "A number multiplying a variable"
+    ],
+    [
+     "Constant",
+     "A number with no variable factor; a number by itself"
+    ],
+    [
+     "Grouping Symbols",
+     "Braces, brackets and parentheses that show which operations come first"
+    ],
+    [
+     "Exponent",
+     "A superscript number telling how many times to multiply the base by itself"
+    ],
+    [
+     "Order of Operations",
+     "The agreed order in which operations must be performed"
+    ],
+    [
+     "GEMDAS",
+     "Grouping, Exponents, Multiply & Divide, Add & Subtract"
+    ]
+   ]
+  },
+  {
+   "t": "terms",
+   "id": "a-terms2",
+   "skill": "Equation vocabulary",
+   "pairs": [
+    [
+     "Equation",
+     "Two expressions balanced on either side of an equality symbol; it has a precise solution"
+    ],
+    [
+     "One-Step Equation",
+     "An equation with one operation happening to the variable"
+    ],
+    [
+     "Two-Step Equation",
+     "An equation with two operations happening to the variable"
+    ],
+    [
+     "Complex Equation",
+     "An equation with a single variable on both sides"
+    ],
+    [
+     "Identity Property",
+     "Certain operations cause “no change” (A + 0 = A, A · 1 = A), which is why you can do the same thing to BOTH sides"
+    ],
+    [
+     "Inverse Property",
+     "When the exact opposite of an operation is applied, both cancel out"
+    ],
+    [
+     "Inverse Operation",
+     "The opposite of an arithmetic operation (add/subtract, multiply/divide)"
+    ]
+   ]
+  },
+  {
+   "t": "terms",
+   "id": "a-terms3",
+   "skill": "Inequality vocabulary",
+   "pairs": [
+    [
+     "Inequality",
+     "A statement with an infinite set of solutions made of expressions on either side of an inequality symbol"
+    ]
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "a-qa1",
+   "skill": "Expression ideas",
+   "list": [
+    {
+     "q": "Why do expressions with variables have no solution?",
+     "a": "Not enough information to know the variable's value",
+     "w": [
+      "They always equal zero",
+      "They are too long",
+      "Variables can't be added"
+     ],
+     "why": "You can simplify an expression, but you can't solve it."
+    },
+    {
+     "q": "Why does the Order of Operations work the way it does?",
+     "a": "It is a convention we all agreed on",
+     "w": [
+      "It can be figured out with logic",
+      "It is random each time",
+      "Only calculators know"
+     ],
+     "why": "It has to be memorized — you can't figure it out."
+    },
+    {
+     "q": "Why can you only combine LIKE terms?",
+     "a": "Quantity only makes sense when it refers to something specific",
+     "w": [
+      "Unlike terms are bigger",
+      "Calculators require it",
+      "Variables can't be added"
+     ],
+     "why": "2x + 3 can't be 5x — they're different things."
+    },
+    {
+     "q": "What is the coefficient of x by itself?",
+     "a": "1",
+     "w": [
+      "0",
+      "x",
+      "It has none"
+     ],
+     "why": "A variable by itself still has a coefficient of 1."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "a-qa2",
+   "skill": "Equation ideas",
+   "list": [
+    {
+     "q": "What is Step 1 of solving a one-step equation?",
+     "a": "Name the operation happening to the variable",
+     "w": [
+      "Check your answer",
+      "Subtract from the left only",
+      "Cross-multiply"
+     ],
+     "why": "First figure out what is being done to the variable."
+    },
+    {
+     "q": "What is the LAST step?",
+     "a": "Check by plugging the answer back in",
+     "w": [
+      "Flip the sign",
+      "Name the inverse",
+      "Add both sides"
+     ],
+     "why": "Plug it back in and see if the equation is still true."
+    },
+    {
+     "q": "On a number line, the solution of an equation looks like…",
+     "a": "A single closed dot",
+     "w": [
+      "A shaded arrow",
+      "An open circle with an arrow",
+      "A line segment"
+     ],
+     "why": "An equation has one precise answer: one closed dot."
+    },
+    {
+     "q": "Doing the same thing to BOTH sides works because of the…",
+     "a": "Identity property",
+     "w": [
+      "Distributive property",
+      "Commutative property",
+      "Zero pair"
+     ],
+     "why": "Identity: certain operations happen with “no change.”"
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "a-qa3",
+   "skill": "Inequality ideas",
+   "list": [
+    {
+     "q": "When do you flip the inequality symbol?",
+     "a": "When multiplying or dividing both sides by a negative",
+     "w": [
+      "When adding a negative",
+      "Every time",
+      "When the number is large"
+     ],
+     "why": "Multiplying/dividing by a negative turns both sides into their opposites."
+    },
+    {
+     "q": "An inequality's solution on a number line is…",
+     "a": "An arrow with a circle at the start",
+     "w": [
+      "A single closed dot",
+      "A closed line segment",
+      "Two dots"
+     ],
+     "why": "Inequalities have infinitely many solutions."
+    },
+    {
+     "q": "A closed circle means…",
+     "a": "The starting number is included (≥ or ≤)",
+     "w": [
+      "The number is not included",
+      "The answer is zero",
+      "The arrow stops"
+     ],
+     "why": "Closed = included. Open = not included."
+    },
+    {
+     "q": "Why must you be careful checking an inequality answer?",
+     "a": "The answers are a whole set of numbers, not one",
+     "w": [
+      "There are no answers",
+      "It only has one solution",
+      "You can't plug numbers in"
+     ],
+     "why": "Plug in one number from the answer set to test it."
+    }
+   ]
+  },
+  {
+   "t": "gen",
+   "id": "g-ev",
+   "gen": "ex-eval",
+   "n": 3,
+   "skill": "Evaluate expressions",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-like",
+   "gen": "ex-like",
+   "n": 4,
+   "skill": "Combine like terms",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-gem1",
+   "gen": "ex-gemdas",
+   "n": 3,
+   "skill": "GEMDAS (basic)",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-gem2",
+   "gen": "ex-gemdas",
+   "n": 3,
+   "skill": "GEMDAS (exponents)",
+   "level": 2
+  },
+  {
+   "t": "gen",
+   "id": "g-e1",
+   "gen": "eq-1step",
+   "n": 4,
+   "skill": "One-step equations",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-e2",
+   "gen": "eq-2step",
+   "n": 4,
+   "skill": "Two-step equations",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-e3",
+   "gen": "eq-both",
+   "n": 3,
+   "skill": "Variable on both sides",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-is",
+   "gen": "ineq-sym",
+   "n": 2,
+   "skill": "Inequality symbols",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-ig",
+   "gen": "ineq-graph",
+   "n": 4,
+   "skill": "Graph an inequality",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-iy",
+   "gen": "ineq-solve",
+   "n": 4,
+   "skill": "Solve an inequality",
+   "level": 1
+  }
+ ]
+}

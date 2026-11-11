@@ -1,0 +1,50 @@
+{
+  "id": "ensley-math-freq", "profile": "ensley", "subject": "Math", "title": "Frequency Tables", "icon": "📊", "color": "#38b6f2",
+  "due": null, "test": "Topic 5 · Collect & Organize Data",
+  "source": "Savvas Topic 5, Lesson 5-1 'Collect and Organize Data' (Another Look + Additional Practice, pp. 67–68)",
+  "notes": ["Questions 1–9 from the worksheet are included exactly (Zayla's color survey, favorite subject, picnic food). Question 7: science and reading tie at 6, so Sasha is not exactly right."],
+  "units": [
+    { "id": "u1", "title": "Tally marks", "icon": "🖍️", "lesson": [
+      { "title": "What is a frequency table?", "html": "A <b>frequency table</b> shows <b>how many</b> times each choice happens.<br>We use <b>tally marks</b> to count: four lines, then a slash across makes <b>5</b>." },
+      { "title": "Counting tallies", "html": "Count by <b>fives</b> for each group with a slash, then add the extra lines.<br>Example: two full groups and two extra lines = 5 + 5 + 2 = <b>12</b>" } ],
+      "items": ["m-concepts", "m-tally", "m-read"] },
+    { "id": "u2", "title": "Zayla's color survey", "icon": "🎨", "lesson": [
+      { "title": "Zayla's survey", "html": "Zayla asked 16 classmates their favorite color. <b>Tap each classmate</b> as you count them, then fill in the table." } ],
+      "items": ["m-zayla", "m-z1", "m-z2", "m-z3", "m-z4"] },
+    { "id": "u3", "title": "Favorite subject & picnic", "icon": "🍕", "lesson": [
+      { "title": "Reading tables to answer questions", "html": "<b>How many in all?</b> add every row.<br><b>How many more?</b> subtract.<br><b>How many did NOT…?</b> add the other rows (or total − that row)." } ],
+      "items": ["m-s5", "m-s6", "m-s7", "m-s8", "m-p9", "m-read2"] }
+  ],
+  "items": [
+    { "t": "qas", "id": "m-concepts", "skill": "Frequency table ideas", "list": [
+      { "q": "What does a frequency table show?", "a": "How many times each choice happens", "w": ["The biggest number only", "A picture of a graph", "Which choice is best"], "why": "A frequency table counts how often each choice shows up." },
+      { "q": "How many tally marks make one group with a slash?", "a": "5", "w": ["4", "10", "3"], "why": "Four lines plus a slash across = 5." },
+      { "q": "Four lines and a slash across them means…", "a": "5", "w": ["4", "6", "1"], "why": "The slash is the 5th mark." },
+      { "q": "A table says Red = 3, Blue = 7. What does the 7 tell you?", "a": "7 students chose blue", "w": ["Blue is the 7th color", "7 colors were picked", "Red is bigger"], "why": "The Number column tells how many chose that color." }
+    ] },
+    { "t": "gen", "id": "m-tally", "gen": "tally-read", "n": 4, "skill": "Reading tally marks" },
+    { "t": "gen", "id": "m-read", "gen": "freq-read", "n": 3, "skill": "Reading a frequency table" },
+    { "t": "counts", "id": "m-zayla", "skill": "Making a frequency table", "title": "Zayla's favorite colors",
+      "data": [["Akira", "Red"], ["Benson", "Yellow"], ["Daryl", "Blue"], ["Emmet", "Blue"], ["Hugo", "Green"], ["Cassie", "Red"], ["Piper", "Blue"], ["Yumi", "Yellow"], ["Jung", "Blue"], ["Dylan", "Green"], ["Jasmine", "Blue"], ["Hayden", "Red"], ["Jack", "Green"], ["Tami", "Blue"], ["Dakota", "Green"], ["Carlos", "Blue"]],
+      "cats": ["Red", "Blue", "Yellow", "Green"], "colors": { "Red": "#ff5f6d", "Blue": "#38b6f2", "Yellow": "#ffc94a", "Green": "#2fc99e" } },
+    { "t": "qas", "id": "m-z1", "skill": "Zayla's survey questions", "visual": { "freq": [["Red", 3], ["Blue", 7], ["Yellow", 2], ["Green", 4]], "title": "Our Favorite Colors" }, "list": [
+      { "id": "z1", "q": "How many students chose red or blue as their favorite color?", "num": 10, "why": "Red 3 + Blue 7 = 10.", "hint": "“Or” means add the two rows." } ] },
+    { "t": "qas", "id": "m-z2", "skill": "Zayla's survey questions", "visual": { "freq": [["Red", 3], ["Blue", 7], ["Yellow", 2], ["Green", 4]], "title": "Our Favorite Colors" }, "list": [
+      { "id": "z2", "q": "How many students did NOT choose blue as their favorite color?", "num": 9, "why": "3 + 2 + 4 = 9. (Or 16 total − 7 blue = 9.)", "hint": "Add every row except blue." } ] },
+    { "t": "qas", "id": "m-z3", "skill": "Zayla's survey questions", "visual": { "freq": [["Red", 3], ["Blue", 7], ["Yellow", 2], ["Green", 4]], "title": "Our Favorite Colors" }, "list": [
+      { "id": "z3", "q": "How many MORE students chose blue than yellow as their favorite color?", "num": 5, "why": "Blue 7 − Yellow 2 = 5.", "hint": "“How many more” means subtract." } ] },
+    { "t": "qas", "id": "m-z4", "skill": "Zayla's survey questions", "visual": { "freq": [["Red", 3], ["Blue", 7], ["Yellow", 2], ["Green", 4]], "title": "Our Favorite Colors" }, "list": [
+      { "id": "z4", "q": "How many students did Zayla survey in all?", "num": 16, "why": "3 + 7 + 2 + 4 = 16.", "hint": "Add all four numbers." } ] },
+    { "t": "qas", "id": "m-s5", "skill": "Favorite subject table", "visual": { "freq": [["Science", 6], ["Math", 4], ["Art", 5], ["Reading", 6]], "title": "Our Favorite Subject" }, "list": [
+      { "id": "s5", "q": "How many students were surveyed?", "num": 21, "why": "6 + 4 + 5 + 6 = 21.", "hint": "Add every row." } ] },
+    { "t": "qas", "id": "m-s6", "skill": "Favorite subject table", "visual": { "freq": [["Science", 6], ["Math", 4], ["Art", 5], ["Reading", 6]], "title": "Our Favorite Subject" }, "list": [
+      { "id": "s6", "q": "How many MORE students chose science than math as their favorite subject?", "num": 2, "why": "Science 6 − Math 4 = 2.", "hint": "Subtract." } ] },
+    { "t": "qas", "id": "m-s7", "skill": "Favorite subject table", "visual": { "freq": [["Science", 6], ["Math", 4], ["Art", 5], ["Reading", 6]], "title": "Our Favorite Subject" }, "list": [
+      { "id": "s7", "q": "Sasha said that science was the favorite subject of the most students. Do you agree?", "a": "Not exactly — science and reading are tied at 6", "w": ["Yes — science has the most all by itself", "No — math has the most", "No — art has the most"], "why": "Science 6 and Reading 6 are tied for the most.", "hint": "Look at the biggest numbers. Is there only one?" } ] },
+    { "t": "qas", "id": "m-s8", "skill": "Favorite subject table", "visual": { "freq": [["Science", 6], ["Math", 4], ["Art", 5], ["Reading", 6]], "title": "Our Favorite Subject" }, "list": [
+      { "id": "s8", "q": "Three more students were surveyed. One chose art and two chose math. What changes in the table?", "a": "Art becomes 6 and Math becomes 6", "w": ["Art becomes 7 and Math becomes 5", "Only Math changes", "Art becomes 5 and Math becomes 4"], "why": "Art 5 + 1 = 6. Math 4 + 2 = 6. The total is now 24.", "hint": "Add 1 to art and 2 to math." } ] },
+    { "t": "qas", "id": "m-p9", "skill": "Picnic food table", "visual": { "freq": [["Hamburger", 10], ["Pizza", 9], ["Hot dog", 5], ["Fried chicken", 7]], "title": "Food Choice for Picnic" }, "list": [
+      { "id": "p9", "q": "Jorge surveyed his classmates about picnic food. How many students did Jorge survey?", "num": 31, "opts": ["12", "19", "31", "45"], "why": "10 + 9 + 5 + 7 = 31.", "hint": "Add all four numbers." } ] },
+    { "t": "gen", "id": "m-read2", "gen": "freq-read", "n": 3, "skill": "Reading a frequency table" }
+  ]
+}

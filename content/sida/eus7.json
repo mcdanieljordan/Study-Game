@@ -1,0 +1,258 @@
+{
+ "id": "sida-eus7",
+ "profile": "sida",
+ "subject": "Math",
+ "title": "EUS 7 · Financial Literacy",
+ "icon": "🏦",
+ "color": "#ffb84a",
+ "due": null,
+ "test": "Financial literacy",
+ "source": "EUS7 Financial Literacy Highlights (C.A. Lyttle 2023)",
+ "units": [
+  {
+   "id": "u1",
+   "title": "Money words",
+   "icon": "📘",
+   "items": [
+    "f-terms",
+    "f-qa"
+   ],
+   "lesson": [
+    {
+     "title": "Finance is cycles",
+     "html": "Outputs in one process are inputs in another. Banks turn deposits into loans. Your spending is another person's income."
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Registers & budgets",
+   "icon": "🧾",
+   "items": [
+    "g-reg",
+    "g-bud",
+    "g-exp",
+    "g-fpct"
+   ],
+   "lesson": [
+    {
+     "title": "Check register",
+     "html": "Order transactions by date. Deposits and + transfers add. Withdrawals and − transfers subtract. Keep a running balance."
+    },
+    {
+     "title": "Percent of a number",
+     "html": "Convert the percent to a decimal and multiply: 50% of 10 = 0.5 · 10 = 5."
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Salaries, profit & college",
+   "icon": "🎓",
+   "items": [
+    "g-sal",
+    "g-prof",
+    "f-qa2"
+   ],
+   "lesson": [
+    {
+     "title": "Comparing salaries",
+     "html": "Subtract the salaries, multiply by the number of years, then subtract expenses like training or college."
+    },
+    {
+     "title": "% profit",
+     "html": "profit ÷ investment = x/100."
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "t": "terms",
+   "id": "f-terms",
+   "skill": "Financial vocabulary",
+   "pairs": [
+    [
+     "Budget",
+     "An estimate of income and spending used to make financial choices; lists categories, $ and %"
+    ],
+    [
+     "Check Register",
+     "A record of actual income and expenses used to verify budget tracking and account statements"
+    ],
+    [
+     "Credit",
+     "The trust that lets people or banks provide goods, services or money with the assurance they'll be paid back later"
+    ],
+    [
+     "Credit Card",
+     "A card used to borrow money to buy goods or services, to be paid back later"
+    ],
+    [
+     "Credit History",
+     "A record of a borrower's responsible repayment of debts"
+    ],
+    [
+     "Credit Report",
+     "A document describing a borrower's credit history, compiled by a private company"
+    ],
+    [
+     "Debit Card",
+     "A card that is linked to a checking account"
+    ],
+    [
+     "Deposit",
+     "Money placed into an account (+ on a check register)"
+    ],
+    [
+     "Withdrawal",
+     "Money taken out of an account (− on a check register)"
+    ],
+    [
+     "Transfer",
+     "Moving funds from one account to another; + or − on a check register"
+    ],
+    [
+     "Fixed Expense",
+     "Costs that do not change from month to month"
+    ],
+    [
+     "Variable Expense",
+     "Costs that change from month to month"
+    ]
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "f-qa",
+   "skill": "Why it matters",
+   "list": [
+    {
+     "q": "Why is it important to know how budgets and check registers work?",
+     "a": "Registers show how much money you have; budgets help you choose how to spend it",
+     "w": [
+      "They are required by law for kids",
+      "They make money grow",
+      "Banks pay you for them"
+     ],
+     "why": "Check registers ensure you know your balance; budgets let you make good choices."
+    },
+    {
+     "q": "A debit card is linked to…",
+     "a": "A checking account",
+     "w": [
+      "A loan",
+      "A credit report",
+      "A savings goal"
+     ],
+     "why": "A credit card borrows; a debit card spends your own money."
+    },
+    {
+     "q": "On a check register a deposit is…",
+     "a": "+ (adds to the balance)",
+     "w": [
+      "− (subtracts)",
+      "Ignored",
+      "Always zero"
+     ],
+     "why": "Deposits and + transfers add; withdrawals and − transfers subtract."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "f-qa2",
+   "skill": "Credit & college",
+   "list": [
+    {
+     "q": "How long do foreclosures and bankruptcies stay on your record?",
+     "a": "7 years",
+     "w": [
+      "1 year",
+      "2 years",
+      "Forever"
+     ],
+     "why": "They stay on your credit record for 7 years."
+    },
+    {
+     "q": "Which is NOT a primary way to pay for college?",
+     "a": "A credit card with no limit",
+     "w": [
+      "Savings",
+      "Scholarships",
+      "Student loans"
+     ],
+     "why": "Primary ways: savings, scholarships, grants, student loans, work-study."
+    },
+    {
+     "q": "A document describing your credit history is a…",
+     "a": "Credit report",
+     "w": [
+      "Check register",
+      "Budget",
+      "Debit card"
+     ],
+     "why": "It is compiled by a private company but used by banks and others."
+    },
+    {
+     "q": "Good credit helps you get approved for…",
+     "a": "Loans, a mortgage and credit cards",
+     "w": [
+      "A new name",
+      "A free college degree",
+      "Lower taxes only"
+     ],
+     "why": "Credit history affects loans, mortgages, credit cards, leasing and hiring."
+    }
+   ]
+  },
+  {
+   "t": "gen",
+   "id": "g-reg",
+   "gen": "fi-register",
+   "n": 4,
+   "skill": "Check register",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-bud",
+   "gen": "fi-budget",
+   "n": 3,
+   "skill": "Budget percents",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-exp",
+   "gen": "fi-exp",
+   "n": 3,
+   "skill": "Fixed vs variable",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-fpct",
+   "gen": "fi-pct",
+   "n": 3,
+   "skill": "Percent of a number",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-sal",
+   "gen": "fi-salary",
+   "n": 3,
+   "skill": "Compare salaries",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-prof",
+   "gen": "fi-profit",
+   "n": 3,
+   "skill": "% profit",
+   "level": 1
+  }
+ ]
+}

@@ -1,0 +1,270 @@
+{
+ "id": "sida-eus4",
+ "profile": "sida",
+ "subject": "Math",
+ "title": "EUS 4 · Proportionality",
+ "icon": "⚗️",
+ "color": "#ff6b6b",
+ "due": null,
+ "test": "Ratios, rates & proportions",
+ "source": "C.A. Lyttle 2023 EUS study guide (merged_document.pdf / EUS7 Financial Literacy Highlights.pdf) — EUS 4 pp.5–6",
+ "units": [
+  {
+   "id": "u1",
+   "title": "Ratios & rates",
+   "icon": "📏",
+   "items": [
+    "p-terms",
+    "p-qa",
+    "g-unit"
+   ],
+   "lesson": [
+    {
+     "title": "Ratio vs rate vs unit rate",
+     "html": "A <b>ratio</b> compares quantities. A <b>rate</b> compares different units. A <b>unit rate</b> has 1 in the denominator."
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Proportions & scale",
+   "icon": "🔨",
+   "items": [
+    "g-prop",
+    "g-scale",
+    "g-cmp",
+    "p-qa2"
+   ],
+   "lesson": [
+    {
+     "title": "Cross-multiplication in 4 steps",
+     "html": "1) Unit template (answer units on top). 2) Standard proportion. 3) Variable proportion. 4) Cross-multiply and solve."
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Percent change & interest",
+   "icon": "💰",
+   "items": [
+    "g-pct",
+    "g-int",
+    "p-qa3"
+   ],
+   "lesson": [
+    {
+     "title": "Formulas",
+     "html": "% of change: (new − old) ÷ old = x/100.<br>Simple interest: I = P · R · T (R in decimal form)."
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "t": "terms",
+   "id": "p-terms",
+   "skill": "Proportionality vocabulary",
+   "pairs": [
+    [
+     "Ratio",
+     "A way to compare two or more quantities; it can be written like a fraction"
+    ],
+    [
+     "Rate",
+     "A quantity measured per unit of something else"
+    ],
+    [
+     "Proportion",
+     "An equation in which two ratios, rates or fractions are set equal"
+    ],
+    [
+     "Ratio Table",
+     "A structured list of equivalent ratios"
+    ],
+    [
+     "Scale Factor",
+     "The number that tells how much a ratio is enlarged or shrunk"
+    ],
+    [
+     "Unit Rate",
+     "A ratio between two quantities where the denominator is 1"
+    ],
+    [
+     "Complex Fraction",
+     "A number written as a fraction that contains other fractions"
+    ],
+    [
+     "Equivalent",
+     "Equal; mathematical objects that can replace each other even if the symbols look different"
+    ],
+    [
+     "Additive Relationship",
+     "A relationship involving addition: something that happens once"
+    ],
+    [
+     "Multiplicative Relationship",
+     "A relationship involving multiplication: something that happens the same way repeatedly"
+    ]
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "p-qa",
+   "skill": "Proportion ideas",
+   "list": [
+    {
+     "q": "Why is using a scale factor the same as expanding or simplifying a fraction?",
+     "a": "They're the same thing with different names",
+     "w": [
+      "Scale factors only work with decimals",
+      "They give different answers",
+      "Simplifying changes the value"
+     ],
+     "why": "Ratios and rates are fractions and follow the same rules."
+    },
+    {
+     "q": "Why are all proportional relationships multiplicative?",
+     "a": "Proportions are equivalent fractions made by multiplying or dividing by a form of one",
+     "w": [
+      "They are made by adding the same number",
+      "They only use whole numbers",
+      "They never use fractions"
+     ],
+     "why": "Equivalent fractions come from multiplying/dividing."
+    },
+    {
+     "q": "A unit rate always has…",
+     "a": "1 in the denominator",
+     "w": [
+      "1 in the numerator",
+      "A decimal",
+      "A negative"
+     ],
+     "why": "“Per 1 unit.”"
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "p-qa2",
+   "skill": "Setting up proportions",
+   "list": [
+    {
+     "q": "In cross-multiplication, what comes FIRST?",
+     "a": "Decide the unit template (what units the answer is in)",
+     "w": [
+      "Multiply the numbers",
+      "Write the variable",
+      "Simplify"
+     ],
+     "why": "The focus (answer units) goes in the numerator."
+    },
+    {
+     "q": "How do you compare two ratios?",
+     "a": "Multiply each numerator by the other fraction's denominator",
+     "w": [
+      "Add the top numbers",
+      "Subtract the bottoms",
+      "Flip one ratio"
+     ],
+     "why": "Expand to a common denominator and compare numerators."
+    },
+    {
+     "q": "It is EXTREMELY important to…",
+     "a": "Set the ratios up as fractions the right way",
+     "w": [
+      "Round early",
+      "Use decimals",
+      "Use only whole numbers"
+     ],
+     "why": "Both numerators must represent the same part of the ratio."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "p-qa3",
+   "skill": "Percent change & interest",
+   "list": [
+    {
+     "q": "% of change = …",
+     "a": "(new − old) ÷ old",
+     "w": [
+      "(old − new) ÷ new",
+      "new ÷ old",
+      "(new + old) ÷ 2"
+     ],
+     "why": "Compare the change to the OLD value."
+    },
+    {
+     "q": "Simple interest formula:",
+     "a": "I = P · R · T",
+     "w": [
+      "I = P + R + T",
+      "I = P ÷ R · T",
+      "I = R ÷ T"
+     ],
+     "why": "Principal × Rate (decimal) × Time (years)."
+    },
+    {
+     "q": "In I = P · R · T, the rate must be written as…",
+     "a": "A decimal",
+     "w": [
+      "A whole number",
+      "A fraction of the time",
+      "A negative"
+     ],
+     "why": "5% → 0.05."
+    }
+   ]
+  },
+  {
+   "t": "gen",
+   "id": "g-unit",
+   "gen": "pr-unit",
+   "n": 4,
+   "skill": "Unit rates",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-prop",
+   "gen": "pr-prop",
+   "n": 5,
+   "skill": "Solve proportions",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-scale",
+   "gen": "pr-scale",
+   "n": 3,
+   "skill": "Scale factor",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-cmp",
+   "gen": "pr-compare",
+   "n": 3,
+   "skill": "Compare rates",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-pct",
+   "gen": "pr-pct",
+   "n": 4,
+   "skill": "Percent of change",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-int",
+   "gen": "pr-int",
+   "n": 3,
+   "skill": "Simple interest",
+   "level": 1
+  }
+ ]
+}

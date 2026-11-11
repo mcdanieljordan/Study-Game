@@ -1,0 +1,337 @@
+{
+ "id": "sida-eus5",
+ "profile": "sida",
+ "subject": "Math",
+ "title": "EUS 5 · Statistics",
+ "icon": "📊",
+ "color": "#b388ff",
+ "due": null,
+ "test": "Data & statistics",
+ "source": "C.A. Lyttle 2023 EUS study guide (merged_document.pdf / EUS7 Financial Literacy Highlights.pdf) — EUS 5 pp.3–4",
+ "units": [
+  {
+   "id": "u1",
+   "title": "Center & spread",
+   "icon": "🎯",
+   "items": [
+    "s-terms1",
+    "s-qa1",
+    "g-mean",
+    "g-med",
+    "g-mode",
+    "g-range"
+   ],
+   "lesson": [
+    {
+     "title": "Center vs spread",
+     "html": "<b>Center</b> (mean, median, mode) = the typical value. <b>Spread</b> (range, IQR) = how much the data varies."
+    },
+    {
+     "title": "Median",
+     "html": "Put the numbers in order first! The middle value (or the average of the two middle values)."
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "IQR, outliers & skew",
+   "icon": "🧱",
+   "items": [
+    "g-iqr",
+    "g-out",
+    "g-skew",
+    "s-qa2"
+   ],
+   "lesson": [
+    {
+     "title": "IQR",
+     "html": "Range of the middle 50% of the data: split the ordered data in halves, find Q1 and Q3, then Q3 − Q1."
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Graphs & plots",
+   "icon": "🗺️",
+   "items": [
+    "s-terms2",
+    "s-qa3",
+    "g-dot",
+    "g-freq"
+   ],
+   "lesson": [
+    {
+     "title": "Which graph?",
+     "html": "Dot plot, stem-and-leaf, bar graph, histogram (bars touch!), circle graph, box-and-whisker plot."
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "t": "terms",
+   "id": "s-terms1",
+   "skill": "Statistics vocabulary",
+   "pairs": [
+    [
+     "Measures of Center",
+     "Values that describe the typical data point (mean, median, mode)"
+    ],
+    [
+     "Mean",
+     "The average: the sum of all numbers divided by how many numbers there are"
+    ],
+    [
+     "Median",
+     "The middle number in a data set after it has been put in order"
+    ],
+    [
+     "Mode",
+     "The number or category that occurs most often; there can be none or more than one"
+    ],
+    [
+     "Measures of Spread",
+     "Indicators of how much a data set varies (range, IQR)"
+    ],
+    [
+     "Range",
+     "The difference between the largest and smallest numbers in a data set"
+    ],
+    [
+     "Interquartile Range",
+     "The difference between the first and third quartiles: the range of the middle 50%"
+    ],
+    [
+     "Outlier",
+     "A data point that deviates significantly from the other observations"
+    ],
+    [
+     "Skew",
+     "How much the data is concentrated on one side of the mean"
+    ]
+   ]
+  },
+  {
+   "t": "terms",
+   "id": "s-terms2",
+   "skill": "Graph vocabulary",
+   "pairs": [
+    [
+     "Frequency Table",
+     "A table of values or categories and how many times each appears"
+    ],
+    [
+     "Stem & Leaf Plot",
+     "Organizes data into “stems” (all digits but the last) and “leaves” (the last digit)"
+    ],
+    [
+     "Dot Plot",
+     "A graph that shows each data point as a dot above a number line"
+    ],
+    [
+     "Bar Graph",
+     "A graph that compares categories of things"
+    ],
+    [
+     "Circle Graph",
+     "A graph of categories that total 100%, drawn as wedges of a circle"
+    ],
+    [
+     "% Bar Chart",
+     "A graph of categories that total 100% shown as a single column or row"
+    ],
+    [
+     "Histogram",
+     "Bars of different heights showing how ranges of values are distributed; the bars touch"
+    ],
+    [
+     "Box & Whisker Plot",
+     "A graph that shows the range, IQR and median of a data set"
+    ]
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "s-qa1",
+   "skill": "Statistics ideas",
+   "list": [
+    {
+     "q": "What can statistics study?",
+     "a": "Things that have variability — things that change",
+     "w": [
+      "Things that never change",
+      "Only numbers",
+      "Only averages"
+     ],
+     "why": "If something never changes, there's nothing to describe with statistics."
+    },
+    {
+     "q": "The heights (in inches) of everyone in a room are…",
+     "a": "Numerical data",
+     "w": [
+      "Categorical data",
+      "Not data",
+      "Both"
+     ],
+     "why": "They're numbers."
+    },
+    {
+     "q": "The different hair colors of everyone in a room are…",
+     "a": "Categorical data",
+     "w": [
+      "Numerical data",
+      "Not data",
+      "Quantitative"
+     ],
+     "why": "Categories you count."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "s-qa2",
+   "skill": "Outliers & skew",
+   "list": [
+    {
+     "q": "A right (positive) skew means…",
+     "a": "There is a tail of outliers on the right",
+     "w": [
+      "There is a tail on the left",
+      "The data is symmetric",
+      "The mean is zero"
+     ],
+     "why": "Skew is named for the side of the tail."
+    },
+    {
+     "q": "No two points in a data set can vary by more than the…",
+     "a": "Range",
+     "w": [
+      "Mean",
+      "Mode",
+      "Median"
+     ],
+     "why": "Range is the maximum possible variability."
+    },
+    {
+     "q": "The IQR describes…",
+     "a": "The middle 50% of the data",
+     "w": [
+      "The whole data set",
+      "The outliers",
+      "The top 25%"
+     ],
+     "why": "Q3 − Q1."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "s-qa3",
+   "skill": "Reading graphs",
+   "list": [
+    {
+     "q": "What's different about a histogram compared to a bar graph?",
+     "a": "The bars touch because each shows a range of values",
+     "w": [
+      "It uses circles",
+      "It has no bars",
+      "It shows percents only"
+     ],
+     "why": "Each bar continues into the next range."
+    },
+    {
+     "q": "Step 1 of a stem-and-leaf plot:",
+     "a": "Put the data in order from least to greatest",
+     "w": [
+      "Draw the leaves",
+      "Find the mean",
+      "Draw a circle"
+     ],
+     "why": "Then group by stem and list the leaves."
+    },
+    {
+     "q": "In a dot plot, you put a dot…",
+     "a": "Above the number line for every value in the data",
+     "w": [
+      "Below the axis for each category",
+      "Only at the mean",
+      "Only at the mode"
+     ],
+     "why": "One dot per data point."
+    }
+   ]
+  },
+  {
+   "t": "gen",
+   "id": "g-mean",
+   "gen": "st-mean",
+   "n": 4,
+   "skill": "Mean",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-med",
+   "gen": "st-median",
+   "n": 4,
+   "skill": "Median",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-mode",
+   "gen": "st-mode",
+   "n": 3,
+   "skill": "Mode",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-range",
+   "gen": "st-range",
+   "n": 3,
+   "skill": "Range",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-iqr",
+   "gen": "st-iqr",
+   "n": 4,
+   "skill": "IQR",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-out",
+   "gen": "st-outlier",
+   "n": 3,
+   "skill": "Outliers",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-skew",
+   "gen": "st-skew",
+   "n": 2,
+   "skill": "Skew",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-dot",
+   "gen": "st-dot",
+   "n": 3,
+   "skill": "Read a dot plot",
+   "level": 1
+  },
+  {
+   "t": "gen",
+   "id": "g-freq",
+   "gen": "st-freq",
+   "n": 3,
+   "skill": "Read a frequency table",
+   "level": 1
+  }
+ ]
+}
