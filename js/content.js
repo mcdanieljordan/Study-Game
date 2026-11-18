@@ -3,7 +3,7 @@
 //  • multiple-choice distractors come from real misconceptions (the worksheet's own wrong spellings, etc.)
 //  • practice order = what is due / weak first (spaced repetition), unseen items next
 import { shuffle, rnd, rint, sample, uniq, esc } from './util.js';
-import { makeQ, tallySVG, tableHTML, waterCycleSVG } from './gen.js';
+import { makeQ, tallySVG, tableHTML, waterCycleSVG, dotplotSVG } from './gen.js';
 import { strength, isDue } from './store.js';
 
 const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -128,6 +128,7 @@ export function buildQ(P, pack, it, mode = 'auto', k = 0) {
     case 'seq': return { fmt: 'order', html: esc(it.title || 'Put these in order'), steps: it.steps, answer: it.steps.join('|'), why: it.why || '' };
     case 'counts': return { fmt: 'counts', html: `Make a frequency table.<br><b>${esc(it.title)}</b>`, data: it.data, cats: it.cats, colors: it.colors, answer: 'counts', why: 'Count each color — then check the numbers add up to ' + it.data.length + '.' };
     case 'story': return storyQ(pack, it);
+    case 'dots': return dotsQ(it);
     case 'gen': { const q = makeQ(it.gen, it.level || 1); if (q.opts && q.fmt === 'mc') q.opts = q.opts.slice(); return q; }
     default: return { fmt: 'mc', html: 'Unknown item', opts: ['ok'], answer: 'ok' };
   }
@@ -189,4 +190,20 @@ function wordQ(P, pack, it, mode) {
       const o = uniq([it.plural, w + 's', w + 'es', w.replace(/y$/, 'ies')]); return { ...base, fmt: 'mc', html: `Which is the plural of <b>${w}</b>?`, answer: it.plural, opts: o.length < 4 ? [...o, w + 'ss'] : o, hint: 'If it hisses (s, sh, ch, x), add -es.', why: `One ${w}, two ${it.plural}.` };
     }
   }
+}
+
+// Dot-plot questions are computed from real worksheet data, so every answer key is correct by construction.
+function dotsQ(it) {
+  const d = it.data, cnt = {}; d.forEach(v => cnt[v] = (cnt[v] || 0) + 1);
+  const lo = Math.min(...d), hi = Math.max(...d), vals = Array.from({ length: hi - lo + 1 }, (_, i) => lo + i), mx = Math.max(...Object.values(cnt));
+  const modes = Object.keys(cnt).filter(k => cnt[k] === mx).map(Number), none = vals.filter(v => !cnt[v]);
+  const kinds = ['count', 'total', 'atleast', 'hilo']; if (modes.length === 1) kinds.push('mode', 'mode'); if (none.length) kinds.push('none');
+  const kind = rnd(kinds), vhtml = `<div class="vis-title">${esc(it.title)}</div>` + dotplotSVG(d), base = { vhtml, skill: it.skill };
+  const near = (ans, k = 3) => uniq([ans + 1, ans - 1, ans + 2, ans - 2].filter(x => x >= 0 && x !== ans)).slice(0, k);
+  if (kind === 'mode') return { ...base, fmt: 'mc', html: 'Which number happened <b>most often</b>?', answer: String(modes[0]), opts: [String(modes[0]), ...sample(vals.filter(v => v !== modes[0]), 3).map(String)], hint: 'Find the tallest stack of dots.', why: `${modes[0]} has ${mx} dots — the most.` };
+  if (kind === 'none') return { ...base, fmt: 'mc', html: 'Which number has <b>no dots</b>?', answer: String(none[0]), opts: uniq([String(none[0]), ...sample(vals.filter(v => cnt[v]), 3).map(String)]), hint: 'Look for a number with nothing above it.', why: `Nothing is above ${none[0]}, so it never happened.` };
+  if (kind === 'total') return { ...base, fmt: 'num', html: 'How many dots are there <b>in all</b>?', answer: d.length, hint: 'Each dot is one piece of data. Count every dot.', why: `${d.length} dots in all.` };
+  if (kind === 'atleast') { const x = vals[Math.floor(vals.length / 2)], n = d.filter(v => v >= x).length; return { ...base, fmt: 'num', html: `How many dots are above <b>${x} or higher</b>?`, answer: n, hint: `Count the dots above ${x} and every number after it.`, why: `${vals.filter(v => v >= x).map(v => cnt[v] || 0).join(' + ')} = ${n}.` }; }
+  if (kind === 'hilo') { const hiQ = Math.random() < .5; return { ...base, fmt: 'num', html: `What is the <b>${hiQ ? 'highest' : 'lowest'}</b> number that has a dot?`, answer: hiQ ? hi : lo, hint: `Look ${hiQ ? 'right' : 'left'} along the number line for the last dot.`, why: `The ${hiQ ? 'highest' : 'lowest'} number with a dot is ${hiQ ? hi : lo}.` }; }
+  const v = rnd(vals.filter(x => cnt[x])); return { ...base, fmt: 'num', html: `How many dots are above the <b>${v}</b>?`, answer: cnt[v], hint: 'Count the dots in that stack.', why: `${cnt[v]} dot${cnt[v] === 1 ? '' : 's'} above ${v}.` };
 }

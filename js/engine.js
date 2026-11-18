@@ -133,7 +133,7 @@ function record(q, ok1, revealed, resp) {
     for (const [w, id] of Object.entries(q.ids)) { const good = (per[w] ? per[w].every(Boolean) : true) && RUN.tries === 0 ? true : (per[w] ? per[w].every(Boolean) : false); srsUpdate(p, id, { ok1: good, revealed, ms: ms / Object.keys(q.ids).length, testISO }); logAnswer(p, { id, pk: RUN.packId, ok: good ? 1 : 0, tr: RUN.tries, ms: 0, fmt: 'story' }); }
   } else {
     srsUpdate(p, q.id, { ok1, revealed, ms, testISO });
-    logAnswer(p, { id: q.id, pk: RUN.packId, sk: q.skill, ok: ok1 ? 1 : 0, tr: RUN.tries, ms, fmt: q.fmt, ...(ok1 ? {} : { r: String(resp ?? '').slice(0, 40) }) });
+    logAnswer(p, { id: q.id, pk: RUN.packId, sk: q.skill, ok: ok1 ? 1 : 0, tr: RUN.tries, ms, fmt: q.fmt, ...(q.teks ? { tk: q.teks } : {}), ...(ok1 ? {} : { r: String(resp ?? '').slice(0, 40) }) });
   }
   RUN.mainDone++; RUN.sinceBreak++;
 }
@@ -202,6 +202,7 @@ async function finishRun() {
   let firstTime = false, improved = false;
   if (r.nodeId) { const prev = p.nodes[r.nodeId]; firstTime = !prev; improved = !prev || stars > (prev.stars || 0); p.nodes[r.nodeId] = { stars: Math.max(stars, prev?.stars || 0), best: Math.max(acc, prev?.best || 0), done: true, t: Date.now(), n: (prev?.n || 0) + 1 }; if (firstTime) addBlocks(BLOCKS_PER_BUILD); }
   p.stars = Object.values(p.nodes).reduce((a, n) => a + (n.stars || 0), 0);
+  if (r.assignmentId) { const a = (p.settings.assignments || []).find(x => x.id === r.assignmentId); if (a) { a.done = Date.now(); a.acc = acc; a.n = r.mainDone; a.first = r.first; } }
   logSession(p, { pk: r.packId, node: r.nodeId, kind: r.kind, q: r.mainDone, first: r.first, xp: r.xp, stars, ms: Date.now() - r.tstart, done: 1 });
   const granted = ENV.grantRewards(r.profile, { stars, firstTime, leveled: r.leveled, improved });
   save(r.profile); RUN = null; document.body.classList.remove('calm');

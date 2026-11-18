@@ -10,6 +10,16 @@ buzzers / point penalties, pick-1-of-3 avatar rewards, no dark patterns, no trac
 * **Grown-ups** (math gate) — readiness per test, strengths / needs-practice, most-missed questions *and what was typed*, activity charts,
   spaced-repetition boxes, test dates, family sync, backup/restore, content library.
 
+## Grown-up controls (PIN)
+The first time a grown-up opens **Grown-ups** the app asks them to create a 4–6 digit PIN (shared across devices when family sync is on).
+Anything a child sees as locked — levels, games, avatar items — can be opened with that PIN, either right on the lock ("Grown-up override")
+or in bulk under **Grown-ups → Overrides** (open every level/game/item, open or clear a whole pack, give a reward, +XP, grow the world).
+
+## TEKS mini-quizzes
+**Grown-ups → TEKS quiz** reads the TEKS standards and the checked, TEKS-tagged question bank straight from the family Supabase project
+(`teks_items`, `question_bank`; public read only). Pick a grade/subject, tick one standard or a whole strand, choose 5–20 questions, then
+*Start now* with the child or *Assign* it (it appears on their home screen). Sets can be saved. Results show per standard in each child's detail page.
+
 ## How learning works
 Pathway = Learn (try-first pre-test → lesson cards → questions) → Practice → Challenge (construct-response) → Test Day Boss.
 Every answer is tracked by a Leitner spaced-repetition scheduler (compressed to finish before the test date). Smart Review, skill practice,

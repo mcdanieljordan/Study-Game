@@ -33,3 +33,10 @@ Put it in the pack's `"notes": [...]` — it shows up under **Grown-ups → Cont
 cd Study-Game && python3 -m http.server 8123     # then open http://localhost:8123
 ```
 (ES modules need a web server; opening `index.html` straight from disk won't work.)
+
+## Item types added later
+| `t` | What it is | Becomes |
+|---|---|---|
+| `dots` | `{title, data:[…]}` raw numbers | unlimited dot-plot questions (most often, how many dots, none, highest/lowest…) computed from the data, so the answers are always right |
+
+Per-pack `due` dates can also be overridden by a grown-up in **Grown-ups → Tests**.

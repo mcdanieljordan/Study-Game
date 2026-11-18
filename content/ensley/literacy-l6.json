@@ -1,0 +1,1496 @@
+{
+ "id": "ensley-lit-l6",
+ "profile": "ensley",
+ "subject": "Literacy",
+ "title": "Lesson 6 Test Prep",
+ "icon": "📚",
+ "color": "#8f5cf2",
+ "due": "2026-11-20",
+ "test": "Lesson 6 Summative Test · Fri 11/20",
+ "source": "BASIS Cedar Park Grade 2 Literacy: Lesson 6 Study Guide, Review Packet, Homework & Answer Key, Days 6–10",
+ "notes": [
+  "Built from the Lesson 6 Study Guide + Review Packet answer key. The 15 spelling words are in the 'Lesson 6 Words' pathway.",
+  "The Day 8 'Applied Concepts' slides are images and could not be read — send a photo of those if they matter."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "ar · ch · oo · bt",
+   "icon": "🔤",
+   "items": [
+    "ph",
+    "ph-sort",
+    "ph-bt"
+   ],
+   "lesson": [
+    {
+     "title": "ar, ch, oo",
+     "html": "<b>ar</b> says /är/ (R-controlled vowel): car, garden.<br><b>ch</b> says /ch/ (chair), /k/ (school), /sh/ (chef).<br><b>oo</b> says /ö/ (moon), /ü/ (book), /ō/ (door)."
+    },
+    {
+     "title": "Advanced phonogram bt",
+     "html": "<b>bt</b> says /t/ in words from Latin: doubt, debt. The b is silent. We mark advanced phonograms with an <b>A</b>."
+    },
+    {
+     "title": "Sort the phonograms",
+     "html": "Consonants: ch th ck ng sh qu · Multi-letter vowels: ee ea ai ay oi oy oo · R-controlled vowels: ar or er"
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Schwa & spelling rules",
+   "icon": "🌀",
+   "items": [
+    "sch",
+    "rules"
+   ],
+   "lesson": [
+    {
+     "title": "Schwa /ә/",
+     "html": "A lazy vowel in an unstressed syllable or word: /ŭ/ or /ĭ/. Hand under your chin: the syllable that opens your mouth wider is stressed. Left journal page: human, gallon, basket, broken. Right page: the, a, was, of."
+    },
+    {
+     "title": "Rules 10 · 30 · 31.1",
+     "html": "<b>Rule 10</b> broad A: ball, water. <b>Rule 30</b> double F, L, S after a single vowel: cliff, full, glass. <b>Rule 31.1</b> schwa in an unstressed syllable or word."
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Grammar & commas",
+   "icon": "✍️",
+   "items": [
+    "gram",
+    "com"
+   ],
+   "lesson": [
+    {
+     "title": "Noun · Adjective · Article",
+     "html": "Find the <b>noun</b> first. An <b>adjective</b> tells what kind. <b>A, an, the</b> are article adjectives. a full moon = A Adj N."
+    },
+    {
+     "title": "Commas in a series",
+     "html": "Two items: no comma (sun and moon). Three or more: commas + and — balls, cards, toys, and books."
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Word parts & vocabulary",
+   "icon": "🧩",
+   "items": [
+    "l6-morph",
+    "morph",
+    "para"
+   ],
+   "lesson": [
+    {
+     "title": "Morphemes",
+     "html": "pend = to hang · fend = to strike · part = separate · spect = to look · quart = four · plaint = lament"
+    },
+    {
+     "title": "Compound words & suffixes",
+     "html": "tooth + brush · class + room · fear + less · smooth + est · quart + er"
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "t": "qas",
+   "id": "ph",
+   "skill": "Phonograms ar · ch · oo",
+   "list": [
+    {
+     "q": "Which phonogram says /är/ as in car and garden?",
+     "a": "ar",
+     "w": [
+      "or",
+      "er",
+      "oo"
+     ],
+     "why": "ar is an R-controlled vowel: /är/."
+    },
+    {
+     "q": "What are the three sounds of ch?",
+     "a": "/ch/, /k/ and /sh/",
+     "w": [
+      "/ch/, /j/ and /s/",
+      "/k/, /g/ and /sh/",
+      "/th/, /ch/ and /sh/"
+     ],
+     "why": "ch says /ch/ (chair), /k/ (school) and /sh/ (chef)."
+    },
+    {
+     "q": "Which sound does ch say in “school”?",
+     "a": "/k/",
+     "w": [
+      "/ch/",
+      "/sh/",
+      "/t/"
+     ],
+     "why": "In school, ch says /k/."
+    },
+    {
+     "q": "Which sound does ch say in “chair”?",
+     "a": "/ch/",
+     "w": [
+      "/k/",
+      "/sh/",
+      "/s/"
+     ],
+     "why": "In chair, ch says /ch/."
+    },
+    {
+     "q": "Which sound does ch say in “chef”?",
+     "a": "/sh/",
+     "w": [
+      "/ch/",
+      "/k/",
+      "/j/"
+     ],
+     "why": "In chef, ch says /sh/."
+    },
+    {
+     "q": "Which sound does ch say in “sandwich”?",
+     "a": "/ch/",
+     "w": [
+      "/k/",
+      "/sh/",
+      "/g/"
+     ],
+     "why": "In sandwich, ch says /ch/."
+    },
+    {
+     "q": "oo has three sounds. Which are they?",
+     "a": "/ö/ (moon), /ü/ (book) and /ō/ (door)",
+     "w": [
+      "/ä/, /ĕ/ and /ĭ/",
+      "/ö/ (moon), /ä/ (car) and /ĭ/ (sit)",
+      "/ū/, /ŭ/ and /ŏ/"
+     ],
+     "why": "oo says /ö/ as in moon, /ü/ as in book, /ō/ as in door."
+    },
+    {
+     "q": "In which word does oo say /ü/ (like book)?",
+     "a": "book",
+     "w": [
+      "moon",
+      "cool",
+      "spoon"
+     ],
+     "why": "book has oo saying /ü/. In moon and cool it says /ö/."
+    },
+    {
+     "q": "Fill in the phonogram: g___den",
+     "a": "ar",
+     "w": [
+      "ch",
+      "oo",
+      "bt"
+     ],
+     "why": "garden: g + ar + d + e + n.",
+     "hint": "The sound is /är/."
+    },
+    {
+     "q": "Fill in the phonogram: ___air (says /ch/)",
+     "a": "ch",
+     "w": [
+      "ar",
+      "oo",
+      "bt"
+     ],
+     "why": "chair starts with ch saying /ch/."
+    },
+    {
+     "q": "Fill in the phonogram: m___n",
+     "a": "oo",
+     "w": [
+      "ar",
+      "ch",
+      "bt"
+     ],
+     "why": "moon = m + oo + n."
+    },
+    {
+     "q": "Fill in the phonogram: s___ool (says /k/)",
+     "a": "ch",
+     "w": [
+      "ar",
+      "oo",
+      "bt"
+     ],
+     "why": "school = s + ch + oo + l, and ch says /k/."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "ph-sort",
+   "skill": "Sorting phonograms",
+   "list": [
+    {
+     "q": "What kind of phonogram is “ch”?",
+     "a": "consonant",
+     "w": [
+      "multi-letter vowel",
+      "R-controlled vowel"
+     ],
+     "why": "ch is a consonant.",
+     "hint": "Think: consonant, multi-letter vowel, or R-controlled vowel?"
+    },
+    {
+     "q": "What kind of phonogram is “th”?",
+     "a": "consonant",
+     "w": [
+      "multi-letter vowel",
+      "R-controlled vowel"
+     ],
+     "why": "th is a consonant.",
+     "hint": "Think: consonant, multi-letter vowel, or R-controlled vowel?"
+    },
+    {
+     "q": "What kind of phonogram is “ck”?",
+     "a": "consonant",
+     "w": [
+      "multi-letter vowel",
+      "R-controlled vowel"
+     ],
+     "why": "ck is a consonant.",
+     "hint": "Think: consonant, multi-letter vowel, or R-controlled vowel?"
+    },
+    {
+     "q": "What kind of phonogram is “ng”?",
+     "a": "consonant",
+     "w": [
+      "multi-letter vowel",
+      "R-controlled vowel"
+     ],
+     "why": "ng is a consonant.",
+     "hint": "Think: consonant, multi-letter vowel, or R-controlled vowel?"
+    },
+    {
+     "q": "What kind of phonogram is “sh”?",
+     "a": "consonant",
+     "w": [
+      "multi-letter vowel",
+      "R-controlled vowel"
+     ],
+     "why": "sh is a consonant.",
+     "hint": "Think: consonant, multi-letter vowel, or R-controlled vowel?"
+    },
+    {
+     "q": "What kind of phonogram is “qu”?",
+     "a": "consonant",
+     "w": [
+      "multi-letter vowel",
+      "R-controlled vowel"
+     ],
+     "why": "qu is a consonant.",
+     "hint": "Think: consonant, multi-letter vowel, or R-controlled vowel?"
+    },
+    {
+     "q": "What kind of phonogram is “ee”?",
+     "a": "multi-letter vowel",
+     "w": [
+      "consonant",
+      "R-controlled vowel"
+     ],
+     "why": "ee is a multi-letter vowel.",
+     "hint": "Think: consonant, multi-letter vowel, or R-controlled vowel?"
+    },
+    {
+     "q": "What kind of phonogram is “ea”?",
+     "a": "multi-letter vowel",
+     "w": [
+      "consonant",
+      "R-controlled vowel"
+     ],
+     "why": "ea is a multi-letter vowel.",
+     "hint": "Think: consonant, multi-letter vowel, or R-controlled vowel?"
+    },
+    {
+     "q": "What kind of phonogram is “ai”?",
+     "a": "multi-letter vowel",
+     "w": [
+      "consonant",
+      "R-controlled vowel"
+     ],
+     "why": "ai is a multi-letter vowel.",
+     "hint": "Think: consonant, multi-letter vowel, or R-controlled vowel?"
+    },
+    {
+     "q": "What kind of phonogram is “ay”?",
+     "a": "multi-letter vowel",
+     "w": [
+      "consonant",
+      "R-controlled vowel"
+     ],
+     "why": "ay is a multi-letter vowel.",
+     "hint": "Think: consonant, multi-letter vowel, or R-controlled vowel?"
+    },
+    {
+     "q": "What kind of phonogram is “oi”?",
+     "a": "multi-letter vowel",
+     "w": [
+      "consonant",
+      "R-controlled vowel"
+     ],
+     "why": "oi is a multi-letter vowel.",
+     "hint": "Think: consonant, multi-letter vowel, or R-controlled vowel?"
+    },
+    {
+     "q": "What kind of phonogram is “oy”?",
+     "a": "multi-letter vowel",
+     "w": [
+      "consonant",
+      "R-controlled vowel"
+     ],
+     "why": "oy is a multi-letter vowel.",
+     "hint": "Think: consonant, multi-letter vowel, or R-controlled vowel?"
+    },
+    {
+     "q": "What kind of phonogram is “oo”?",
+     "a": "multi-letter vowel",
+     "w": [
+      "consonant",
+      "R-controlled vowel"
+     ],
+     "why": "oo is a multi-letter vowel.",
+     "hint": "Think: consonant, multi-letter vowel, or R-controlled vowel?"
+    },
+    {
+     "q": "What kind of phonogram is “ar”?",
+     "a": "R-controlled vowel",
+     "w": [
+      "consonant",
+      "multi-letter vowel"
+     ],
+     "why": "ar is a R-controlled vowel.",
+     "hint": "Think: consonant, multi-letter vowel, or R-controlled vowel?"
+    },
+    {
+     "q": "What kind of phonogram is “or”?",
+     "a": "R-controlled vowel",
+     "w": [
+      "consonant",
+      "multi-letter vowel"
+     ],
+     "why": "or is a R-controlled vowel.",
+     "hint": "Think: consonant, multi-letter vowel, or R-controlled vowel?"
+    },
+    {
+     "q": "What kind of phonogram is “er”?",
+     "a": "R-controlled vowel",
+     "w": [
+      "consonant",
+      "multi-letter vowel"
+     ],
+     "why": "er is a R-controlled vowel.",
+     "hint": "Think: consonant, multi-letter vowel, or R-controlled vowel?"
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "ph-bt",
+   "skill": "Advanced phonogram bt",
+   "list": [
+    {
+     "q": "What sound does the advanced phonogram bt say?",
+     "a": "/t/",
+     "w": [
+      "/b/",
+      "/bt/",
+      "/d/"
+     ],
+     "why": "bt says /t/ — the b is silent."
+    },
+    {
+     "q": "bt says /t/ in words that came from…",
+     "a": "Latin",
+     "w": [
+      "French",
+      "Spanish",
+      "Old English"
+     ],
+     "why": "doubt and debt came from Latin."
+    },
+    {
+     "q": "Which words have the phonogram bt?",
+     "a": "doubt and debt",
+     "w": [
+      "boat and bat",
+      "bet and bat",
+      "boat and bet"
+     ],
+     "why": "doubt and debt have bt."
+    },
+    {
+     "q": "Write the phonograms in debt.",
+     "a": "d + e + bt",
+     "w": [
+      "d + e + b + t",
+      "de + bt",
+      "d + eb + t"
+     ],
+     "why": "debt = d + e + bt."
+    },
+    {
+     "q": "Write the phonograms in doubt.",
+     "a": "d + ou + bt",
+     "w": [
+      "d + o + ubt",
+      "do + ubt",
+      "d + ou + b + t"
+     ],
+     "why": "doubt = d + ou + bt."
+    },
+    {
+     "q": "What do we write above an advanced phonogram like bt?",
+     "a": "An A",
+     "w": [
+      "A star",
+      "A line",
+      "Two dots"
+     ],
+     "why": "Advanced phonograms are used less often, so we mark them with an A."
+    },
+    {
+     "q": "Finish the sentence: Do not ______ yourself.",
+     "a": "doubt",
+     "w": [
+      "debt",
+      "boat",
+      "bat"
+     ],
+     "why": "Do not doubt yourself."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "sch",
+   "skill": "Schwa",
+   "list": [
+    {
+     "q": "Schwa is a lazy vowel sound. It sounds like…",
+     "a": "/ŭ/ or /ĭ/",
+     "w": [
+      "/ä/ or /ō/",
+      "/ē/ or /ā/",
+      "/ö/ or /ü/"
+     ],
+     "why": "Schwa sounds like /ŭ/ or /ĭ/."
+    },
+    {
+     "q": "Hand under your chin, say “morning.” Which syllable is stressed?",
+     "a": "mor",
+     "w": [
+      "ning",
+      "Both the same",
+      "Neither"
+     ],
+     "why": "The syllable that opens your mouth wider is stressed: MOR-ning."
+    },
+    {
+     "q": "In “basket,” which syllable is unstressed (lazy)?",
+     "a": "ket",
+     "w": [
+      "bas",
+      "Both",
+      "Neither"
+     ],
+     "why": "BAS-ket: the unstressed syllable is ket."
+    },
+    {
+     "q": "In “basket,” which vowel says the schwa sound?",
+     "a": "e (in ket)",
+     "w": [
+      "a (in bas)",
+      "Both a and e",
+      "None"
+     ],
+     "why": "The e in ket is lazy: bas-kәt."
+    },
+    {
+     "q": "Which words are unstressed (schwa) in “The cat sat on a chair”?",
+     "a": "the and a",
+     "w": [
+      "cat and sat",
+      "on and chair",
+      "sat and on"
+     ],
+     "why": "Small words like the and a are often unstressed."
+    },
+    {
+     "q": "True or false: a stressed syllable has a clearly pronounced vowel.",
+     "a": "True",
+     "w": [
+      "False"
+     ],
+     "why": "Stressed syllables have a clear vowel."
+    },
+    {
+     "q": "Spelling Journal: which page do you write “human” on?",
+     "a": "Left page",
+     "w": [
+      "Right page"
+     ],
+     "why": "Left page = unstressed syllable in a word with more than one syllable."
+    },
+    {
+     "q": "Spelling Journal: which page do you write “the” on?",
+     "a": "Right page",
+     "w": [
+      "Left page"
+     ],
+     "why": "Right page = a one-syllable unstressed word (the, a, was)."
+    },
+    {
+     "q": "Which words go on the LEFT page?",
+     "a": "gallon and broken",
+     "w": [
+      "was and a",
+      "the and was",
+      "a and gallon"
+     ],
+     "why": "Left: unstressed syllables in longer words (gallon, broken)."
+    },
+    {
+     "q": "Which words go on the RIGHT page?",
+     "a": "was and a",
+     "w": [
+      "gallon and broken",
+      "broken and a",
+      "gallon and was"
+     ],
+     "why": "Right: one-syllable unstressed words (was, a)."
+    },
+    {
+     "q": "Which is the only word where F says /v/?",
+     "a": "of",
+     "w": [
+      "off",
+      "if",
+      "for"
+     ],
+     "why": "of is the only word where F says /v/."
+    },
+    {
+     "q": "What does the schwa symbol look like?",
+     "a": "An upside-down e (ә)",
+     "w": [
+      "A backwards b",
+      "A curly s",
+      "A tiny a"
+     ],
+     "why": "The schwa symbol ә looks like an upside-down e."
+    },
+    {
+     "q": "In “garden,” which syllable has the schwa?",
+     "a": "den",
+     "w": [
+      "gar",
+      "Both",
+      "Neither"
+     ],
+     "why": "GAR-dәn."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "rules",
+   "skill": "Spelling rules 10 · 30 · 31.1",
+   "list": [
+    {
+     "q": "Rule 10: A may say /ä/ after a ___ or before an ___",
+     "a": "W; L",
+     "w": [
+      "Y; M",
+      "T; R",
+      "S; N"
+     ],
+     "why": "Broad A: after a W or before an L (water, ball)."
+    },
+    {
+     "q": "Which two words have the broad /ä/?",
+     "a": "ball and water",
+     "w": [
+      "cat and map",
+      "ball and cat",
+      "water and map"
+     ],
+     "why": "ball (before L) and water (after W)."
+    },
+    {
+     "q": "Rule 30: we often double F, L and S after a single ______ at the end of a base word.",
+     "a": "vowel",
+     "w": [
+      "consonant",
+      "syllable",
+      "phonogram"
+     ],
+     "why": "cliff, full, glass: double F, L, S after a single vowel."
+    },
+    {
+     "q": "Which word follows Rule 30?",
+     "a": "glass",
+     "w": [
+      "moon",
+      "car",
+      "chair"
+     ],
+     "why": "glass has a doubled s."
+    },
+    {
+     "q": "Complete: gla__",
+     "a": "ss",
+     "w": [
+      "s",
+      "ff",
+      "ll"
+     ],
+     "why": "glass"
+    },
+    {
+     "q": "Complete: cli__",
+     "a": "ff",
+     "w": [
+      "f",
+      "ss",
+      "ll"
+     ],
+     "why": "cliff"
+    },
+    {
+     "q": "Complete: ba__",
+     "a": "ll",
+     "w": [
+      "l",
+      "ss",
+      "ff"
+     ],
+     "why": "ball"
+    },
+    {
+     "q": "Rule 31.1: any vowel may say a schwa sound in an unstressed ______ or unstressed ______.",
+     "a": "syllable; word",
+     "w": [
+      "rule; sound",
+      "word; letter",
+      "phonogram; page"
+     ],
+     "why": "Schwa lives in unstressed syllables and unstressed words."
+    },
+    {
+     "q": "Which rule: “double F, L and S”?",
+     "a": "Rule 30",
+     "w": [
+      "Rule 10",
+      "Rule 31.1"
+     ],
+     "why": "Rule 30: cliff, full, glass."
+    },
+    {
+     "q": "Which rule: “broad A says /ä/”?",
+     "a": "Rule 10",
+     "w": [
+      "Rule 30",
+      "Rule 31.1"
+     ],
+     "why": "Rule 10: all, ball, water."
+    },
+    {
+     "q": "Which rule: “schwa”?",
+     "a": "Rule 31.1",
+     "w": [
+      "Rule 10",
+      "Rule 30"
+     ],
+     "why": "Rule 31.1: garden, human, the, a, was, of."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "gram",
+   "skill": "Nouns, adjectives & articles",
+   "list": [
+    {
+     "q": "In “Mia told me a secret,” what is the word “secret”?",
+     "a": "Noun",
+     "w": [
+      "Adjective",
+      "Article"
+     ],
+     "why": "A secret is a thing — a noun."
+    },
+    {
+     "q": "In “The secret door is hidden,” what is the word “secret”?",
+     "a": "Adjective",
+     "w": [
+      "Noun",
+      "Article"
+     ],
+     "why": "Secret tells what kind of door — an adjective."
+    },
+    {
+     "q": "In “He drank a glass of milk,” what is “glass”?",
+     "a": "Noun",
+     "w": [
+      "Adjective",
+      "Article"
+     ],
+     "why": "A glass is a thing — a noun."
+    },
+    {
+     "q": "In “The glass jar broke,” what is “glass”?",
+     "a": "Adjective",
+     "w": [
+      "Noun",
+      "Article"
+     ],
+     "why": "Glass tells what kind of jar — an adjective."
+    },
+    {
+     "q": "The three article adjectives are…",
+     "a": "a, an, the",
+     "w": [
+      "is, am, are",
+      "big, red, tall",
+      "and, but, or"
+     ],
+     "why": "Articles: a, an, the."
+    },
+    {
+     "q": "In “a smooth seashell”, what is “a”?",
+     "a": "A (article)",
+     "w": [
+      "Adj (adjective)",
+      "N (noun)"
+     ],
+     "why": "An article adjective tells WHICH one (a, an, the).",
+     "hint": "Find the noun first (the thing), then ask what kind and which one."
+    },
+    {
+     "q": "In “a smooth seashell”, what is “smooth”?",
+     "a": "Adj (adjective)",
+     "w": [
+      "A (article)",
+      "N (noun)"
+     ],
+     "why": "An adjective tells what kind.",
+     "hint": "Find the noun first (the thing), then ask what kind and which one."
+    },
+    {
+     "q": "In “a smooth seashell”, what is “seashell”?",
+     "a": "N (noun)",
+     "w": [
+      "A (article)",
+      "Adj (adjective)"
+     ],
+     "why": "The noun names the thing — find the noun first!",
+     "hint": "Find the noun first (the thing), then ask what kind and which one."
+    },
+    {
+     "q": "In “the sharp pencil”, what is “the”?",
+     "a": "A (article)",
+     "w": [
+      "Adj (adjective)",
+      "N (noun)"
+     ],
+     "why": "An article adjective tells WHICH one (a, an, the).",
+     "hint": "Find the noun first (the thing), then ask what kind and which one."
+    },
+    {
+     "q": "In “the sharp pencil”, what is “sharp”?",
+     "a": "Adj (adjective)",
+     "w": [
+      "A (article)",
+      "N (noun)"
+     ],
+     "why": "An adjective tells what kind.",
+     "hint": "Find the noun first (the thing), then ask what kind and which one."
+    },
+    {
+     "q": "In “the sharp pencil”, what is “pencil”?",
+     "a": "N (noun)",
+     "w": [
+      "A (article)",
+      "Adj (adjective)"
+     ],
+     "why": "The noun names the thing — find the noun first!",
+     "hint": "Find the noun first (the thing), then ask what kind and which one."
+    },
+    {
+     "q": "In “a fearless sheriff”, what is “a”?",
+     "a": "A (article)",
+     "w": [
+      "Adj (adjective)",
+      "N (noun)"
+     ],
+     "why": "An article adjective tells WHICH one (a, an, the).",
+     "hint": "Find the noun first (the thing), then ask what kind and which one."
+    },
+    {
+     "q": "In “a fearless sheriff”, what is “fearless”?",
+     "a": "Adj (adjective)",
+     "w": [
+      "A (article)",
+      "N (noun)"
+     ],
+     "why": "An adjective tells what kind.",
+     "hint": "Find the noun first (the thing), then ask what kind and which one."
+    },
+    {
+     "q": "In “a fearless sheriff”, what is “sheriff”?",
+     "a": "N (noun)",
+     "w": [
+      "A (article)",
+      "Adj (adjective)"
+     ],
+     "why": "The noun names the thing — find the noun first!",
+     "hint": "Find the noun first (the thing), then ask what kind and which one."
+    },
+    {
+     "q": "In “the spectacular garden”, what is “the”?",
+     "a": "A (article)",
+     "w": [
+      "Adj (adjective)",
+      "N (noun)"
+     ],
+     "why": "An article adjective tells WHICH one (a, an, the).",
+     "hint": "Find the noun first (the thing), then ask what kind and which one."
+    },
+    {
+     "q": "In “the spectacular garden”, what is “spectacular”?",
+     "a": "Adj (adjective)",
+     "w": [
+      "A (article)",
+      "N (noun)"
+     ],
+     "why": "An adjective tells what kind.",
+     "hint": "Find the noun first (the thing), then ask what kind and which one."
+    },
+    {
+     "q": "In “the spectacular garden”, what is “garden”?",
+     "a": "N (noun)",
+     "w": [
+      "A (article)",
+      "Adj (adjective)"
+     ],
+     "why": "The noun names the thing — find the noun first!",
+     "hint": "Find the noun first (the thing), then ask what kind and which one."
+    },
+    {
+     "q": "In “a full moon”, what is “a”?",
+     "a": "A (article)",
+     "w": [
+      "Adj (adjective)",
+      "N (noun)"
+     ],
+     "why": "An article adjective tells WHICH one (a, an, the).",
+     "hint": "Find the noun first (the thing), then ask what kind and which one."
+    },
+    {
+     "q": "In “a full moon”, what is “full”?",
+     "a": "Adj (adjective)",
+     "w": [
+      "A (article)",
+      "N (noun)"
+     ],
+     "why": "An adjective tells what kind.",
+     "hint": "Find the noun first (the thing), then ask what kind and which one."
+    },
+    {
+     "q": "In “a full moon”, what is “moon”?",
+     "a": "N (noun)",
+     "w": [
+      "A (article)",
+      "Adj (adjective)"
+     ],
+     "why": "The noun names the thing — find the noun first!",
+     "hint": "Find the noun first (the thing), then ask what kind and which one."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "com",
+   "skill": "Commas & conjunctions",
+   "list": [
+    {
+     "q": "Which list is written correctly?",
+     "a": "pens, pencils, and paper",
+     "w": [
+      "pens pencils and paper",
+      "pens, pencils and, paper",
+      "pens, pencils, and, paper"
+     ],
+     "why": "Three or more items: a comma after each item before the last, and before the word and."
+    },
+    {
+     "q": "Which list is written correctly?",
+     "a": "two cats, three dogs, and five ducks",
+     "w": [
+      "two cats three dogs and five ducks",
+      "two cats, three dogs and, five ducks",
+      "two cats, three, dogs and five ducks"
+     ],
+     "why": "Commas separate the items; the comma goes before and."
+    },
+    {
+     "q": "Which list is written correctly?",
+     "a": "red hats, blue socks, and green shoes",
+     "w": [
+      "red hats blue socks and green shoes",
+      "red, hats blue, socks and green shoes",
+      "red hats, blue socks and, green shoes"
+     ],
+     "why": "Commas between the items in the series."
+    },
+    {
+     "q": "Which list is written correctly?",
+     "a": "oil, eggs, bread, and milk",
+     "w": [
+      "oil eggs bread and milk",
+      "oil, eggs, bread and, milk",
+      "oil, eggs bread, and milk"
+     ],
+     "why": "oil, eggs, bread, and milk."
+    },
+    {
+     "q": "Which list is written correctly?",
+     "a": "paper, paint, and paintbrushes",
+     "w": [
+      "paper paint and paintbrushes",
+      "paper, paint and, paintbrushes",
+      "paper, paint, paintbrushes, and"
+     ],
+     "why": "Comma after each item before the last."
+    },
+    {
+     "q": "Which list needs NO commas?",
+     "a": "salt and pepper",
+     "w": [
+      "pens pencils and paper",
+      "red hats blue socks and green shoes",
+      "oil eggs bread and milk"
+     ],
+     "why": "Only two items, so no comma."
+    },
+    {
+     "q": "Why is there no comma in “sun and moon”?",
+     "a": "There are only two items",
+     "w": [
+      "The words are short",
+      "Sun is a noun",
+      "Moon is an adjective"
+     ],
+     "why": "Two items need no comma."
+    },
+    {
+     "q": "In a list of three or more, where does the comma go?",
+     "a": "After each item before the last (before the word and)",
+     "w": [
+      "After the word and",
+      "Only at the very end",
+      "Before the first item"
+     ],
+     "why": "toy cars, toy trains, and balls."
+    },
+    {
+     "q": "A conjunction joins…",
+     "a": "words, phrases, or sentences",
+     "w": [
+      "only nouns",
+      "only verbs",
+      "only letters"
+     ],
+     "why": "con = with, junct = to join, ion = noun suffix."
+    },
+    {
+     "q": "Circle the conjunction: the sun and the full moon",
+     "a": "and",
+     "w": [
+      "the",
+      "full",
+      "sun"
+     ],
+     "why": "And joins the sun and the full moon."
+    },
+    {
+     "q": "Circle the conjunction: We saw ducks, geese, and swans.",
+     "a": "and",
+     "w": [
+      "saw",
+      "ducks",
+      "swans"
+     ],
+     "why": "And joins the last item to the list."
+    },
+    {
+     "q": "Circle the conjunction: Tom and Ava rode the bus.",
+     "a": "and",
+     "w": [
+      "Tom",
+      "rode",
+      "bus"
+     ],
+     "why": "And joins Tom and Ava."
+    },
+    {
+     "q": "The word “conjunction” = con + junct + ion. What does junct mean?",
+     "a": "to join",
+     "w": [
+      "with",
+      "noun suffix",
+      "to look"
+     ],
+     "why": "con (with) + junct (to join) + ion (noun suffix)."
+    }
+   ]
+  },
+  {
+   "t": "terms",
+   "id": "l6-morph",
+   "skill": "Roots, prefixes & suffixes",
+   "pairs": [
+    [
+     "part",
+     "separate, part"
+    ],
+    [
+     "spect",
+     "to look, to see"
+    ],
+    [
+     "pend",
+     "to hang"
+    ],
+    [
+     "fend",
+     "to strike"
+    ],
+    [
+     "plaint",
+     "lament"
+    ],
+    [
+     "quart",
+     "four"
+    ],
+    [
+     "ad- (a-)",
+     "to, toward, add"
+    ],
+    [
+     "de-",
+     "away from, out of"
+    ],
+    [
+     "com-",
+     "with, together"
+    ],
+    [
+     "sus-",
+     "below (from sub-)"
+    ],
+    [
+     "-less",
+     "without, devoid of"
+    ],
+    [
+     "-est",
+     "the most"
+    ],
+    [
+     "-dom",
+     "state or place of"
+    ],
+    [
+     "-er",
+     "a noun suffix"
+    ],
+    [
+     "-ment",
+     "a noun suffix"
+    ],
+    [
+     "-iff",
+     "a noun suffix: a person"
+    ],
+    [
+     "-ant / -ent",
+     "characterized by"
+    ]
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "morph",
+   "skill": "Compound words & morphemes",
+   "list": [
+    {
+     "q": "De-fend-ant: write the three morphemes.",
+     "a": "de + fend + ant",
+     "w": [
+      "def + end + ant",
+      "de + fen + dant",
+      "d + efend + ant"
+     ],
+     "why": "defendant = de- + fend + -ant."
+    },
+    {
+     "q": "Divide apartment into morphemes.",
+     "a": "a + part + ment",
+     "w": [
+      "ap + art + ment",
+      "apart + men + t",
+      "a + partm + ent"
+     ],
+     "why": "apartment = a- + part + -ment."
+    },
+    {
+     "q": "Divide compartment into morphemes.",
+     "a": "com + part + ment",
+     "w": [
+      "comp + art + ment",
+      "com + par + tment",
+      "co + mpart + ment"
+     ],
+     "why": "compartment = com- + part + -ment."
+    },
+    {
+     "q": "Divide dependent into morphemes.",
+     "a": "de + pend + ent",
+     "w": [
+      "dep + end + ent",
+      "de + pen + dent",
+      "d + epend + ent"
+     ],
+     "why": "dependent = de- + pend + -ent."
+    },
+    {
+     "q": "Divide suspenders into morphemes.",
+     "a": "sus + pend + er + s",
+     "w": [
+      "su + spend + ers",
+      "sus + pen + ders",
+      "sus + pender + s"
+     ],
+     "why": "suspenders = sus- + pend + -er + -s: things that hang below."
+    },
+    {
+     "q": "Which are compound words?",
+     "a": "classroom and bookmark",
+     "w": [
+      "garden and partner",
+      "classroom and garden",
+      "bookmark and partner"
+     ],
+     "why": "classroom = class + room; bookmark = book + mark."
+    },
+    {
+     "q": "Which two words make “seashell”?",
+     "a": "sea + shell",
+     "w": [
+      "se + ashell",
+      "seas + hell",
+      "sea + hell"
+     ],
+     "why": "sea + shell = seashell."
+    },
+    {
+     "q": "Break “afternoon” into two words.",
+     "a": "after + noon",
+     "w": [
+      "aft + ernoon",
+      "af + ternoon",
+      "after + moon"
+     ],
+     "why": "after + noon = afternoon."
+    },
+    {
+     "q": "paint + ____ = a compound word",
+     "a": "brush (paintbrush)",
+     "w": [
+      "ing",
+      "less",
+      "ant"
+     ],
+     "why": "paint + brush = paintbrush."
+    },
+    {
+     "q": "tooth + brush = ?",
+     "a": "toothbrush",
+     "w": [
+      "tooth brush",
+      "toothebrush",
+      "tuthbrush"
+     ],
+     "why": "Two words join to make a new word."
+    },
+    {
+     "q": "basket + ball = ?",
+     "a": "basketball",
+     "w": [
+      "basket ball",
+      "basketbal",
+      "baskitball"
+     ],
+     "why": "basket + ball."
+    },
+    {
+     "q": "A compound word is formed when two ______ join together to form a new ______.",
+     "a": "words; word",
+     "w": [
+      "letters; word",
+      "words; letter",
+      "sounds; sound"
+     ],
+     "why": "Two words → one new word."
+    },
+    {
+     "q": "fear + less = ?",
+     "a": "fearless",
+     "w": [
+      "fearful",
+      "fearness",
+      "feared"
+     ],
+     "why": "-less means without."
+    },
+    {
+     "q": "pain + less = ?",
+     "a": "painless",
+     "w": [
+      "painful",
+      "painly",
+      "pained"
+     ],
+     "why": "-less means without."
+    },
+    {
+     "q": "smooth + est = ?",
+     "a": "smoothest",
+     "w": [
+      "smoother",
+      "smoothly",
+      "smoothless"
+     ],
+     "why": "-est means the most."
+    },
+    {
+     "q": "quart + er = ?",
+     "a": "quarter",
+     "w": [
+      "quartless",
+      "quartest",
+      "quartly"
+     ],
+     "why": "-er makes a noun."
+    },
+    {
+     "q": "Quart means four. So a quarter is one of ___ equal parts.",
+     "a": "4",
+     "w": [
+      "2",
+      "3",
+      "8"
+     ],
+     "why": "A quarter is 1 of 4 equal parts."
+    },
+    {
+     "q": "What word is “balloon” related to?",
+     "a": "ball",
+     "w": [
+      "bell",
+      "bale",
+      "bowl"
+     ],
+     "why": "balloon = ball + -oon: it is round like a ball."
+    },
+    {
+     "q": "What was added to the end of “ball” to make “balloon”?",
+     "a": "-oon",
+     "w": [
+      "-ing",
+      "-less",
+      "-ment"
+     ],
+     "why": "ball + -oon."
+    },
+    {
+     "q": "In “balloon,” which syllable is stressed?",
+     "a": "loon",
+     "w": [
+      "bal",
+      "Both",
+      "Neither"
+     ],
+     "why": "bal-LOON."
+    },
+    {
+     "q": "What sound does the A say in the first syllable of “balloon”?",
+     "a": "schwa",
+     "w": [
+      "/ä/",
+      "/ā/",
+      "/ă/"
+     ],
+     "why": "The broad /ä/ in ball changes to schwa in balloon."
+    },
+    {
+     "q": "Why do we spell “balloon” with an A?",
+     "a": "It is related to “ball” in meaning",
+     "w": [
+      "It is a Latin word",
+      "It has a silent letter",
+      "It rhymes with moon"
+     ],
+     "why": "balloon is related to ball."
+    },
+    {
+     "q": "The suffix -less means…",
+     "a": "without",
+     "w": [
+      "the most",
+      "a person",
+      "four"
+     ],
+     "why": "fearless = without fear."
+    },
+    {
+     "q": "A spectator is a person who ______ an event.",
+     "a": "watches",
+     "w": [
+      "plans",
+      "sells",
+      "hangs"
+     ],
+     "why": "spect = to look, to see."
+    },
+    {
+     "q": "de- is a…",
+     "a": "prefix",
+     "w": [
+      "root",
+      "suffix"
+     ],
+     "why": "de- comes at the beginning: a prefix."
+    },
+    {
+     "q": "In “apartment,” a- is a form of the prefix…",
+     "a": "ad-",
+     "w": [
+      "de-",
+      "com-",
+      "sus-"
+     ],
+     "why": "a- is a form of ad- (to, toward, add)."
+    },
+    {
+     "q": "The suffix -iff names a…",
+     "a": "person",
+     "w": [
+      "place",
+      "thing",
+      "feeling"
+     ],
+     "why": "sheriff and plaintiff are people."
+    },
+    {
+     "q": "Add -es to sandwich to make it plural.",
+     "a": "sandwiches",
+     "w": [
+      "sandwichs",
+      "sandwichies",
+      "sandwichen"
+     ],
+     "why": "Words that end in a hissing sound add -es."
+    },
+    {
+     "q": "Which is a word with the suffix -iff?",
+     "a": "sheriff",
+     "w": [
+      "spectator",
+      "pendant",
+      "garden"
+     ],
+     "why": "sheriff = law officer (a person)."
+    },
+    {
+     "q": "Which word has pend (to hang)?",
+     "a": "pendant",
+     "w": [
+      "partner",
+      "garden",
+      "quarter"
+     ],
+     "why": "A pendant hangs on a chain."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "para",
+   "skill": "Spelling paragraph",
+   "list": [
+    {
+     "q": "In the Lesson 6 paragraph, how many words have the phonogram ar?",
+     "a": "5 (partner, garden, apartment, compartment, quarter)",
+     "w": [
+      "3",
+      "4",
+      "7"
+     ],
+     "why": "ar words: partner, garden, apartment, compartment, quarter."
+    },
+    {
+     "q": "Which three words have oo?",
+     "a": "afternoon, igloo, smooth",
+     "w": [
+      "garden, partner, quarter",
+      "afternoon, garden, sheriff",
+      "igloo, partner, pendant"
+     ],
+     "why": "afternoon, igloo, smooth."
+    },
+    {
+     "q": "Which word has the phonogram ch?",
+     "a": "sandwich",
+     "w": [
+      "garden",
+      "igloo",
+      "sheriff"
+     ],
+     "why": "sandwich ends in ch."
+    },
+    {
+     "q": "Which word ends with -less?",
+     "a": "fearless",
+     "w": [
+      "pendant",
+      "sheriff",
+      "smooth"
+     ],
+     "why": "fearless = without fear."
+    },
+    {
+     "q": "Which word ends with -iff?",
+     "a": "sheriff",
+     "w": [
+      "fearless",
+      "quarter",
+      "dependent"
+     ],
+     "why": "sheriff."
+    }
+   ]
+  }
+ ]
+}

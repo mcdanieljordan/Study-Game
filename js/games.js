@@ -7,13 +7,13 @@ import { ENV, BLOCKS_PER_BUILD } from './engine.js';
 
 export const GAMES = {
   ensley: [
-    { id: 'memory', icon: '🃏', name: 'Memory Match', sub: 'Find the matching pairs' },
-    { id: 'spell', icon: '🫧', name: 'Bubble Spell', sub: 'Pop letters to spell words', needs: 'word' },
-    { id: 'tf', icon: '⚡', name: 'True or Silly?', sub: 'Is it right? No clock!' }
+    { id: 'memory', icon: '🃏', name: 'Memory Match', sub: 'Find the matching pairs', unlock: 0 },
+    { id: 'spell', icon: '🫧', name: 'Bubble Spell', sub: 'Pop letters to spell words', needs: 'word', unlock: 2 },
+    { id: 'tf', icon: '⚡', name: 'True or Silly?', sub: 'Is it right? No clock!', unlock: 4 }
   ],
   sida: [
-    { id: 'memory', icon: '🃏', name: 'Pair Up', sub: 'Match terms and meanings' },
-    { id: 'tf', icon: '⚡', name: 'Fact Check', sub: 'True or false? No clock.' }
+    { id: 'memory', icon: '🃏', name: 'Pair Up', sub: 'Match terms and meanings', unlock: 0 },
+    { id: 'tf', icon: '⚡', name: 'Fact Check', sub: 'True or false? No clock.', unlock: 3 }
   ]
 };
 function credit(profile, packId, id, ok1) {

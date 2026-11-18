@@ -1,6 +1,8 @@
 // Every screen: launcher, kid dashboard, pathway, play hub, checklist, closet, and the parent dashboard.
 import { $, $$, esc, pct, today, daysUntil, shuffle, sample, uniq, avg, fmtDate, DAY, sleep } from './util.js';
-import { PROFILES, P, save, levelOf, xpForLevel, strength, minutesToday, family, setFamily, newFamilyCode, syncInfo, syncProfile, pullAll, mergeInto, exportAll, importAll, resetProfile, pushNow } from './store.js';
+import { PROFILES, P, save, levelOf, xpForLevel, strength, minutesToday, family, setFamily, newFamilyCode, syncInfo, syncProfile, pullAll, mergeInto, exportAll, importAll, resetProfile, pushNow, adoptPin, hasPin } from './store.js';
+import { requireParent, parentSession, endParentSession } from './pin.js';
+import * as TK from './teks.js';
 import { sfx, setAudio } from './audio.js';
 import { burstAt, burstEl, openOv, closeOv, say, setVoice, setFxTheme, banner, fireworks, floatText } from './fx.js';
 import { ENV, BLOCKS_PER_BUILD, startRun } from './engine.js';
@@ -8,7 +10,7 @@ import { CATALOG, itemById, ensureAvatar, WORLD } from './catalog.js';
 import { unicornSVG, meadowHTML } from './avatar2d.js';
 import { createStage, createWorld, snapshotURL, canGL } from './avatar3d.js';
 import { questionsForNode, questionsForItems, nodeById, readiness, skillStats, dueItems } from './content.js';
-import { recommend, todaysQuest, nextNodeFor, isUnlocked, dueISO, dueLabel, weekAcc } from './reco.js';
+import { recommend, todaysQuest, nextNodeFor, isUnlocked, dueISO, dueLabel, weekAcc, ovOf, gameUnlocked, itemUnlocked, clearedCount } from './reco.js';
 import { GAMES, startGame } from './games.js';
 import { offerBreak } from './breaks.js';
 
@@ -63,6 +65,7 @@ function home() {
   const hero = e ? `<div class="hero-av">${unicornSVG(ensureAvatar(p) && p.avatar.equipped, 'idle', 150)}</div>` : `<div class="hero-av stage" id="stage3d"></div>`;
   chrome(`<section class="hero">${hero}<div class="hero-tx"><h1>${e ? `Hi ${PROFILES[S.profile].name}! ✨` : `Welcome back, ${PROFILES[S.profile].name}.`}</h1><p>${e ? 'Ready for a sparkly adventure?' : 'Pick up where you left off.'}</p><div class="chips"><span class="chip sun">⭐ ${p.stars} stars</span><span class="chip">🧠 ${mastered} mastered</span><span class="chip mint">Lv ${lv.level}</span></div></div></section>
   ${q ? `<button class="quest" data-act="${q.act}" ${Object.entries(q.args || {}).map(([k, v]) => `data-${k.toLowerCase()}="${esc(v)}"`).join(' ')}><span class="qi">${q.icon}</span><span class="qt"><small>${e ? "TODAY'S QUEST" : 'NEXT UP'}</small><b>${esc(q.title)}</b><em>${esc(q.sub)}</em></span><span class="qgo">▶</span></button>` : ''}
+  ${(p.settings.assignments || []).filter(a => !a.done).map(a => `<button class="quest asg" data-act="tkdo" data-id="${a.id}"><span class="qi">📝</span><span class="qt"><small>FROM YOUR GROWN-UP</small><b>${esc(a.title)}</b><em>${a.n} quick questions</em></span><span class="qgo">▶</span></button>`).join('')}
   <h2 class="sec">${e ? 'My adventures' : 'My pathways'}</h2><div class="pgrid">${packs.map(packCard).join('') || '<p class="mut">No content yet.</p>'}</div>
   ${recs.length ? `<h2 class="sec">${e ? 'Your brain coach says' : 'Coach'}</h2><div class="recs">${recs.map(r => `<${r.act ? 'button' : 'div'} class="rec ${r.level}" ${r.act ? `data-act="${r.act}" ${Object.entries(r.args || {}).map(([k, v]) => `data-${k.toLowerCase()}="${esc(v)}"`).join(' ')}` : ''}><span class="ri">${r.icon}</span><span><b>${esc(r.title)}</b><small>${esc(r.text)}</small></span></${r.act ? 'button' : 'div'}>`).join('')}</div>` : ''}
   <div class="two"><div class="card"><h3>${e ? '🌟 My super strengths' : '🏆 Strengths'}</h3>${strong.length ? strong.map(s => `<div class="srow"><span>${esc(s.skill)}</span>${bar(s.avg, 'g')}</div>`).join('') : '<p class="mut">Play a few rounds and your strengths will show up here!</p>'}</div><div class="card"><h3>${e ? '🌱 Growing' : '📈 Growing'}</h3>${grow.length ? grow.map(s => `<div class="srow"><span>${esc(s.skill)}</span>${bar(s.avg)}</div>`).join('') : '<p class="mut">Nothing yet.</p>'}</div></div>
@@ -82,7 +85,7 @@ function path() {
     const st = p.nodes[n.id], ok = isUnlocked(p, pk, n), cur = nxt && nxt.id === n.id, off = [0, 38, 70, 38, 0, -38, -70, -38][i % 8];
     if (n.unitId && n.unitId !== lastU) { lastU = n.unitId; const u = pk.units.find(x => x.id === n.unitId); nodes += `<div class="unithead"><span>${u.icon || ''}</span> ${esc(u.title)}</div>`; }
     if (n.type === 'boss') nodes += `<div class="unithead boss">👑 The big test</div>`;
-    nodes += `<button class="node ${st?.done ? 'done' : ''} ${cur ? 'cur' : ''} ${ok ? '' : 'lock'} ${n.type}" style="--off:${off}px" ${ok ? `data-act="startnode" data-pack="${pk.id}" data-node="${n.id}"` : 'disabled'} aria-label="${esc(n.title)}"><span class="nb">${ok ? n.icon : '🔒'}</span><span class="nl">${esc(n.title.replace(/^(Learn|Practice|Challenge) · /, ''))}<small>${n.type === 'learn' ? 'learn' : n.type}</small></span><span class="nstars">${[1, 2, 3].map(k => `<i class="${(st?.stars || 0) >= k ? 'on' : ''}">★</i>`).join('')}</span></button>`;
+    nodes += `<button class="node ${st?.done ? 'done' : ''} ${cur ? 'cur' : ''} ${ok ? '' : 'lock'} ${n.type}" style="--off:${off}px" ${ok ? `data-act="startnode" data-pack="${pk.id}" data-node="${n.id}"` : `data-act="lockednode" data-pack="${pk.id}" data-node="${n.id}"`} aria-label="${esc(n.title)}"><span class="nb">${ok ? n.icon : '🔒'}</span><span class="nl">${esc(n.title.replace(/^(Learn|Practice|Challenge) · /, ''))}<small>${n.type === 'learn' ? 'learn' : n.type}</small></span><span class="nstars">${[1, 2, 3].map(k => `<i class="${(st?.stars || 0) >= k ? 'on' : ''}">★</i>`).join('')}</span></button>`;
   });
   chrome(`<div class="ptabs">${tabs}</div><section class="pbanner" style="--pc:${pk.color}"><div class="pic">${pk.icon}</div><div><h1>${esc(pk.title)}</h1><p>${esc(pk.test || pk.subject)}${iso ? ` · <b>${dueLabel(iso)}</b>` : ''}</p>${bar(r)}</div>${ring(r, 74)}</section>
   <div class="row quick"><button class="btn mint" data-act="review" data-pack="${pk.id}" ${due.length ? '' : ''}>🧠 Review${due.length ? ` (${Math.min(due.length, 10)} ready)` : ''}</button><button class="btn soft" data-act="mock" data-pack="${pk.id}">👑 Mock test</button></div>
@@ -94,7 +97,7 @@ function play() {
   const p = P_(), packs = packsOf(S.profile), e = S.profile === 'ensley', games = GAMES[S.profile], sk = skillStats(p, packs);
   const all = packs.flatMap(pk => pk.units.flatMap(u => [...new Set(u.list.map(i => i.skill || pk.title))].map(s => ({ pk, s }))));
   const have = new Map(sk.map(x => [x.pack.id + '|' + x.skill, x.avg]));
-  chrome(`<h1 class="h1">${e ? 'Play!' : 'Play & practice'}</h1><h2 class="sec">${e ? 'Learning games' : 'Learning games'}</h2><div class="pgrid g3">${games.map(g => `<button class="tile" data-act="game" data-game="${g.id}"><span class="t2i">${g.icon}</span><b>${g.name}</b><small>${g.sub}</small></button>`).join('')}<button class="tile" data-act="brk"><span class="t2i">🧠</span><b>Brain break</b><small>${e ? 'Move, breathe or play' : 'Reset your focus'}</small></button></div>
+  chrome(`<h1 class="h1">${e ? 'Play!' : 'Play & practice'}</h1><h2 class="sec">${e ? 'Learning games' : 'Learning games'}</h2><div class="pgrid g3">${games.map(g => gameUnlocked(p, g) ? `<button class="tile" data-act="game" data-game="${g.id}"><span class="t2i">${g.icon}</span><b>${g.name}</b><small>${g.sub}</small></button>` : `<button class="tile locked" data-act="lockedgame" data-game="${g.id}"><span class="t2i">🔒</span><b>${g.name}</b><small>Clear ${g.unlock} levels (${clearedCount(p)} so far)</small></button>`).join('')}<button class="tile" data-act="brk"><span class="t2i">🧠</span><b>Brain break</b><small>${e ? 'Move, breathe or play' : 'Reset your focus'}</small></button></div>
   <h2 class="sec">Practice a skill</h2><div class="skills">${all.map(({ pk, s }) => { const v = have.get(pk.id + '|' + s), b = strengthBadge(v ?? null); return `<button class="skill ${b[2]}" data-act="skill" data-pack="${pk.id}" data-skill="${esc(s)}"><span class="sbadge">${b[0]}</span><span><b>${esc(s)}</b><small>${esc(pk.title.replace(/^EUS \d · /, ''))}</small></span>${bar(v ?? 0, v >= .8 ? 'g' : '')}</button>`; }).join('')}</div>`);
 }
 
@@ -128,7 +131,7 @@ function closet() {
   const p = P_(), e = S.profile === 'ensley', cat = CATALOG[S.profile]; ensureAvatar(p); const slot = S.tab.closet || cat.slots[0].id, eq = p.avatar.equipped, t0 = S.closetT0 ||= Date.now();
   const items = cat.items.filter(i => i.slot === slot), swatch = i => i.c && i.c !== 'rainbow' ? `<i class="sw" style="background:${i.c}"></i>` : `<i class="sw">${i.icon || (i.c === 'rainbow' ? '🌈' : '·')}</i>`;
   chrome(`<h1 class="h1">${e ? '👗 My Closet' : '🎽 Customize'}</h1><p class="lead center">${e ? 'Pick what you like — then go have fun!' : 'Quick tweak, then back to the game.'}</p><div class="closet"><div class="cprev">${e ? unicornSVG(eq, 'happy', 200) : '<div class="stage tall" id="stage3d"></div>'}<div class="bar soft"><i id="cbar" style="width:0%"></i></div><small class="mut" id="cmsg">Take your time — this is a short break!</small></div>
-  <div><div class="slotbar">${cat.slots.map(s => `<button class="${s.id === slot ? 'on' : ''}" data-act="cslot" data-s="${s.id}"><span>${s.icon}</span><small>${s.name}</small></button>`).join('')}</div><div class="igrid">${items.map(i => { const own = p.avatar.owned.includes(i.id); return `<button class="item ${eq[slot] === i.id ? 'on' : ''} ${own ? '' : 'locked'}" ${own ? `data-act="equip" data-i="${i.id}"` : 'disabled'}>${swatch(i)}<b>${esc(i.name)}</b>${i.skill ? '<em>🎓 scholar</em>' : ''}${i.rare ? '<em>⭐ rare</em>' : ''}${own ? '' : '<small>🔒 earn by learning</small>'}</button>`; }).join('')}</div></div></div><div class="row"><button class="btn big mint" data-act="nav" data-v="home">Done — let's play!</button></div>`, { nav: false });
+  <div><div class="slotbar">${cat.slots.map(s => `<button class="${s.id === slot ? 'on' : ''}" data-act="cslot" data-s="${s.id}"><span>${s.icon}</span><small>${s.name}</small></button>`).join('')}</div><div class="igrid">${items.map(i => { const own = itemUnlocked(p, i); return `<button class="item ${eq[slot] === i.id ? 'on' : ''} ${own ? '' : 'locked'}" ${own ? `data-act="equip" data-i="${i.id}"` : `data-act="lockeditem" data-i="${i.id}"`}>${swatch(i)}<b>${esc(i.name)}</b>${i.skill ? '<em>🎓 scholar</em>' : ''}${i.rare ? '<em>⭐ rare</em>' : ''}${own ? '' : '<small>🔒 earn by learning</small>'}</button>`; }).join('')}</div></div></div><div class="row"><button class="btn big mint" data-act="nav" data-v="home">Done — let's play!</button></div>`, { nav: false });
   requestAnimationFrame(() => { if (!e) { const st = $('#stage3d'); if (st) { const s = createStage(st, eq); S.three.push(s); S.stage = s; } } });
   const iv = setInterval(() => { const b = $('#cbar'); if (!b) return clearInterval(iv); const f = Math.min(1, (Date.now() - t0) / 90000); b.style.width = f * 100 + '%'; if (f >= 1) { const m = $('#cmsg'); if (m) m.textContent = e ? 'Time to play! 🦄' : 'Time to get back in the game.'; clearInterval(iv); } }, 500);
 }
@@ -147,20 +150,21 @@ export function worldReveal(profile, built) {
 }
 
 // ---------- parent ----------
-const gateQ = () => { const a = 6 + (Math.random() * 7 | 0), b = 6 + (Math.random() * 6 | 0), c = 3 + (Math.random() * 20 | 0); return { q: `${a} × ${b} + ${c}`, a: a * b + c }; };
-let GATE = null;
 function parent() {
   S.profile = null; document.documentElement.dataset.theme = 'parent';
-  if (Date.now() - S.parentOK > 15 * 60e3) { GATE = gateQ(); $('#view').innerHTML = `<main class="launch"><div class="card center gate"><div class="lav big">🔒</div><h2>Grown-ups only</h2><p class="lead">What is <b>${GATE.q}</b> ?</p><input id="gin" inputmode="numeric" autocomplete="off" class="gin"><div class="row"><button class="btn big" data-act="gate">Enter</button><button class="btn soft" data-act="nav" data-v="launcher">← Back</button></div><p class="fine">This keeps little fingers out of the settings.</p></main>`; return; }
-  const who = S.tab.parentWho || 'overview', tab = S.tab.parent || 'overview';
+  if (!parentSession()) { $('#view').innerHTML = '<main class="launch"><div class="lav big">🔒</div></main>'; requireParent('Grown-ups').then(ok => ok ? parent() : go('launcher')); return; }
+  const tab = S.tab.parent || 'overview';
   $('#view').innerHTML = `<header class="pbar"><button class="btn sm soft" data-act="nav" data-v="launcher">← Players</button><h1>📊 Grown-up dashboard</h1><span class="sp"></span><span class="chip ${syncInfo().status === 'ok' ? 'mint' : ''}">${family() ? '☁️ ' + ({ ok: 'Synced', syncing: 'Syncing…', error: 'Sync error', idle: 'Sync on' }[syncInfo().status]) : '💾 This device only'}</span></header>
-  <div class="ptabs2">${[['overview', 'Overview'], ['ensley', 'Ensley'], ['sida', 'Sida'], ['tests', 'Tests'], ['sync', 'Sync & backup'], ['content', 'Content']].map(([k, n]) => `<button class="${tab === k ? 'on' : ''}" data-act="ptab" data-t="${k}">${n}</button>`).join('')}</div><main class="parentmain">${parentBody(tab)}</main>`;
+  <div class="ptabs2">${[['overview', 'Overview'], ['ensley', 'Ensley'], ['sida', 'Sida'], ['tests', 'Tests'], ['teks', 'TEKS quiz'], ['overrides', '🔓 Overrides'], ['sync', 'Sync & backup'], ['content', 'Content']].map(([k, n]) => `<button class="${tab === k ? 'on' : ''}" data-act="ptab" data-t="${k}">${n}</button>`).join('')}</div><main class="parentmain">${parentBody(tab)}</main>`;
+  if (tab === 'teks') teksLoad();
 }
 const sparkbars = (vals, labels, color) => { const mx = Math.max(1, ...vals), W = vals.length * 26 + 10; return `<svg class="sb" viewBox="0 0 ${W} 80" width="100%" height="80" preserveAspectRatio="none">${vals.map((v, i) => `<rect x="${6 + i * 26}" y="${64 - v / mx * 56}" width="18" height="${v / mx * 56}" rx="3" fill="${color}" opacity="${v ? 1 : .25}"><title>${labels[i]}: ${v}</title></rect><text x="${15 + i * 26}" y="77" text-anchor="middle" font-size="8" fill="currentColor">${labels[i].slice(-2)}</text>`).join('')}</svg>`; };
 function parentBody(tab) {
   if (tab === 'overview') return ['ensley', 'sida'].map(id => parentSummary(id)).join('') + '<p class="mut center">Tip: tap a name above for full detail — missed questions, what they typed, and spaced-repetition status.</p>';
   if (tab === 'ensley' || tab === 'sida') return parentDetail(tab);
   if (tab === 'tests') return testsTab();
+  if (tab === 'teks') return teksTab();
+  if (tab === 'overrides') return overridesTab();
   if (tab === 'sync') return syncTab();
   return contentTab();
 }
@@ -182,6 +186,7 @@ function parentDetail(id) {
   <section class="card"><h3>Most-missed questions <small class="mut">(and what was typed or chosen)</small></h3>${rows.length ? `<table class="dt"><thead><tr><th>Item</th><th>Misses</th><th>Answers given</th></tr></thead><tbody>${rows.map(([k, m]) => { const e = byId[k]; return `<tr><td>${esc(String(label(e.i)).replace(/<[^>]+>/g, '').slice(0, 70))}<br><small class="mut">${esc(e.pk.title)}</small></td><td>${m.n}</td><td>${esc([...new Set(m.resp)].slice(0, 4).join(', '))}</td></tr>`; }).join('')}</tbody></table>` : '<p class="mut">No misses recorded.</p>'}</section>
   <section class="card"><h3>Activity — last 14 days</h3><p class="mut">Questions per day</p>${sparkbars(dq, days, '#38b6f2')}<p class="mut">Minutes per day</p>${sparkbars(dm, days, '#2fc99e')}</section>
   <section class="card"><h3>Memory strength (spaced repetition)</h3><p class="mut">Box 0 = just learned · Box 5 = long-term. ${due.length} item(s) are due for review now.</p><div class="boxes">${boxes.map((n, i) => `<div><b>${n}</b><small>Box ${i}</small></div>`).join('')}</div></section>
+  ${teksResults(p)}
   <section class="card"><h3>Settings</h3><label class="tg"><input type="checkbox" data-act="setting" data-p="${id}" data-s="sound" ${p.settings.sound ? 'checked' : ''}> Sound effects</label><label class="tg"><input type="checkbox" data-act="setting" data-p="${id}" data-s="voice" ${p.settings.voice ? 'checked' : ''}> Spoken praise / words</label><label class="tg"><input type="checkbox" data-act="setting" data-p="${id}" data-s="unlockAll" ${p.settings.unlockAll ? 'checked' : ''}> Unlock the whole path (skip ahead)</label><div class="row"><button class="btn sm soft" data-act="resetp" data-p="${id}">Reset ${PROFILES[id].name}'s progress…</button></div></section>`;
 }
 function testsTab() {
@@ -198,14 +203,94 @@ function contentTab() {
   return `<section class="card"><h2>📚 Content library</h2><p class="mut">Everything the kids practice comes from packs in the <code>content/</code> folder. To add a new assignment or study guide: send me the photo/PDF and I'll add it to the pathway (see docs/ADDING_CONTENT.md).</p>${['ensley', 'sida'].map(id => `<h3>${PROFILES[id].name}</h3>${packsOf(id).map(pk => `<div class="trow"><span>${pk.icon} <b>${esc(pk.title)}</b><br><small class="mut">${pk.units.length} units · ${pk.all.length} items · ${esc(pk.source || '')}</small>${(pk.notes || []).map(n => `<br><small class="note">⚠️ ${esc(n)}</small>`).join('')}</span></div>`).join('')}`).join('')}</section>`;
 }
 
+// ---------- locks + overrides ----------
+function lockSheet(title, hint, apply) {
+  sfx.wrong();
+  openOv(`<div class="sheet"><div class="big">🔒</div><h2>${esc(title)}</h2><p class="lead">${esc(hint)}</p><div class="row"><button class="btn mint" data-ov="ok">OK</button><button class="btn soft" data-ov="pin">🔑 Grown-up override</button></div></div>`);
+  $('#ov').onclick = async ev => { const b = ev.target.closest('[data-ov]'); if (!b) return; closeOv(); if (b.dataset.ov === 'pin' && await requireParent('Grown-up override')) { apply(); save(S.profile); sfx.unlock(); banner('🔓 Unlocked by a grown-up'); go(S.view, S.params); } };
+}
+function overridesTab() {
+  const chip = (n, p, ov, pk) => { const st = p.nodes[n.id]?.done ? 'done' : (ov.allNodes || p.settings.unlockAll || ov.nodes[n.id]) ? 'open' : isUnlocked(p, pk, n) ? 'ready' : ''; return `<button class="nchip ${st}" title="${esc(n.title)}" data-act="ovnode" data-p="${p.id}" data-pack="${pk.id}" data-node="${n.id}">${st === 'done' ? '★' : st === 'open' ? '🔓' : st === 'ready' ? '▶' : '🔒'}<small>${n.type === 'boss' ? 'boss' : n.type.slice(0, 3)}</small></button>`; };
+  return `<section class="card"><h2>🔓 Overrides</h2><p class="mut">Anything that is locked for a child can be opened here — or right on the lock itself with your PIN. Overrides are saved per child and sync with the family code.</p><div class="row"><button class="btn sm" data-act="changepin">${hasPin() ? 'Change grown-up PIN' : 'Create grown-up PIN'}</button><button class="btn sm soft" data-act="lockparent">Lock grown-up mode now</button></div></section>` +
+    ['ensley', 'sida'].map(id => { const p = P(id), ov = ovOf(p), packs = packsOf(id);
+      return `<section class="card"><h2>${PROFILES[id].name}</h2>
+      <label class="tg"><input type="checkbox" data-act="ov" data-p="${id}" data-k="allNodes" ${ov.allNodes || p.settings.unlockAll ? 'checked' : ''}> Open every level (skip ahead)</label>
+      <label class="tg"><input type="checkbox" data-act="ov" data-p="${id}" data-k="allGames" ${ov.allGames ? 'checked' : ''}> Open every game</label>
+      <label class="tg"><input type="checkbox" data-act="ov" data-p="${id}" data-k="allItems" ${ov.allItems ? 'checked' : ''}> Open every avatar item</label>
+      <h3>Games</h3><div class="row left">${GAMES[id].map(g => `<button class="nchip wide ${gameUnlocked(p, g) ? 'open' : ''}" data-act="ovgame" data-p="${id}" data-game="${g.id}">${gameUnlocked(p, g) ? '🔓' : '🔒'} ${esc(g.name)}</button>`).join('')}</div>
+      <h3>Levels <small class="mut">★ cleared · ▶ ready · 🔓 opened by you · 🔒 locked — tap to open/close</small></h3>
+      ${packs.map(pk => `<div class="ovpack"><div class="ovh"><b>${pk.icon} ${esc(pk.title)}</b><span><button class="btn sm soft" data-act="ovpack" data-p="${id}" data-pack="${pk.id}">Open all</button> <button class="btn sm soft" data-act="clrpack" data-p="${id}" data-pack="${pk.id}">Mark all cleared</button></span></div><div class="nchips">${pk.nodes.map(n => chip(n, p, ov, pk)).join('')}</div></div>`).join('')}
+      <h3>Rewards & progress</h3><div class="row left"><button class="btn sm soft" data-act="ovreward" data-p="${id}">🎁 Give a reward pick</button><button class="btn sm soft" data-act="ovxp" data-p="${id}">⭐ +100 XP</button><button class="btn sm soft" data-act="ovblocks" data-p="${id}">🧱 Grow the world (+1 build)</button><button class="btn sm soft" data-act="ovclear" data-p="${id}">Close all overrides</button></div></section>`; }).join('');
+}
+
+// ---------- TEKS mini-quizzes (grown-up builds them from the TEKS database) ----------
+S.tk = { who: 'ensley', grade: '2', subject: null, subjects: null, groups: null, sel: new Set(), open: new Set(), n: 10, err: '', loading: false };
+const gradeOf = id => ({ ensley: '2', sida: '6' })[id];
+function teksLoad() {
+  const t = S.tk; if (t.loading) return; const need = !t.subjects ? 'subjects' : (t.subject && !t.groups) ? 'groups' : null; if (!need) return;
+  t.loading = true; t.err = '';
+  (need === 'subjects' ? TK.subjectsFor(t.grade).then(r => { t.subjects = r; }) : TK.standardsFor(t.grade, t.subject).then(r => { t.groups = r; }))
+    .catch(e => { t.err = String(e.message || e); }).finally(() => { t.loading = false; if (S.view === 'parent' && S.tab.parent === 'teks') { const m = $('.parentmain'); if (m) { m.innerHTML = teksTab(); teksLoad(); } } });
+}
+function teksTab() {
+  const t = S.tk, p = P(t.who), sets = TK.loadSets(), avail = (t.groups || []).flatMap(g => g.standards).filter(s => t.sel.has(s.code)).reduce((a, s) => a + s.n, 0), asg = p.settings.assignments || [];
+  return `<section class="card"><h2>📝 TEKS mini-quiz</h2><p class="mut">Pick one standard or a whole set from the TEKS database, then either start a quiz with your child right now or assign it so it shows up on their home screen. Questions come from the checked/verified TEKS-tagged question bank.</p>
+  <div class="row left">${['ensley', 'sida'].map(id => `<button class="tab ${t.who === id ? 'on' : ''}" data-act="tkwho" data-p="${id}">${PROFILES[id].name}</button>`).join('')}<label class="selw">Grade <select data-act="tkgrade">${TK.GRADES.map(([v, l]) => `<option value="${v}" ${v === t.grade ? 'selected' : ''}>${l}</option>`).join('')}</select></label></div>
+  ${t.err ? `<p class="note">⚠️ Couldn't reach the TEKS database: ${esc(t.err)}. Quizzes you already opened still work offline.</p>` : ''}
+  ${!t.subjects ? '<p class="mut">Loading subjects…</p>' : `<div class="row left">${t.subjects.map(s => `<button class="tab ${t.subject === s.subject ? 'on' : ''}" data-act="tksubj" data-s="${esc(s.subject)}">${esc(s.subject.replace('English Language Arts and Reading', 'ELA & Reading').replace(/Spanish.*/, 'Spanish LA'))} <small>${s.count}</small></button>`).join('')}</div>`}
+  ${sets.length ? `<h3>Saved sets</h3><div class="row left">${sets.map((x, i) => `<span class="setchip"><button data-act="tkset" data-i="${i}">⭐ ${esc(x.name)} <small>${x.codes.length}</small></button><button data-act="tkdelset" data-i="${i}" aria-label="Delete set">✕</button></span>`).join('')}</div>` : ''}
+  ${t.subject && !t.groups ? '<p class="mut">Loading standards…</p>' : ''}
+  ${(t.groups || []).map(g => { const codes = g.standards.map(s => s.code), all = codes.every(c => t.sel.has(c)), open = t.open.has(g.ks); return `<div class="tkgroup"><div class="tkh"><label><input type="checkbox" data-act="tkgrp" data-g="${esc(g.ks)}" ${all ? 'checked' : ''}> <b>${esc(TK.shortCode(g.ks))}</b> ${esc(g.title.slice(0, 120))}</label><button class="btn sm soft" data-act="tkopen" data-g="${esc(g.ks)}">${open ? '▾' : '▸'} ${g.standards.length}</button></div>${open ? g.standards.map(s => `<label class="tks"><input type="checkbox" data-act="tkcode" data-c="${esc(s.code)}" ${t.sel.has(s.code) ? 'checked' : ''}> <b>${esc(TK.shortCode(s.code))}</b> ${esc(s.text.slice(0, 220))} <em>${s.n}q</em></label>`).join('') : ''}</div>`; }).join('')}
+  ${t.groups ? `<div class="tkbar"><b>${t.sel.size}</b> standard${t.sel.size === 1 ? '' : 's'} · <b>${avail}</b> questions available<span class="sp"></span>${[5, 10, 15, 20].map(n => `<button class="tab ${t.n === n ? 'on' : ''}" data-act="tkn" data-n="${n}">${n}</button>`).join('')}<small>questions</small></div>
+  <div class="row"><button class="btn mint" data-act="tkstart" ${t.sel.size ? '' : 'disabled'}>▶ Start with ${PROFILES[t.who].name} now</button><button class="btn" data-act="tkassign" ${t.sel.size ? '' : 'disabled'}>📌 Assign to ${PROFILES[t.who].name}</button><button class="btn soft" data-act="tksave" ${t.sel.size ? '' : 'disabled'}>⭐ Save as a set</button></div>` : ''}</section>
+  <section class="card"><h3>${PROFILES[t.who].name}'s assigned quizzes</h3>${asg.length ? asg.slice().reverse().map(a => `<div class="trow"><span>📝 <b>${esc(a.title)}</b><br><small class="mut">${a.codes.length} standard(s) · ${a.n} questions · ${a.done ? `done ${fmtDate(a.done)} — ${pct(a.acc)}% first try` : 'waiting'}</small></span><button class="btn sm soft" data-act="tkrm" data-id="${a.id}">remove</button></div>`).join('') : '<p class="mut">Nothing assigned yet.</p>'}</section>`;
+}
+async function startTeks(who, a) {
+  banner('Fetching questions…');
+  try {
+    const qs = await TK.buildQuiz(a.grade, a.codes, a.n); if (!qs.length) return alert('No questions found for those standards.');
+    S.profile = who; document.documentElement.dataset.theme = th(who); setFxTheme(th(who)); setAudio({ theme: th(who), sound: P(who).settings.sound }); setVoice(P(who).settings.voice); destroy3d();
+    startRun({ profile: who, kind: 'teks', packId: 'teks', pack: null, packNodes: [], title: a.title, back: 'home', qs, assignmentId: a.id });
+  } catch (e) { alert('Could not reach the TEKS database: ' + (e.message || e)); }
+}
+const tkTitle = () => { const t = S.tk, n = t.sel.size, first = [...t.sel][0]; return n === 1 ? `TEKS ${TK.shortCode(first)}` : `${(t.subject || 'TEKS').replace('English Language Arts and Reading', 'ELA').replace('Mathematics', 'Math')} · ${n} standards`; };
+const teksRerender = () => { const m = $('.parentmain'); if (m) m.innerHTML = teksTab(); };
+
 // ---------- actions ----------
 export const ACT = {
+  lockednode: e => { const pk = packsOf(S.profile).find(x => x.id === e.dataset.pack), n = pk.nodes.find(x => x.id === e.dataset.node); lockSheet(n.title, 'Finish the level before it to open this one.', () => { ovOf(P_()).nodes[n.id] = true; }); },
+  lockedgame: e => { const g = GAMES[S.profile].find(x => x.id === e.dataset.game); lockSheet(g.name, `Clear ${g.unlock} levels to unlock this game (${clearedCount(P_())} so far).`, () => { ovOf(P_()).games[g.id] = true; }); },
+  lockeditem: e => { const it = itemById(S.profile, e.dataset.i); lockSheet(it.name, 'Earn it with a reward pick — finish a level with 2+ stars or level up!', () => { ovOf(P_()).items[it.id] = true; }); },
+  ov: e => { const p = P(e.dataset.p), ov = ovOf(p); ov[e.dataset.k] = e.checked; if (e.dataset.k === 'allNodes') p.settings.unlockAll = e.checked; save(e.dataset.p); parent(); },
+  ovnode: e => { const p = P(e.dataset.p), ov = ovOf(p), id = e.dataset.node; if (ov.nodes[id]) delete ov.nodes[id]; else ov.nodes[id] = true; save(e.dataset.p); parent(); },
+  ovpack: e => { const p = P(e.dataset.p), pk = packsOf(e.dataset.p).find(x => x.id === e.dataset.pack); pk.nodes.forEach(n => { ovOf(p).nodes[n.id] = true; }); save(e.dataset.p); parent(); },
+  clrpack: e => { const p = P(e.dataset.p), pk = packsOf(e.dataset.p).find(x => x.id === e.dataset.pack); if (!confirm(`Mark every level in "${pk.title}" as cleared (1 star)?`)) return; pk.nodes.forEach(n => { if (!p.nodes[n.id]?.done) p.nodes[n.id] = { stars: 1, best: 1, done: true, t: Date.now(), n: 1, skipped: true }; }); p.stars = Object.values(p.nodes).reduce((a, n) => a + (n.stars || 0), 0); save(e.dataset.p); parent(); },
+  ovgame: e => { const p = P(e.dataset.p), ov = ovOf(p), id = e.dataset.game; if (ov.games[id]) delete ov.games[id]; else ov.games[id] = true; save(e.dataset.p); parent(); },
+  ovreward: e => { const p = P(e.dataset.p); ensureAvatar(p); import('./catalog.js').then(c => { const o = c.offerThree(p); if (o.length) p.avatar.picks.push(o); save(e.dataset.p); banner('🎁 Reward ready on their Me screen'); parent(); }); },
+  ovxp: e => { const p = P(e.dataset.p); p.xp += 100; save(e.dataset.p); banner('+100 XP'); parent(); },
+  ovblocks: e => { const p = P(e.dataset.p); p.world.blocks = (p.world.blocks || 0) + BLOCKS_PER_BUILD; p.world.built = Math.floor(p.world.blocks / BLOCKS_PER_BUILD); save(e.dataset.p); banner('🧱 +1 build'); parent(); },
+  ovclear: e => { const p = P(e.dataset.p); p.settings.ov = { nodes: {}, games: {}, items: {}, allNodes: false, allGames: false, allItems: false }; p.settings.unlockAll = false; save(e.dataset.p); parent(); },
+  changepin: async () => { if (await requireParent('New grown-up PIN', { create: true })) { banner('PIN saved'); parent(); } },
+  lockparent: () => { endParentSession(); go('launcher'); },
+  tkwho: e => { S.tk.who = e.dataset.p; S.tk.grade = gradeOf(e.dataset.p); Object.assign(S.tk, { subjects: null, subject: null, groups: null }); S.tk.sel = new Set(); parent(); },
+  tkgrade: e => { S.tk.grade = e.value; Object.assign(S.tk, { subjects: null, subject: null, groups: null }); S.tk.sel = new Set(); parent(); },
+  tksubj: e => { Object.assign(S.tk, { subject: e.dataset.s, groups: null }); S.tk.sel = new Set(); S.tk.open = new Set(); parent(); },
+  tkopen: e => { const o = S.tk.open, g = e.dataset.g; o.has(g) ? o.delete(g) : o.add(g); teksRerender(); },
+  tkcode: e => { e.checked ? S.tk.sel.add(e.dataset.c) : S.tk.sel.delete(e.dataset.c); teksRerender(); },
+  tkgrp: e => { const g = S.tk.groups.find(x => x.ks === e.dataset.g); g.standards.forEach(s => e.checked ? S.tk.sel.add(s.code) : S.tk.sel.delete(s.code)); teksRerender(); },
+  tkn: e => { S.tk.n = +e.dataset.n; teksRerender(); },
+  tkstart: () => startTeks(S.tk.who, { id: null, title: tkTitle(), codes: [...S.tk.sel], grade: S.tk.grade, n: S.tk.n }),
+  tkassign: () => { const p = P(S.tk.who); (p.settings.assignments ||= []).push({ id: 'a' + Date.now(), title: tkTitle(), codes: [...S.tk.sel], grade: S.tk.grade, n: S.tk.n, created: Date.now() }); save(S.tk.who); banner(`📌 Assigned to ${PROFILES[S.tk.who].name}`); teksRerender(); },
+  tkrm: e => { const p = P(S.tk.who); p.settings.assignments = (p.settings.assignments || []).filter(a => a.id !== e.dataset.id); save(S.tk.who); teksRerender(); },
+  tksave: () => { const name = prompt('Name this set (e.g. "Water cycle + matter")', tkTitle()); if (!name) return; const s = TK.loadSets(); s.push({ name, grade: S.tk.grade, subject: S.tk.subject, codes: [...S.tk.sel] }); TK.saveSets(s); teksRerender(); },
+  tkset: e => { const x = TK.loadSets()[+e.dataset.i]; if (!x) return; S.tk.grade = x.grade; S.tk.subject = x.subject; S.tk.groups = null; S.tk.sel = new Set(x.codes); S.tk.open = new Set(); S.tk.subjects = S.tk.subjects || null; parent(); },
+  tkdelset: e => { const s = TK.loadSets(); s.splice(+e.dataset.i, 1); TK.saveSets(s); teksRerender(); },
+  tkdo: e => { const a = (P_().settings.assignments || []).find(x => x.id === e.dataset.id); if (a) startTeks(S.profile, a); },
   pick: e => { S.profile = e.dataset.p; sfx.tap(); go('home'); },
-  nav: e => { if (e.dataset.v === 'launcher') { S.profile = null; } go(e.dataset.v); },
+  nav: e => { if (e.dataset.v === 'launcher') { S.profile = null; endParentSession(); } go(e.dataset.v); },
   switch: () => go('launcher'),
-  parent: () => go('parent'),
+  parent: async () => { if (await requireParent('Grown-ups')) go('parent'); },
   reward: async () => { await openPick(S.profile); go(S.view, S.params); },
-  gate: () => { const v = parseInt($('#gin').value, 10); if (v === GATE.a) { S.parentOK = Date.now(); go('parent'); } else { $('#gin').value = ''; $('#gin').placeholder = 'try again'; } },
   ptab: e => { S.tab.parent = e.dataset.t; parent(); },
   path: e => go('path', { packId: e.dataset.pack }),
   startnode: e => startNode(e.dataset.pack, e.dataset.node),
@@ -218,13 +303,13 @@ export const ACT = {
   tick: e => { const p = P_(), k = e.dataset.k; p.checks[k] = !p.checks[k]; save(S.profile); if (p.checks[k]) { sfx.correct(2); burstEl(e, { n: 40 }); say(S.profile === 'ensley' ? 'Nice!' : ''); } checklist(); },
   ptick: e => { const d = (P_().plan[today()] ||= {}), k = 'm_' + e.dataset.k; d[k] = !d[k]; save(S.profile); if (d[k]) { sfx.correct(2); burstEl(e, { n: 40 }); } checklist(); },
   closet: () => { S.closetT0 = 0; go('closet'); }, cslot: e => { S.tab.closet = e.dataset.s; closet(); },
-  equip: e => { const p = P_(), it = itemById(S.profile, e.dataset.i); p.avatar.equipped[it.slot] = it.id; save(S.profile); sfx.unlock(); if (S.profile === 'sida' && S.stage) { S.stage.setLook(p.avatar.equipped, 'happy'); S.stage.celebrate(); } closetKeep(); },
+  equip: e => { const p = P_(), it = itemById(S.profile, e.dataset.i); if (!p.avatar.owned.includes(it.id)) p.avatar.owned.push(it.id); p.avatar.equipped[it.slot] = it.id; save(S.profile); sfx.unlock(); if (S.profile === 'sida' && S.stage) { S.stage.setLook(p.avatar.equipped, 'happy'); S.stage.celebrate(); } closetKeep(); },
   setting: e => { const p = P(e.dataset.p), k = e.dataset.s; if (k === 'unlockAll') p.settings.unlockAll = e.checked; else p.settings[k] = e.checked; save(e.dataset.p); },
   resetp: async e => { const id = e.dataset.p; if (confirm(`Erase ALL of ${PROFILES[id].name}'s progress on this device?`) && confirm('Really erase? This cannot be undone.')) { resetProfile(id); parent(); } },
   due: e => { const p = P(e.dataset.p); (p.settings.due ||= {})[e.dataset.pack] = e.value || null; save(e.dataset.p); },
   clrdue: e => { const p = P(e.dataset.p); (p.settings.due ||= {})[e.dataset.pack] = ''; save(e.dataset.p); testsRerender(); },
   newfam: () => { setFamily(newFamilyCode()); Object.keys(PROFILES).forEach(pushNow); parent(); },
-  usefam: async () => { const v = ($('#famin').value || '').trim().toLowerCase(); if (v.length < 20) return alert('That code looks too short.'); setFamily(v); const all = await pullAll(); Object.keys(PROFILES).forEach(id => { if (all[id]) { mergeInto(P(id), all[id].data); save(id); } }); parent(); },
+  usefam: async () => { const v = ($('#famin').value || '').trim().toLowerCase(); if (v.length < 20) return alert('That code looks too short.'); setFamily(v); const all = await pullAll(); adoptPin(all.family?.data?.pin); Object.keys(PROFILES).forEach(id => { if (all[id]) { mergeInto(P(id), all[id].data); save(id); } }); parent(); },
   syncnow: async () => { for (const id of Object.keys(PROFILES)) await syncProfile(id); parent(); },
   stopsync: () => { if (confirm('Turn sync off on this device? (Your cloud copy stays.)')) { setFamily(''); parent(); } },
   copycode: async () => { const u = `${location.origin}${location.pathname}#family=${family()}`; try { await navigator.clipboard.writeText(u); alert('Setup link copied. Open it on the other device.'); } catch (e) { prompt('Copy this link:', u); } },
@@ -252,4 +337,11 @@ export function startSkill(packId, skill) {
   const pk = packsOf(S.profile).find(x => x.id === packId), p = P_(), items = pk.all.filter(i => i.t !== 'story' && (i.skill || pk.title) === skill);
   const entries = []; items.forEach(i => { const reps = i.t === 'gen' ? (i.n || 3) : 1; for (let k = 0; k < reps; k++) entries.push({ pack: pk, item: i }); });
   destroy3d(); startRun({ profile: S.profile, kind: 'skill', packId, pack: pk, packNodes: [], title: skill, back: 'play', qs: questionsForItems(p, shuffle(entries).slice(0, 8), 'auto') });
+}
+
+function teksResults(p) {
+  const by = {}; p.log.forEach(l => { if (l.tk) { const e = by[l.tk] ||= { n: 0, ok: 0 }; e.n++; if (l.ok) e.ok++; } });
+  const rows = Object.entries(by).sort((a, b) => a[1].ok / a[1].n - b[1].ok / b[1].n), asg = (p.settings.assignments || []).filter(a => a.done);
+  if (!rows.length && !asg.length) return '';
+  return `<section class="card"><h3>TEKS quiz results</h3>${asg.length ? `<p class="mut">${asg.slice(-4).reverse().map(a => `📝 ${esc(a.title)}: <b>${pct(a.acc)}%</b> first try (${fmtDate(a.done)})`).join('<br>')}</p>` : ''}${rows.length ? `<table class="dt"><thead><tr><th>Standard</th><th>Tries</th><th>First-try</th></tr></thead><tbody>${rows.map(([c, e]) => `<tr><td><b>${esc(TK.shortCode(c))}</b> <small class="mut">${esc(TK.cachedStatement(c).slice(0, 90))}</small></td><td>${e.n}</td><td>${pct(e.ok / e.n)}%</td></tr>`).join('')}</tbody></table>` : ''}</section>`;
 }

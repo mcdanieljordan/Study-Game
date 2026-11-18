@@ -112,3 +112,16 @@ export async function syncProfile(id) {            // pull -> merge -> push
 export function exportAll() { return JSON.stringify({ exported: new Date().toISOString(), app: 'study-quest-v2', profiles: Object.fromEntries(Object.keys(PROFILES).map(id => [id, P(id)])) }, null, 1); }
 export function importAll(json) { const o = JSON.parse(json); for (const [id, d] of Object.entries(o.profiles || {})) if (PROFILES[id]) { cache[id] = Object.assign(blank(id), d); save(id); } }
 export function resetProfile(id) { delete cache[id]; try { localStorage.removeItem(KEY(id)); localStorage.removeItem(KEY(id) + '.bak'); } catch (e) { } return P(id); }
+
+// ---------- grown-up PIN (guards every override; shared across devices through family sync) ----------
+const PINK = 'sq2:pin';
+const digest = async t => [...new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(t)))].map(b => b.toString(16).padStart(2, '0')).join('');
+const pinRec = () => { try { return JSON.parse(localStorage.getItem(PINK) || 'null'); } catch (e) { return null; } };
+export const hasPin = () => !!pinRec();
+export async function setPin(pin) {
+  const salt = crypto.randomUUID(), rec = { salt, hash: await digest(salt + pin), t: Date.now() };
+  localStorage.setItem(PINK, JSON.stringify(rec));
+  if (family()) { try { await rpc('sg_push', { p_family: family(), p_profile: 'family', p_data: { pin: rec } }); } catch (e) { } }
+}
+export async function verifyPin(pin) { const r = pinRec(); return !!r && (await digest(r.salt + pin)) === r.hash; }
+export function adoptPin(remote) { if (!remote || !remote.hash) return; const cur = pinRec(); if (!cur || (remote.t || 0) > (cur.t || 0)) localStorage.setItem(PINK, JSON.stringify(remote)); }

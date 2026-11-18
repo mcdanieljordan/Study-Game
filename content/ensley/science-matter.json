@@ -1,0 +1,608 @@
+{
+ "id": "ensley-sci-matter",
+ "profile": "ensley",
+ "subject": "Science",
+ "title": "Properties of Matter",
+ "icon": "🧪",
+ "color": "#38b6f2",
+ "due": null,
+ "test": "Properties of Matter Review",
+ "source": "Mrs. Powell's 2nd Grade Math/Science slides (Properties of Matter Review, Bartholomew and the Oobleck, Oobleck), Non-Newtonian Flow experiment, Properties & Uses of Matter lessons 1–3",
+ "notes": [
+  "The PDF doesn't say when the Properties of Matter quiz is — set the date under Grown-ups → Tests.",
+  "The Bartholomew and the Oobleck slides are mostly pictures, so only the oobleck experiment facts are included."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Solids, liquids & gases",
+   "icon": "🧊",
+   "items": [
+    "m-states"
+   ],
+   "lesson": [
+    {
+     "title": "Three states",
+     "html": "<b>Solid</b>: its own shape and size (wood, glass, clay, metal, concrete).<br><b>Liquid</b>: takes the shape of its container; has a definite volume.<br><b>Gas</b>: no shape; fills its container."
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Properties & uses",
+   "icon": "🔬",
+   "items": [
+    "m-uses"
+   ],
+   "lesson": [
+    {
+     "title": "Best for the job",
+     "html": "We test materials for water resistance, absorbency, flexibility and strength, then match each material to the job using evidence: “Foil is best for blocking water because it stayed dry.”"
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Changing matter & oobleck",
+   "icon": "🥣",
+   "items": [
+    "m-change",
+    "m-nn"
+   ],
+   "lesson": [
+    {
+     "title": "Reversible or not?",
+     "html": "Ice, chocolate and playdough can change back (reversible). Toasted bread cannot (irreversible). Changes: melting, freezing, cooking, breaking, mixing."
+    },
+    {
+     "title": "Oobleck",
+     "html": "Cornstarch + water is a non-Newtonian fluid: slow touch = liquid, fast punch = solid."
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "t": "qas",
+   "id": "m-states",
+   "skill": "Solid, liquid or gas?",
+   "list": [
+    {
+     "q": "What is a solid?",
+     "a": "Matter that has its own shape and size",
+     "w": [
+      "Matter that takes the shape of its container",
+      "Matter that fills a container and has no shape",
+      "Matter that is always wet"
+     ],
+     "why": "A solid keeps its own shape and size.",
+     "hint": "Think: does it stay the same shape?"
+    },
+    {
+     "q": "What is a liquid?",
+     "a": "Matter that does not have its own shape and takes the shape of its container",
+     "w": [
+      "Matter with its own shape",
+      "Matter that always floats",
+      "Matter you cannot see"
+     ],
+     "why": "Liquids take the shape of their containers and have a definite volume."
+    },
+    {
+     "q": "Which is true about liquids?",
+     "a": "They have a definite volume",
+     "w": [
+      "They have their own shape",
+      "They always stay in one place",
+      "They fill the whole room"
+     ],
+     "why": "A liquid has a definite volume (an amount)."
+    },
+    {
+     "q": "What is a gas?",
+     "a": "Matter with no shape that fills the container it is in",
+     "w": [
+      "Matter with its own shape",
+      "Matter that takes the container's shape but has a set volume",
+      "Matter that is always hot"
+     ],
+     "why": "Gases do not have shape and fill their container."
+    },
+    {
+     "q": "Which of these is a solid?",
+     "a": "wood",
+     "w": [
+      "water",
+      "air",
+      "juice"
+     ],
+     "why": "Solids can be wood, glass, clay, metal or concrete."
+    },
+    {
+     "q": "Which of these is a solid?",
+     "a": "glass",
+     "w": [
+      "milk",
+      "oil",
+      "steam"
+     ],
+     "why": "Glass is a solid."
+    },
+    {
+     "q": "Which of these is a solid?",
+     "a": "metal",
+     "w": [
+      "syrup",
+      "helium",
+      "water"
+     ],
+     "why": "Metal is a solid."
+    },
+    {
+     "q": "Which of these is a solid?",
+     "a": "concrete",
+     "w": [
+      "applesauce",
+      "air",
+      "juice"
+     ],
+     "why": "Concrete is a solid."
+    },
+    {
+     "q": "Which of these is a solid?",
+     "a": "clay",
+     "w": [
+      "syrup",
+      "air",
+      "oil"
+     ],
+     "why": "Clay is a solid."
+    },
+    {
+     "q": "Which of these is a liquid?",
+     "a": "water",
+     "w": [
+      "sand",
+      "a rock",
+      "wood"
+     ],
+     "why": "Water is a liquid."
+    },
+    {
+     "q": "Which of these is a liquid?",
+     "a": "oil",
+     "w": [
+      "glass",
+      "metal",
+      "a sponge"
+     ],
+     "why": "Oil flows and takes the shape of its container."
+    },
+    {
+     "q": "Which of these is a liquid?",
+     "a": "syrup",
+     "w": [
+      "a plastic cup",
+      "sand",
+      "a balloon"
+     ],
+     "why": "Syrup pours — it's a liquid."
+    },
+    {
+     "q": "Which of these is a gas?",
+     "a": "the air inside a balloon",
+     "w": [
+      "water in a cup",
+      "a sponge",
+      "sand"
+     ],
+     "why": "Air is a gas: it has no shape and fills the balloon."
+    },
+    {
+     "q": "Which of these is a gas?",
+     "a": "helium",
+     "w": [
+      "syrup",
+      "a cup",
+      "milk"
+     ],
+     "why": "Helium is a gas."
+    },
+    {
+     "q": "A balloon is blown up. The air inside…",
+     "a": "spreads out to fill the whole balloon",
+     "w": [
+      "keeps its own shape",
+      "stays at the bottom like water",
+      "turns into a solid"
+     ],
+     "why": "Gases fill the container they are in."
+    },
+    {
+     "q": "You pour juice from a tall glass into a wide bowl. What happens to the juice's shape?",
+     "a": "It takes the shape of the bowl",
+     "w": [
+      "It stays tall",
+      "It turns into a gas",
+      "It becomes a solid"
+     ],
+     "why": "Liquids take the shape of their containers."
+    },
+    {
+     "q": "You move a block from a box to a bag. What happens to the block's shape?",
+     "a": "It stays the same",
+     "w": [
+      "It takes the bag's shape",
+      "It turns into a liquid",
+      "It spreads out like air"
+     ],
+     "why": "Solids keep their own shape."
+    },
+    {
+     "q": "Name one solid, one liquid and one gas we use every day.",
+     "a": "wood (solid), water (liquid), air (gas)",
+     "w": [
+      "water, ice, rain",
+      "wood, glass, metal",
+      "air, steam, helium only"
+     ],
+     "why": "Many everyday examples: a solid (wood), a liquid (water), a gas (air)."
+    },
+    {
+     "q": "Which clue tells you something is a liquid?",
+     "a": "It pours and takes the shape of its container",
+     "w": [
+      "It keeps its shape",
+      "It is always hard",
+      "It can't be poured"
+     ],
+     "why": "Liquids flow."
+    },
+    {
+     "q": "Which clue tells you something is a solid?",
+     "a": "It keeps its own shape",
+     "w": [
+      "It spreads out to fill a room",
+      "It always pours",
+      "It has no volume"
+     ],
+     "why": "Solids keep their shape."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "m-uses",
+   "skill": "Properties & uses of materials",
+   "list": [
+    {
+     "q": "A toy needs a raincoat. Which material is best for keeping water out?",
+     "a": "foil",
+     "w": [
+      "cotton balls",
+      "a sponge",
+      "felt"
+     ],
+     "why": "Foil is best for blocking water because it stayed dry.",
+     "hint": "Think: which one stayed dry when water was dropped on it?"
+    },
+    {
+     "q": "Which material is best for cleaning up a spill?",
+     "a": "a sponge",
+     "w": [
+      "foil",
+      "wax paper",
+      "plastic wrap"
+     ],
+     "why": "A sponge is absorbent — it soaks up water."
+    },
+    {
+     "q": "What does “absorbent” mean?",
+     "a": "It soaks up liquid",
+     "w": [
+      "It keeps liquid out",
+      "It bends easily",
+      "It is very strong"
+     ],
+     "why": "Absorbency is how well something soaks up water."
+    },
+    {
+     "q": "What does “water resistant” mean?",
+     "a": "It keeps water out",
+     "w": [
+      "It soaks up water",
+      "It melts in water",
+      "It sinks"
+     ],
+     "why": "Water-resistant materials block water."
+    },
+    {
+     "q": "What does “flexible” mean?",
+     "a": "It bends easily",
+     "w": [
+      "It is very heavy",
+      "It soaks up water",
+      "It is hard to bend"
+     ],
+     "why": "Flexibility is how easily something bends."
+    },
+    {
+     "q": "In the strength test, what do you check?",
+     "a": "Whether the material can hold a block",
+     "w": [
+      "Whether it is wet",
+      "Whether it is soft",
+      "Whether it is shiny"
+     ],
+     "why": "Strength: can it hold a block?"
+    },
+    {
+     "q": "Which is the best way to choose a material for a job?",
+     "a": "Test it and use evidence",
+     "w": [
+      "Pick the prettiest one",
+      "Pick the biggest",
+      "Guess"
+     ],
+     "why": "We match materials to the best job using evidence from tests."
+    },
+    {
+     "q": "Which material is good for holding something heavy?",
+     "a": "cardboard that passed the strength test",
+     "w": [
+      "cotton balls",
+      "tissue paper",
+      "plastic wrap"
+     ],
+     "why": "A strong material that held a block is best for heavy jobs."
+    },
+    {
+     "q": "Why is foil a good choice to block water?",
+     "a": "It stayed dry when water was dropped on it",
+     "w": [
+      "It is shiny",
+      "It is flexible",
+      "It is soft"
+     ],
+     "why": "Evidence: foil stayed dry."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "m-change",
+   "skill": "Changing matter",
+   "list": [
+    {
+     "q": "Ice melts and then is refrozen. Can it change back?",
+     "a": "Yes — reversible",
+     "w": [
+      "No — irreversible"
+     ],
+     "why": "Melting and refreezing ice is reversible."
+    },
+    {
+     "q": "Chocolate melts and then cools. Can it change back?",
+     "a": "Yes — reversible",
+     "w": [
+      "No — irreversible"
+     ],
+     "why": "Melted chocolate becomes solid again when it cools."
+    },
+    {
+     "q": "Bread is toasted. Can it change back?",
+     "a": "No — irreversible",
+     "w": [
+      "Yes — reversible"
+     ],
+     "why": "Toasting (cooking) bread changes it for good."
+    },
+    {
+     "q": "Playdough is squished into a new shape. Can it change back?",
+     "a": "Yes — reversible",
+     "w": [
+      "No — irreversible"
+     ],
+     "why": "Playdough can be reshaped back."
+    },
+    {
+     "q": "What does “reversible” mean?",
+     "a": "It can change back",
+     "w": [
+      "It can never change",
+      "It is always a liquid",
+      "It gets bigger"
+     ],
+     "why": "A reversible change can be undone."
+    },
+    {
+     "q": "What does “irreversible” mean?",
+     "a": "It cannot change back",
+     "w": [
+      "It can change back",
+      "It is always cold",
+      "It is a gas"
+     ],
+     "why": "Irreversible changes can't be undone."
+    },
+    {
+     "q": "Which is an irreversible change?",
+     "a": "cooking an egg",
+     "w": [
+      "melting ice",
+      "freezing water",
+      "bending playdough"
+     ],
+     "why": "Cooking changes food for good."
+    },
+    {
+     "q": "Heating can change matter. What happens when you heat ice?",
+     "a": "It melts into a liquid",
+     "w": [
+      "It becomes a bigger solid",
+      "It turns into sand",
+      "It disappears forever"
+     ],
+     "why": "Heat melts ice into water."
+    },
+    {
+     "q": "What happens when you cool water until it is very cold?",
+     "a": "It freezes into ice",
+     "w": [
+      "It becomes a gas",
+      "It turns into oil",
+      "Nothing"
+     ],
+     "why": "Cooling water makes ice — a solid."
+    },
+    {
+     "q": "Name the five ways matter can change that the class sorted.",
+     "a": "Melting, freezing, cooking, breaking and mixing",
+     "w": [
+      "Running, jumping, skipping, hopping, rolling",
+      "Hot, cold, wet, dry, soft",
+      "Solid, liquid, gas, plasma, ice"
+     ],
+     "why": "Melting, freezing, cooking, breaking, mixing."
+    },
+    {
+     "q": "Which change is freezing?",
+     "a": "water turning into ice",
+     "w": [
+      "ice turning into water",
+      "bread turning into toast",
+      "a cup breaking"
+     ],
+     "why": "Freezing: liquid → solid."
+    },
+    {
+     "q": "Which change is melting?",
+     "a": "ice turning into water",
+     "w": [
+      "water turning into ice",
+      "dough baking",
+      "mixing paint"
+     ],
+     "why": "Melting: solid → liquid."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "m-nn",
+   "skill": "Oobleck (non-Newtonian fluid)",
+   "list": [
+    {
+     "q": "What is oobleck made from?",
+     "a": "cornstarch and water",
+     "w": [
+      "sand and oil",
+      "flour and milk",
+      "salt and juice"
+     ],
+     "why": "Mix about 1½ cups of cornstarch with 1¼ cups of water."
+    },
+    {
+     "q": "A non-Newtonian fluid is a mixture that…",
+     "a": "acts like both a liquid and a solid",
+     "w": [
+      "is always a gas",
+      "is always a solid",
+      "never changes"
+     ],
+     "why": "It has parts of both a liquid and a solid."
+    },
+    {
+     "q": "What happens if you press oobleck slowly with your fingers?",
+     "a": "Your fingers sink in like a liquid",
+     "w": [
+      "It turns hard right away",
+      "It turns into air",
+      "Nothing happens"
+     ],
+     "why": "Slow, gentle pressure → it acts like a liquid."
+    },
+    {
+     "q": "What happens if you punch oobleck quickly and hard?",
+     "a": "It acts like a solid",
+     "w": [
+      "It splashes like water",
+      "It turns into a gas",
+      "It disappears"
+     ],
+     "why": "Fast, hard force → it acts like a solid."
+    },
+    {
+     "q": "What happens when you press two fingers into water and then punch it?",
+     "a": "Your fingers go in and it splashes — it stays a liquid",
+     "w": [
+      "It turns hard",
+      "It becomes a solid",
+      "Nothing"
+     ],
+     "why": "Water is a plain liquid; it doesn't turn solid."
+    },
+    {
+     "q": "What happens when you punch a solid tabletop?",
+     "a": "It stays hard and does not give",
+     "w": [
+      "It flows like a liquid",
+      "Your fist sinks in",
+      "It melts"
+     ],
+     "why": "A solid keeps its shape."
+    },
+    {
+     "q": "If you run across a river of quicksand, it will act like a…",
+     "a": "solid",
+     "w": [
+      "liquid",
+      "gas",
+      "cloud"
+     ],
+     "why": "Moving fast makes it act like a solid."
+    },
+    {
+     "q": "If you slowly step into quicksand, it will act like a…",
+     "a": "liquid",
+     "w": [
+      "solid",
+      "gas",
+      "rock"
+     ],
+     "why": "Moving slowly, it acts like a liquid."
+    },
+    {
+     "q": "Why is oobleck special?",
+     "a": "It can act like a liquid AND a solid",
+     "w": [
+      "It is a gas",
+      "It is always hard",
+      "It only comes from the ocean"
+     ],
+     "why": "Oobleck is a non-Newtonian fluid."
+    },
+    {
+     "q": "Which two ingredients make a non-Newtonian fluid in the experiment?",
+     "a": "cornstarch and water",
+     "w": [
+      "sugar and sand",
+      "oil and salt",
+      "flour and juice"
+     ],
+     "why": "Cornstarch + water."
+    },
+    {
+     "q": "In the oobleck experiment, what do you do to make it difficult to stir but not too dry?",
+     "a": "Mix cornstarch and water, adding a bit more of either if needed",
+     "w": [
+      "Heat it on a stove",
+      "Freeze it",
+      "Add sand only"
+     ],
+     "why": "Adjust the cornstarch and water until it is the right consistency."
+    }
+   ]
+  }
+ ]
+}

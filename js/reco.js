@@ -14,7 +14,12 @@ export function nextNodeFor(p, pack) {
   if (p.settings.unlockAll) return pack.nodes.find(n => !(p.nodes[n.id]?.done)) || null;
   return pack.nodes.find(n => !(p.nodes[n.id]?.done)) || null;
 }
-export const isUnlocked = (p, pack, node) => node.idx === 0 || p.settings.unlockAll || !!p.nodes[pack.nodes[node.idx - 1].id]?.done || !!p.nodes[node.id]?.done;
+export const ovOf = p => (p.settings.ov ||= { nodes: {}, games: {}, items: {}, allNodes: false, allGames: false, allItems: false });
+export const clearedCount = p => Object.values(p.nodes).filter(n => n.done).length;
+// Everything "locked" can be opened by a grown-up with the PIN (see Overrides in the Grown-ups area).
+export const isUnlocked = (p, pack, node) => { const ov = ovOf(p); return node.idx === 0 || p.settings.unlockAll || ov.allNodes || !!ov.nodes[node.id] || !!p.nodes[pack.nodes[node.idx - 1].id]?.done || !!p.nodes[node.id]?.done; };
+export const gameUnlocked = (p, g) => { const ov = ovOf(p); return clearedCount(p) >= (g.unlock || 0) || ov.allGames || !!ov.games[g.id]; };
+export const itemUnlocked = (p, it) => { const ov = ovOf(p); return p.avatar.owned.includes(it.id) || ov.allItems || !!ov.items[it.id]; };
 
 // Returns [{icon, title, text, act, args, level}]  level: 'urgent' | 'info' | 'good'
 export function recommend(profile, packs, audience = 'kid') {

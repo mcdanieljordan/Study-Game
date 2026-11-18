@@ -1,0 +1,739 @@
+{
+ "id": "ensley-ela-sentences",
+ "profile": "ensley",
+ "subject": "English",
+ "title": "Sentence Structure",
+ "icon": "🧠",
+ "color": "#ff7a5c",
+ "due": null,
+ "test": "Sentence Structure Test",
+ "source": "English Sentence Structure Study Guide + English Review slides (Do Now, practice, exit tickets)",
+ "notes": [
+  "The PDF doesn't give the test date for the Sentence Structure test — set it under Grown-ups → Tests."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Subjects, predicates & fragments",
+   "icon": "🧱",
+   "items": [
+    "s-sub"
+   ],
+   "lesson": [
+    {
+     "title": "Subject & predicate",
+     "html": "<b>Complete subject</b>: who or what the sentence is about.<br><b>Complete predicate</b>: what the subject does or is.<br>The little brown dog | barked at the mailman."
+    },
+    {
+     "title": "Fragments & run-ons",
+     "html": "A <b>fragment</b> is missing a subject, predicate or complete thought. A <b>run-on</b> joins two complete sentences with no punctuation or conjunction. Fix with a period, or a comma + conjunction."
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Four sentence types",
+   "icon": "❓",
+   "items": [
+    "s-typ"
+   ],
+   "lesson": [
+    {
+     "title": "Four jobs",
+     "html": "Declarative tells (.). Interrogative asks (?). Imperative commands or requests (. or !). Exclamatory shows strong feeling (!)."
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Combining, prepositions & agreement",
+   "icon": "🔗",
+   "items": [
+    "s-comb",
+    "s-prep"
+   ],
+   "lesson": [
+    {
+     "title": "FANBOYS",
+     "html": "for · and · nor · but · or · yet · so. Joining two complete sentences? Put a comma before the conjunction."
+    },
+    {
+     "title": "Prepositions & agreement",
+     "html": "under the table = prepositional phrase. Singular subject → singular verb; plural → plural. Words inside a prepositional phrase don't change the subject: The basket of apples IS on the table."
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "t": "qas",
+   "id": "s-sub",
+   "skill": "Subjects, predicates & fragments",
+   "list": [
+    {
+     "q": "In “The little brown dog barked at the mailman,” what is the complete subject?",
+     "a": "The little brown dog",
+     "w": [
+      "barked at the mailman",
+      "the mailman",
+      "barked"
+     ],
+     "why": "The complete subject is who or what the sentence is about.",
+     "hint": "Ask: who or what is it about?"
+    },
+    {
+     "q": "In “The little brown dog barked at the mailman,” what is the complete predicate?",
+     "a": "barked at the mailman",
+     "w": [
+      "The little brown dog",
+      "the mailman",
+      "The little"
+     ],
+     "why": "The predicate tells what the subject does."
+    },
+    {
+     "q": "In “The tiny puppy chased a ball,” the complete subject is…",
+     "a": "The tiny puppy",
+     "w": [
+      "chased a ball",
+      "a ball",
+      "puppy chased"
+     ],
+     "why": "The tiny puppy is who the sentence is about."
+    },
+    {
+     "q": "In “My cousin rides her bike,” what is the complete subject?",
+     "a": "My cousin",
+     "w": [
+      "rides her bike",
+      "her bike",
+      "My"
+     ],
+     "why": "Who? My cousin."
+    },
+    {
+     "q": "In “My cousin rides her bike,” what is the complete predicate?",
+     "a": "rides her bike",
+     "w": [
+      "My cousin",
+      "her bike",
+      "My cousin rides"
+     ],
+     "why": "What does she do? rides her bike."
+    },
+    {
+     "q": "In “The three children built a sandcastle,” who or what is the sentence about?",
+     "a": "The three children",
+     "w": [
+      "a sandcastle",
+      "built",
+      "sandcastle"
+     ],
+     "why": "The complete subject: The three children."
+    },
+    {
+     "q": "A complete sentence must have…",
+     "a": "a subject, a predicate and a complete thought",
+     "w": [
+      "only a subject",
+      "a question mark",
+      "three words"
+     ],
+     "why": "Who or what + what they do + a complete thought."
+    },
+    {
+     "q": "Which is a complete sentence?",
+     "a": "The birds are singing in the trees.",
+     "w": [
+      "Under the big tree.",
+      "Playing with my friends.",
+      "After the rain stopped."
+     ],
+     "why": "It has a subject, a predicate and a complete thought."
+    },
+    {
+     "q": "Is “After the rain stopped.” a complete sentence or a fragment?",
+     "a": "Fragment",
+     "w": [
+      "Complete sentence"
+     ],
+     "why": "It doesn't finish the thought."
+    },
+    {
+     "q": "Which is a fragment?",
+     "a": "Near the river.",
+     "w": [
+      "The dog barked.",
+      "We ate lunch.",
+      "I ran home."
+     ],
+     "why": "Near the river has no subject or predicate."
+    },
+    {
+     "q": "Fix the fragment: “Playing with my friends.”",
+     "a": "I enjoy playing with my friends.",
+     "w": [
+      "Playing with my friends,",
+      "Playing with my friends and",
+      "With my friends playing"
+     ],
+     "why": "Add a subject and a predicate."
+    },
+    {
+     "q": "Fix the fragment: “Beside the tall tree.”",
+     "a": "The dog slept beside the tall tree.",
+     "w": [
+      "Beside the tall tree and",
+      "The beside tall tree.",
+      "Tall tree beside."
+     ],
+     "why": "Add a subject and predicate to complete the thought."
+    },
+    {
+     "q": "What is a run-on sentence?",
+     "a": "Two complete sentences joined without proper punctuation or a conjunction",
+     "w": [
+      "A sentence that is too short",
+      "A sentence with no verb",
+      "A question with no mark"
+     ],
+     "why": "We went to the park we played on the swings is a run-on."
+    },
+    {
+     "q": "Which fixes the run-on “We went to the park we played on the swings”?",
+     "a": "We went to the park, and we played on the swings.",
+     "w": [
+      "We went to the park we played, on the swings.",
+      "We went to the park and. We played on the swings",
+      "We went to the park, we played on the swings"
+     ],
+     "why": "A period or a comma + conjunction fixes it."
+    },
+    {
+     "q": "Fix this run-on: “I fed the fish it swam away.”",
+     "a": "I fed the fish, and it swam away.",
+     "w": [
+      "I fed the fish it swam away.",
+      "I fed the fish, it swam away",
+      "I fed the fish and, it swam away"
+     ],
+     "why": "Comma + and joins two complete thoughts."
+    },
+    {
+     "q": "Which fixes a run-on?",
+     "a": "I ran, and I fell.",
+     "w": [
+      "I ran I fell.",
+      "I ran, I fell.",
+      "I ran and. I fell."
+     ],
+     "why": "Comma + conjunction (or a period)."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "s-typ",
+   "skill": "Four sentence types",
+   "list": [
+    {
+     "q": "What type of sentence asks a question?",
+     "a": "Interrogative",
+     "w": [
+      "Declarative",
+      "Imperative",
+      "Exclamatory"
+     ],
+     "why": "Interrogative sentences ask and end with ?"
+    },
+    {
+     "q": "What type of sentence gives a command or request?",
+     "a": "Imperative",
+     "w": [
+      "Declarative",
+      "Interrogative",
+      "Exclamatory"
+     ],
+     "why": "Imperative: Please sit down."
+    },
+    {
+     "q": "What type of sentence tells or states something?",
+     "a": "Declarative",
+     "w": [
+      "Interrogative",
+      "Imperative",
+      "Exclamatory"
+     ],
+     "why": "Declarative sentences tell and end with a period."
+    },
+    {
+     "q": "What type of sentence shows strong feeling or excitement?",
+     "a": "Exclamatory",
+     "w": [
+      "Declarative",
+      "Interrogative",
+      "Imperative"
+     ],
+     "why": "Exclamatory sentences end with !"
+    },
+    {
+     "q": "Which end mark goes after “Where are my crayons”?",
+     "a": "?",
+     "w": [
+      ".",
+      "!",
+      ","
+     ],
+     "why": "It asks a question."
+    },
+    {
+     "q": "Which end mark goes after “How many stars can you see”?",
+     "a": "?",
+     "w": [
+      ".",
+      "!",
+      ","
+     ],
+     "why": "It asks a question."
+    },
+    {
+     "q": "Which end mark goes after “We are going to the library”?",
+     "a": ".",
+     "w": [
+      "?",
+      "!",
+      ","
+     ],
+     "why": "It tells something."
+    },
+    {
+     "q": "Which end mark goes after “That roller coaster was amazing”?",
+     "a": "!",
+     "w": [
+      ".",
+      "?",
+      ","
+     ],
+     "why": "Strong feeling."
+    },
+    {
+     "q": "What type of sentence is “Please close the classroom door.”?",
+     "a": "Imperative",
+     "w": [
+      "Declarative",
+      "Interrogative",
+      "Exclamatory"
+     ],
+     "why": "It's a request."
+    },
+    {
+     "q": "What type of sentence is “That cake is huge!”?",
+     "a": "Exclamatory",
+     "w": [
+      "Declarative",
+      "Interrogative",
+      "Imperative"
+     ],
+     "why": "Strong feeling → !"
+    },
+    {
+     "q": "What type of sentence is “My family went to the zoo yesterday.”?",
+     "a": "Declarative",
+     "w": [
+      "Interrogative",
+      "Imperative",
+      "Exclamatory"
+     ],
+     "why": "It tells something."
+    },
+    {
+     "q": "What type of sentence is “Where did you put my backpack?”?",
+     "a": "Interrogative",
+     "w": [
+      "Declarative",
+      "Imperative",
+      "Exclamatory"
+     ],
+     "why": "It asks."
+    },
+    {
+     "q": "What type of sentence is “What a wonderful surprise!”?",
+     "a": "Exclamatory",
+     "w": [
+      "Declarative",
+      "Interrogative",
+      "Imperative"
+     ],
+     "why": "Strong feeling."
+    },
+    {
+     "q": "What type of sentence is “Will you read this story to me?”",
+     "a": "Interrogative",
+     "w": [
+      "Declarative",
+      "Imperative",
+      "Exclamatory"
+     ],
+     "why": "It asks a question."
+    },
+    {
+     "q": "What type of sentence is “Put your name at the top.”",
+     "a": "Imperative",
+     "w": [
+      "Declarative",
+      "Interrogative",
+      "Exclamatory"
+     ],
+     "why": "It's a command."
+    },
+    {
+     "q": "What type of sentence is “The birds are building a nest.”",
+     "a": "Declarative",
+     "w": [
+      "Interrogative",
+      "Imperative",
+      "Exclamatory"
+     ],
+     "why": "It tells something."
+    },
+    {
+     "q": "Can an imperative sentence end with an exclamation mark?",
+     "a": "Yes — a strong command can end with !",
+     "w": [
+      "No, never",
+      "Only a question can",
+      "Only with a comma"
+     ],
+     "why": "Most imperatives end with a period, but a forceful command can end with !."
+    },
+    {
+     "q": "Which end marks can an imperative sentence have?",
+     "a": ". or !",
+     "w": [
+      "only ?",
+      "only .",
+      "? or ,"
+     ],
+     "why": "Imperative: . or !"
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "s-comb",
+   "skill": "Combining sentences (FANBOYS)",
+   "list": [
+    {
+     "q": "Which are the seven FANBOYS conjunctions?",
+     "a": "for, and, nor, but, or, yet, so",
+     "w": [
+      "for, and, not, but, on, yes, so",
+      "far, and, nor, bat, or, yet, so",
+      "for, at, nor, but, or, yet, sun"
+     ],
+     "why": "FANBOYS: For And Nor But Or Yet So."
+    },
+    {
+     "q": "FANBOYS: which conjunction explains why?",
+     "a": "for",
+     "w": [
+      "and",
+      "but",
+      "so"
+     ],
+     "why": "For explains why."
+    },
+    {
+     "q": "FANBOYS: which conjunction adds information?",
+     "a": "and",
+     "w": [
+      "but",
+      "or",
+      "yet"
+     ],
+     "why": "And adds information."
+    },
+    {
+     "q": "FANBOYS: which conjunction shows a difference?",
+     "a": "but",
+     "w": [
+      "and",
+      "or",
+      "so"
+     ],
+     "why": "But shows a difference."
+    },
+    {
+     "q": "FANBOYS: which conjunction gives a choice?",
+     "a": "or",
+     "w": [
+      "and",
+      "but",
+      "so"
+     ],
+     "why": "Or gives a choice."
+    },
+    {
+     "q": "FANBOYS: which conjunction shows a result?",
+     "a": "so",
+     "w": [
+      "and",
+      "but",
+      "or"
+     ],
+     "why": "So shows a result."
+    },
+    {
+     "q": "FANBOYS: which conjunction shows a surprising difference?",
+     "a": "yet",
+     "w": [
+      "so",
+      "and",
+      "or"
+     ],
+     "why": "Yet shows a surprising difference."
+    },
+    {
+     "q": "I wanted to play outside, ___ it started raining.",
+     "a": "but",
+     "w": [
+      "and",
+      "or",
+      "so"
+     ],
+     "why": "But shows a contrast.",
+     "hint": "Think about how the two ideas are connected."
+    },
+    {
+     "q": "Do you want an apple ___ a banana?",
+     "a": "or",
+     "w": [
+      "but",
+      "and",
+      "because"
+     ],
+     "why": "Or gives a choice."
+    },
+    {
+     "q": "I put on my coat ___ it was cold.",
+     "a": "because",
+     "w": [
+      "or",
+      "but",
+      "and"
+     ],
+     "why": "Because explains why."
+    },
+    {
+     "q": "When FANBOYS joins two complete sentences, you put a comma…",
+     "a": "before the conjunction",
+     "w": [
+      "after the conjunction",
+      "nowhere",
+      "at the start"
+     ],
+     "why": "I was hungry, so I ate a sandwich."
+    },
+    {
+     "q": "Which is a compound sentence?",
+     "a": "I can snap, but I can't whistle.",
+     "w": [
+      "I can snap but can't whistle.",
+      "I like to read and write.",
+      "Snap and whistle."
+     ],
+     "why": "Two complete sentences joined by , + conjunction."
+    },
+    {
+     "q": "Which is NOT a compound sentence?",
+     "a": "I like to read and write.",
+     "w": [
+      "I like to read, and I like to write.",
+      "I can snap, but I can't whistle.",
+      "I was hungry, so I ate a sandwich."
+     ],
+     "why": "Read and write is one subject doing two things, not two complete sentences."
+    },
+    {
+     "q": "Combine: “I was hungry. I ate a sandwich.”",
+     "a": "I was hungry, so I ate a sandwich.",
+     "w": [
+      "I was hungry so, I ate a sandwich.",
+      "I was hungry I ate, so a sandwich.",
+      "I was hungry, ate a sandwich so."
+     ],
+     "why": "Comma + so shows the result."
+    }
+   ]
+  },
+  {
+   "t": "qas",
+   "id": "s-prep",
+   "skill": "Prepositions & verb agreement",
+   "list": [
+    {
+     "q": "What does a preposition show?",
+     "a": "How a noun relates to another word (like where or when)",
+     "w": [
+      "An action",
+      "A feeling",
+      "A number"
+     ],
+     "why": "under the table: under shows where."
+    },
+    {
+     "q": "In “The ball rolled under the table,” what is the preposition?",
+     "a": "under",
+     "w": [
+      "ball",
+      "rolled",
+      "table"
+     ],
+     "why": "under shows where."
+    },
+    {
+     "q": "In “The ball rolled under the table,” what is the prepositional phrase?",
+     "a": "under the table",
+     "w": [
+      "The ball",
+      "rolled under",
+      "the table"
+     ],
+     "why": "It starts with the preposition and includes its object."
+    },
+    {
+     "q": "In “The book is on the desk,” what is the prepositional phrase?",
+     "a": "on the desk",
+     "w": [
+      "The book",
+      "is on",
+      "the desk is"
+     ],
+     "why": "on + the desk."
+    },
+    {
+     "q": "In “The cat hid under the bed,” what is the prepositional phrase?",
+     "a": "under the bed",
+     "w": [
+      "The cat hid",
+      "hid under",
+      "the cat"
+     ],
+     "why": "under + the bed."
+    },
+    {
+     "q": "In “The girl with the blue backpack walked to school,” which is a prepositional phrase?",
+     "a": "with the blue backpack",
+     "w": [
+      "The girl",
+      "walked",
+      "blue"
+     ],
+     "why": "It begins with with."
+    },
+    {
+     "q": "Which word is a preposition?",
+     "a": "beside",
+     "w": [
+      "happy",
+      "jump",
+      "quickly"
+     ],
+     "why": "Prepositions: in, on, under, over, above, below, beside, between, behind, near, with, at, to, from, of, by."
+    },
+    {
+     "q": "Which word is a preposition?",
+     "a": "behind",
+     "w": [
+      "tall",
+      "sing",
+      "green"
+     ],
+     "why": "behind shows where."
+    },
+    {
+     "q": "The basket of apples ___ on the table.",
+     "a": "is",
+     "w": [
+      "are"
+     ],
+     "why": "The subject is basket (singular). Words in the prepositional phrase don't change the subject."
+    },
+    {
+     "q": "The flock of birds ___ flying south.",
+     "a": "is",
+     "w": [
+      "are"
+     ],
+     "why": "The simple subject is flock (singular)."
+    },
+    {
+     "q": "The children ___ excited.",
+     "a": "are",
+     "w": [
+      "is"
+     ],
+     "why": "Children is plural."
+    },
+    {
+     "q": "The dogs ___ through the park.",
+     "a": "run",
+     "w": [
+      "runs"
+     ],
+     "why": "Plural subject → plural verb."
+    },
+    {
+     "q": "The team ___ ready.",
+     "a": "is",
+     "w": [
+      "are"
+     ],
+     "why": "Team is one group: singular."
+    },
+    {
+     "q": "The stack of papers ___ on my desk.",
+     "a": "is",
+     "w": [
+      "are"
+     ],
+     "why": "The simple subject is stack."
+    },
+    {
+     "q": "The birds ___ chirping.",
+     "a": "are",
+     "w": [
+      "is"
+     ],
+     "why": "Birds is plural."
+    },
+    {
+     "q": "He ___ to school.",
+     "a": "runs",
+     "w": [
+      "run"
+     ],
+     "why": "He is singular → runs."
+    },
+    {
+     "q": "They ___ to school.",
+     "a": "run",
+     "w": [
+      "runs"
+     ],
+     "why": "They is plural → run."
+    },
+    {
+     "q": "Singular subjects use ______ verbs.",
+     "a": "singular",
+     "w": [
+      "plural",
+      "past",
+      "silent"
+     ],
+     "why": "Singular with singular, plural with plural."
+    }
+   ]
+  }
+ ]
+}
